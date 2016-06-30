@@ -4,8 +4,10 @@
 
 package ChemistryCounter.ReactionManagers;
 
-import ChemistryCounter.ReactionManagers.ReactionDetector.ManageReactions;
 import ChemistryCounter.DevelopmentPurposes.TestingPrint;
+import ChemistryCounter.ReactionManagers.ReactionDetector.ManageReactions;
+import ChemistryCounter.ReactionManagers.Stochiometry.EquationBalancer;
+import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
 import ChemistryCounter.Summoner;
 import ChemistryCounter.UniversalGetters;
 
@@ -19,20 +21,25 @@ import java.util.ArrayList;
 public class Manager
 {
 	public static String mixedName = "";
+	public static String reactants = "";
+	public static String products = "";
 
 	public static void main(String[] args)
 
 	{
 		String input = "H2+O2+F+U+C=H2O+N3";
 		UniversalGetters u = findElementInReactions(ManageReactions.manageReactions(input));
-		TestingPrint.printCompounds(u.getCn());
+		EquationBalancer.balanceEquation(u);
 	}
 
 	private static UniversalGetters findElementInReactions(ArrayList<ReactionCompounds> compoundsArrayList)
 	{
+		mixedName = products + reactants;
 		UniversalGetters universal = new UniversalGetters();
-		universal.setCn(Summoner.summoner(mixedName));
-		universal.setRc(compoundsArrayList);
+		ArrayList<ChemicalName> product = Summoner.summoner(products);
+		ArrayList<ChemicalName> reactant= Summoner.summoner(reactants);
+		universal.setCn(product, reactant);
+		universal.setReactionCompounds(compoundsArrayList);
 		return universal;
 	}
 

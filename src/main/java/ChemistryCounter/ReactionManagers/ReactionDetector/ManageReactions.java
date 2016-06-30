@@ -38,7 +38,7 @@ public class ManageReactions
 				reactionCompounds.setName(i);
 				reactionCompounds.setCompoundStatus("Reactant");
 				reactionCompoundNames.add(reactionCompounds);
-				Manager.mixedName = Manager.mixedName + i;
+				Manager.products = Manager.products + i;
 			}
 			String products = input.substring(equalPosition + 1);
 			String[] rightSideOfReaction = products.split("\\+");
@@ -48,7 +48,7 @@ public class ManageReactions
 				reactionCompounds.setName(i);
 				reactionCompounds.setCompoundStatus("Product");
 				reactionCompoundNames.add(reactionCompounds);
-				Manager.mixedName = Manager.mixedName + i;
+				Manager.reactants = Manager.reactants + i;
 			}
 		}
 		return reactionCompoundNames;

@@ -26,7 +26,7 @@ public class ElementDetails
 		ArrayList<ChemicalName> finalVerifiedList = new ArrayList<>();
 		try
 		{
-			File molarMass = new File("W:\\lol\\src\\main\\resources\\properties_initMainChart.xml");
+			File molarMass = new File("W:\\chemistsCounter\\src\\main\\resources\\properties_initMainChart.xml");
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 			Document doc = dBuilder.parse(molarMass);

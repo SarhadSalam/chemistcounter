@@ -16,27 +16,34 @@ import java.util.ArrayList;
  */
 public class UniversalGetters
 {
-	private ArrayList<ChemicalName> cn;
-	private ArrayList<ReactionCompounds> rc;
+	private ArrayList<ChemicalName> getProduct;
+	private ArrayList<ChemicalName> reactant;
+	private ArrayList<ReactionCompounds> getReactionCompounds;
 
-	public ArrayList<ChemicalName> getCn()
+	public ArrayList<ChemicalName> getReactant()
 	{
-		return cn;
+		return reactant;
 	}
 
-	public void setCn(ArrayList<ChemicalName> cn)
+	public ArrayList<ChemicalName> getProduct()
 	{
-		this.cn = cn;
+		return getProduct;
 	}
 
-	public ArrayList<ReactionCompounds> getRc()
+	public void setCn(ArrayList<ChemicalName> cn, ArrayList<ChemicalName> reactant)
 	{
-		return rc;
+		this.getProduct = cn;
+		this.reactant = reactant;
 	}
 
-	public void setRc(ArrayList<ReactionCompounds> rc)
+	public ArrayList<ReactionCompounds> getReactionCompounds()
 	{
-		this.rc = rc;
+		return getReactionCompounds;
+	}
+
+	public void setReactionCompounds(ArrayList<ReactionCompounds> getReactionCompounds)
+	{
+		this.getReactionCompounds = getReactionCompounds;
 	}
 
 }

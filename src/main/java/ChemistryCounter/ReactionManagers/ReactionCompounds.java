@@ -13,6 +13,8 @@ public class ReactionCompounds
 {
 	private String name;
 	private String compoundStatus;
+	private int atomReactantOccurences;
+	private int atomProductOccurences;
 
 	public String getName()
 	{
@@ -32,5 +34,26 @@ public class ReactionCompounds
 	public void setCompoundStatus(String compoundStatus)
 	{
 		this.compoundStatus = compoundStatus;
+	}
+
+	public void setAtomReactantOccurences(int atomReactantOccurences)
+	{
+		this.atomReactantOccurences = atomReactantOccurences;
+	}
+
+	public void setAtomProductOccurences(int atomProductOccurences)
+	{
+		this.atomProductOccurences = atomProductOccurences;
+	}
+
+	public int getAtomReactantOccurences()
+	{
+
+		return atomReactantOccurences;
+	}
+
+	public int getAtomProductOccurences()
+	{
+		return atomProductOccurences;
 	}
 }
