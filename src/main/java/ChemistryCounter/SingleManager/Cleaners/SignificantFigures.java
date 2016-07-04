@@ -22,22 +22,22 @@ public class SignificantFigures
 		int position = 0;
 
 //		Counts the entire length
-		for( int i = 0; i < count; i++ )
+		for( int i = 0; i<count; i++ )
 		{
 			char c = input.charAt(i);
 			if( c == '.' )
 			{
 				position = i;
-				count = count - 1;
+				count = count-1;
 			}
 		}
 
 //		Counts number of decimal places
 		if( position != 0 )
 		{
-			for( int i = position; i < count; i++ )
+			for( int i = position; i<count; i++ )
 			{
-				decimalPlaces = decimalPlaces + 1;
+				decimalPlaces = decimalPlaces+1;
 			}
 		}
 		return count;

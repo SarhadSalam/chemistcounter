@@ -26,25 +26,30 @@ public class Manager
 	public static void main(String[] args)
 
 	{
-		String input = "H=H10N4FCa21";
+		String input = "Mg + H2O = Mg(OH)2 + H2";
+		String balanced = balance(input);
+		System.out.println(balanced);
+	}
+
+	private static String balance(String input)
+	{
 		try
 		{
 			UniversalGetters u = findElementInReactions(ManageReactions.manageReactions(input));
-			 u = EquationBalancer.balanceEquation(u);
-		}
-		catch( NullPointerException e )
+			String balancedEquation = EquationBalancer.balanceEquation(u);
+			return balancedEquation;
+		} catch( NullPointerException e )
 		{
-			System.out.println("There is something wrong with this equation. Please check it.");
 			throw new NullPointerException();
 		}
 	}
 
 	private static UniversalGetters findElementInReactions(ArrayList<ReactionCompounds> compoundsArrayList)
 	{
-		mixedName = products + reactants;
+		mixedName = products+reactants;
 		UniversalGetters universal = new UniversalGetters();
 		ArrayList<ChemicalName> product = Summoner.summoner(products);
-		ArrayList<ChemicalName> reactant= Summoner.summoner(reactants);
+		ArrayList<ChemicalName> reactant = Summoner.summoner(reactants);
 		universal.setCn(product, reactant);
 		universal.setReactionCompounds(compoundsArrayList);
 		return universal;

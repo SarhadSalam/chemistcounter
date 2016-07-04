@@ -16,7 +16,7 @@ public class MoleCounter
 	public static Double mole(Double mass, String userInput)
 	{
 		Double molar = MolarMassCounter.molar(userInput);
-		return mass / molar;
+		return mass/molar;
 	}
 
 	public static BigDecimal atomMole(BigDecimal atom)

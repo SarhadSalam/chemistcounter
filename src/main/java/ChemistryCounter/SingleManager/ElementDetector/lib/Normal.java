@@ -20,7 +20,7 @@ public class Normal
 		String[] splitElement = chemicalCompound.split("(?=[A-Z])");
 		ArrayList<ChemicalName> chemicalList = new ArrayList<>();
 //			Detects compounds
-		for( int i = 0; i < splitElement.length; i++ )
+		for( int i = 0; i<splitElement.length; i++ )
 		{
 			String elementName = splitElement[i];
 			ChemicalName element = new ChemicalName();

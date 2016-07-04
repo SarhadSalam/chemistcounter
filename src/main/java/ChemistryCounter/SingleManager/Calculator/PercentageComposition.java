@@ -18,7 +18,7 @@ public class PercentageComposition
 
 		for( ChemicalName item : compound )
 		{
-			Double compositionPercent = ((item.getAtomicWeight() * item.getValenceElectron()) / molarMass) * 100;
+			Double compositionPercent = ((item.getAtomicWeight()*item.getValenceElectron())/molarMass)*100;
 			item.setComposition(compositionPercent);
 		}
 	}

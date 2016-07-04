@@ -45,7 +45,7 @@ public class Polyatomic
 	{
 		ArrayList<ChemicalName> chemicalListContainer = new ArrayList<>();
 //		Goes through all instances of the polyatomic compounds
-		for( int i = 0; i < polyatomicElements.size(); i++ )
+		for( int i = 0; i<polyatomicElements.size(); i++ )
 		{
 			String valenceElectron = polyatomicElements.get(i);
 //			Removes the brackets
@@ -53,7 +53,7 @@ public class Polyatomic
 			ArrayList<String> polyatomicValenceArrayFinal = new ArrayList<>();
 
 //			Deals with an empty array, basically just a fix.
-			for( int z = 0; z < polyatomicValenceArray.length; z++ )
+			for( int z = 0; z<polyatomicValenceArray.length; z++ )
 			{
 				if( polyatomicValenceArray[z].equals("") )
 				{
@@ -67,12 +67,12 @@ public class Polyatomic
 			{
 				ArrayList<ChemicalName> elements = Normal.manager(polyatomicValenceArrayFinal.get(0));
 //				All kinds of magical thing goes on down there
-				for( int z = 0; z < elements.size(); z++ )
+				for( int z = 0; z<elements.size(); z++ )
 				{
 					ChemicalName valenceElement = elements.get(z);
 					int valenceElectronCount = valenceElement.getValenceElectron();
 					int polyatomicValenceElectron = Integer.parseInt(polyatomicValenceArrayFinal.get(1));
-					valenceElectronCount = valenceElectronCount * polyatomicValenceElectron;
+					valenceElectronCount = valenceElectronCount*polyatomicValenceElectron;
 					valenceElement.setValenceElectron(valenceElectronCount);
 					chemicalListContainer = elements;
 				}

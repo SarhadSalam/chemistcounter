@@ -61,7 +61,7 @@ public class ElementDetails
 		{
 			e.printStackTrace();
 		}
-		if(!(unverifiedList.size() == finalVerifiedList.size()))
+		if( !(unverifiedList.size() == finalVerifiedList.size()) )
 		{
 			throw new NullPointerException();
 		}

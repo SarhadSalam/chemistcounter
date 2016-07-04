@@ -36,24 +36,24 @@ public class ReactionCompounds
 		this.compoundStatus = compoundStatus;
 	}
 
-	public void setAtomReactantOccurences(int atomReactantOccurences)
-	{
-		this.atomReactantOccurences = atomReactantOccurences;
-	}
-
 	public int getAtomReactantOccurences()
 	{
 
 		return atomReactantOccurences;
 	}
 
-	public void setAtomProductOccurences(int atomProductOccurences)
+	public void setAtomReactantOccurences(int atomReactantOccurences)
 	{
-		this.atomProductOccurences = atomProductOccurences;
+		this.atomReactantOccurences = atomReactantOccurences;
 	}
 
 	public int getAtomProductOccurences()
 	{
 		return atomProductOccurences;
+	}
+
+	public void setAtomProductOccurences(int atomProductOccurences)
+	{
+		this.atomProductOccurences = atomProductOccurences;
 	}
 }

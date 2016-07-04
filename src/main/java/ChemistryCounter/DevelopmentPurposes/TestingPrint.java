@@ -24,7 +24,7 @@ public class TestingPrint
 		Method[] n = c.getDeclaredMethods();
 		for( Method i : n )
 		{
-			if( i.getName().contains("get") && i.getTypeParameters().length == 0 )
+			if( i.getName().contains("get")&&i.getTypeParameters().length == 0 )
 			{
 				methods.add(i.getName());
 			}
@@ -33,7 +33,7 @@ public class TestingPrint
 		System.out.println("Chemical Symbol\t Chemical Name\t Atomic weight\t Valence Electron\t Atom Count\t Composition \t Reaction Balance\t");
 		for( ChemicalName s : list )
 		{
-			System.out.println(s.getChemicalSymbol() + tabs + s.getChemicalName() + tabs + s.getAtomicWeight() + tabs + s.getValenceElectron() + tabs + s.getCount() + tabs + s.getComposition() + tabs + s.getReactionBalance());
+			System.out.println(s.getChemicalSymbol()+tabs+s.getChemicalName()+tabs+s.getAtomicWeight()+tabs+s.getValenceElectron()+tabs+s.getCount()+tabs+s.getComposition()+tabs+s.getReactionBalance());
 		}
 	}
 
@@ -44,7 +44,7 @@ public class TestingPrint
 		Method[] n = c.getDeclaredMethods();
 		for( Method i : n )
 		{
-			if( i.getName().contains("get") && i.getTypeParameters().length == 0 )
+			if( i.getName().contains("get")&&i.getTypeParameters().length == 0 )
 			{
 				methods.add(i.getName());
 			}
@@ -52,7 +52,7 @@ public class TestingPrint
 		String tabs = "\t\t\t\t";
 		for( ReactionCompounds r : reactionCompoundNames )
 		{
-			System.out.println(r.getName() + tabs + r.getCompoundStatus() + tabs);
+			System.out.println(r.getName()+tabs+r.getCompoundStatus()+tabs);
 		}
 
 	}

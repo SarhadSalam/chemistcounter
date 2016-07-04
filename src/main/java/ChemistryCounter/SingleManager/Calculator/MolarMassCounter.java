@@ -23,12 +23,12 @@ public class MolarMassCounter
 		double molarMass = 0.0;
 		for( ChemicalName item : chemicalListArray )
 		{
-			if( item.getValenceElectron() > 1 )
+			if( item.getValenceElectron()>1 )
 			{
-				molarMass = molarMass + item.getAtomicWeight() * item.getValenceElectron();
+				molarMass = molarMass+item.getAtomicWeight()*item.getValenceElectron();
 			} else
 			{
-				molarMass = molarMass + item.getAtomicWeight();
+				molarMass = molarMass+item.getAtomicWeight();
 			}
 		}
 		return molarMass;

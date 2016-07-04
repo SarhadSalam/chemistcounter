@@ -78,7 +78,7 @@ public class ChemicalName
 
 	public void setMultiValenceElectron(int multiValenceElectron)
 	{
-		this.multiValenceElectron = multiValenceElectron + this.multiValenceElectron;
+		this.multiValenceElectron = multiValenceElectron+this.multiValenceElectron;
 	}
 
 	public Double getComposition()

@@ -20,13 +20,13 @@ public class ElementManager
 	{
 		ArrayList<ChemicalName> polyatomicElementsList = null;
 //		If polyatomic
-		if( chemicalCompound.matches(".*\\(+.*") || chemicalCompound.matches(".*\\)+.*") )
+		if( chemicalCompound.matches(".*\\(+.*")||chemicalCompound.matches(".*\\)+.*") )
 		{
 			polyatomicElementsList = Polyatomic.manager(chemicalCompound);
 		}
 
 //		If normal
-		if( !chemicalCompound.matches(".*\\(+.*") || !chemicalCompound.matches(".*\\)+.*") )
+		if( !chemicalCompound.matches(".*\\(+.*")||!chemicalCompound.matches(".*\\)+.*") )
 		{
 			polyatomicElementsList = Normal.manager(chemicalCompound);
 		}

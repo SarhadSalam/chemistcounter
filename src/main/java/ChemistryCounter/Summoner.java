@@ -4,13 +4,11 @@
 
 package ChemistryCounter;
 
-import ChemistryCounter.DevelopmentPurposes.TestingPrint;
 import ChemistryCounter.SingleManager.Cleaners.AtomCounter;
 import ChemistryCounter.SingleManager.DetailsGrabbers.ElementDetails;
 import ChemistryCounter.SingleManager.ElementDetector.ElementManager;
 import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -25,7 +23,7 @@ public class Summoner
 		System.out.println("The compound in use presently is: "+userInput);
 		try
 		{
-			ArrayList<ChemicalName> managedElements =ElementManager.elements(userInput);
+			ArrayList<ChemicalName> managedElements = ElementManager.elements(userInput);
 			ArrayList<ChemicalName> elementName = ElementDetails.findElement(managedElements);
 			ArrayList<ChemicalName> counted = AtomCounter.atomCounter(elementName);
 			return counted;
