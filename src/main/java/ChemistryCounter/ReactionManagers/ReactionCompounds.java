@@ -41,15 +41,15 @@ public class ReactionCompounds
 		this.atomReactantOccurences = atomReactantOccurences;
 	}
 
-	public void setAtomProductOccurences(int atomProductOccurences)
-	{
-		this.atomProductOccurences = atomProductOccurences;
-	}
-
 	public int getAtomReactantOccurences()
 	{
 
 		return atomReactantOccurences;
+	}
+
+	public void setAtomProductOccurences(int atomProductOccurences)
+	{
+		this.atomProductOccurences = atomProductOccurences;
 	}
 
 	public int getAtomProductOccurences()

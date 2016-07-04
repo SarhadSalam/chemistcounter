@@ -4,7 +4,6 @@
 
 package ChemistryCounter.ReactionManagers;
 
-import ChemistryCounter.DevelopmentPurposes.TestingPrint;
 import ChemistryCounter.ReactionManagers.ReactionDetector.ManageReactions;
 import ChemistryCounter.ReactionManagers.Stochiometry.EquationBalancer;
 import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
@@ -27,9 +26,17 @@ public class Manager
 	public static void main(String[] args)
 
 	{
-		String input = "H2+O2+F+U+C=H2O+N3";
-		UniversalGetters u = findElementInReactions(ManageReactions.manageReactions(input));
-		EquationBalancer.balanceEquation(u);
+		String input = "H=H10N4FCa21";
+		try
+		{
+			UniversalGetters u = findElementInReactions(ManageReactions.manageReactions(input));
+			 u = EquationBalancer.balanceEquation(u);
+		}
+		catch( NullPointerException e )
+		{
+			System.out.println("There is something wrong with this equation. Please check it.");
+			throw new NullPointerException();
+		}
 	}
 
 	private static UniversalGetters findElementInReactions(ArrayList<ReactionCompounds> compoundsArrayList)

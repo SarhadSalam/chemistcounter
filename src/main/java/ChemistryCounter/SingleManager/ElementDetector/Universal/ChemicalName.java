@@ -8,24 +8,27 @@ package ChemistryCounter.SingleManager.ElementDetector.Universal;
  * Created by sarhaD on 23-May-16.
  * The place where all the magic happens. Creates an ArrayList data type. The methods in this file speak for themselves.
  */
+
 public class ChemicalName
 {
+	public boolean reactionsRelation = false;
 	private String symbol;
-	private String name;
+	private String chemicalName;
 	private double atomicWeight;
-	private int valence;
+	private int valenceElectron;
 	private int count;
 	private int multiValenceElectron;
 	private double composition;
+	private int reactionBalance;
 
 	public String getChemicalSymbol()
 	{
 		return symbol;
 	}
 
-	public void setChemicalSymbol(String elementName)
+	public void setChemicalSymbol(String symbol)
 	{
-		symbol = elementName;
+		this.symbol = symbol;
 	}
 
 	public int getValenceElectron()
@@ -35,12 +38,12 @@ public class ChemicalName
 		{
 			return multiValenceElectron;
 		}
-		return valence;
+		return valenceElectron;
 	}
 
-	public void setValenceElectron(int ValenceElectron)
+	public void setValenceElectron(int valenceElectron)
 	{
-		valence = ValenceElectron;
+		this.valenceElectron = valenceElectron;
 	}
 
 	public int getCount()
@@ -55,12 +58,12 @@ public class ChemicalName
 
 	public String getChemicalName()
 	{
-		return name;
+		return chemicalName;
 	}
 
-	public void setChemicalName(String fullName)
+	public void setChemicalName(String chemicalName)
 	{
-		name = fullName;
+		this.chemicalName = chemicalName;
 	}
 
 	public double getAtomicWeight()
@@ -68,9 +71,9 @@ public class ChemicalName
 		return atomicWeight;
 	}
 
-	public void setAtomicWeight(double atomicWeight1)
+	public void setAtomicWeight(double atomicWeight)
 	{
-		atomicWeight = atomicWeight1;
+		this.atomicWeight = atomicWeight;
 	}
 
 	public void setMultiValenceElectron(int multiValenceElectron)
@@ -87,7 +90,21 @@ public class ChemicalName
 	{
 		this.composition = composition;
 	}
+
+	public int getReactionBalance()
+	{
+		if( reactionsRelation )
+		{
+			return reactionBalance;
+		}
+		return 0;
+	}
+
+	public void setReactionBalance(int reactionBalance)
+	{
+		if( reactionsRelation )
+		{
+			this.reactionBalance = reactionBalance;
+		}
+	}
 }
-/*Usage guidance:
-* 				element.setElementname(valencyElements[0]);
-*/

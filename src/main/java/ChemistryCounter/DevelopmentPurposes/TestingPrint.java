@@ -6,6 +6,7 @@ package ChemistryCounter.DevelopmentPurposes;
 
 import ChemistryCounter.ReactionManagers.ReactionCompounds;
 import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
+import ChemistryCounter.UniversalGetters;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -29,10 +30,10 @@ public class TestingPrint
 			}
 		}
 		String tabs = "\t\t\t\t";
-		System.out.println("Chemical Symbol\t Chemical Name\t Atomic weight\t Valence Electron\t Atom Count\t");
+		System.out.println("Chemical Symbol\t Chemical Name\t Atomic weight\t Valence Electron\t Atom Count\t Composition \t Reaction Balance\t");
 		for( ChemicalName s : list )
 		{
-			System.out.println(s.getChemicalSymbol() + tabs + s.getChemicalName() + tabs + s.getAtomicWeight() + tabs + s.getValenceElectron() + tabs + s.getCount() + tabs + s.getComposition());
+			System.out.println(s.getChemicalSymbol() + tabs + s.getChemicalName() + tabs + s.getAtomicWeight() + tabs + s.getValenceElectron() + tabs + s.getCount() + tabs + s.getComposition() + tabs + s.getReactionBalance());
 		}
 	}
 
@@ -54,5 +55,18 @@ public class TestingPrint
 			System.out.println(r.getName() + tabs + r.getCompoundStatus() + tabs);
 		}
 
+	}
+
+	public static void printEquations(UniversalGetters u)
+	{
+		System.out.println("Prodcuts");
+		TestingPrint.printCompounds(u.getProduct());
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~\t````````````````");
+		System.out.println("Reactants");
+		TestingPrint.printCompounds(u.getReactant());
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~\t````````````````");
+		System.out.println("Reaction Compounds");
+		TestingPrint.printReactions(u.getReactionCompounds());
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~\t````````````````");
 	}
 }

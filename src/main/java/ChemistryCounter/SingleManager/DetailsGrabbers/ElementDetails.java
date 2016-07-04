@@ -35,33 +35,35 @@ public class ElementDetails
 
 			NodeList nList = doc.getElementsByTagName("element");
 
-			for( int i = 0; i < nList.getLength(); i++ )
+			for( int i = 0; i<nList.getLength(); i++ )
 			{
 
 				Node nNode = nList.item(i);
 				Element eElement = (Element) nNode;
 				String symbol = eElement.getElementsByTagName("symbol").item(0).getTextContent();
 //				For each element
-				for( int z = 0; z < unverifiedList.size(); z++ )
+				for( ChemicalName z : unverifiedList )
 				{
 					ChemicalName verifiedListInstance = new ChemicalName();
-					ChemicalName chemicalNameInstance = unverifiedList.get(z);
-					if( symbol.equals(chemicalNameInstance.getChemicalSymbol()) )
+					if( symbol.equals(z.getChemicalSymbol()) )
 					{
 //						Sets the variable data
 
 						verifiedListInstance.setChemicalName(eElement.getElementsByTagName("name").item(0).getTextContent());
 						verifiedListInstance.setAtomicWeight(Double.parseDouble(eElement.getElementsByTagName("atomic_weight").item(0).getTextContent()));
 						verifiedListInstance.setChemicalSymbol(symbol);
-						verifiedListInstance.setValenceElectron(chemicalNameInstance.getValenceElectron());
+						verifiedListInstance.setValenceElectron(z.getValenceElectron());
 						finalVerifiedList.add(verifiedListInstance);
 					}
 				}
 			}
-
 		} catch( Exception e )
 		{
 			e.printStackTrace();
+		}
+		if(!(unverifiedList.size() == finalVerifiedList.size()))
+		{
+			throw new NullPointerException();
 		}
 		return finalVerifiedList;
 	}
