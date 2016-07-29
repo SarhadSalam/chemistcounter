@@ -1,36 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a07e711-931c-4962-95de-25f48ccb6ca1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/DevelopmentPurposes/TestingPrint.class" afterPath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/DevelopmentPurposes/TestingPrint.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/ReactionManagers/Manager.class" afterPath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/ReactionManagers/Manager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/ReactionManagers/ReactionCompounds.class" afterPath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/ReactionManagers/ReactionCompounds.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.class" afterPath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.class" afterPath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/Cleaners/ScientificNotation.class" afterPath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/Cleaners/ScientificNotation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/ElementDetector/Universal/ChemicalName.class" afterPath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/ElementDetector/Universal/ChemicalName.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/Summoner.class" afterPath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/Summoner.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/IHaveNoIdeaWhatIsTheRelevanceOfThisFile.class" afterPath="$PROJECT_DIR$/build/classes/test/IHaveNoIdeaWhatIsTheRelevanceOfThisFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/properties_atomic.xml" afterPath="$PROJECT_DIR$/build/resources/main/properties_atomic.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/properties_general.xml" afterPath="$PROJECT_DIR$/build/resources/main/properties_general.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/properties_initMainChart.xml" afterPath="$PROJECT_DIR$/build/resources/main/properties_initMainChart.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/properties_initSeriesChart.xml" afterPath="$PROJECT_DIR$/build/resources/main/properties_initSeriesChart.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/properties_misc.xml" afterPath="$PROJECT_DIR$/build/resources/main/properties_misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/properties_physical.xml" afterPath="$PROJECT_DIR$/build/resources/main/properties_physical.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chemistsCounter.iml" afterPath="$PROJECT_DIR$/chemistsCounter.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/TestingPrint.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/TestingPrint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Manager.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Manager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionCompounds.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionCompounds.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/InsertBalance.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/InsertBalance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/ScientificNotation.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/ScientificNotation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/Universal/ChemicalName.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/Universal/ChemicalName.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/Summoner.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/Summoner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/IHaveNoIdeaWhatIsTheRelevanceOfThisFile.java" afterPath="$PROJECT_DIR$/src/test/java/IHaveNoIdeaWhatIsTheRelevanceOfThisFile.java" />
-    </list>
+    <list default="true" id="2a07e711-931c-4962-95de-25f48ccb6ca1" name="Default" comment="" />
     <ignored path="chemistsCounter.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -928,7 +899,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26928473" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4235624" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36563876" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36563876" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Reviews" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819074" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IntelliCalc" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
