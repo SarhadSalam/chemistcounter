@@ -17,7 +17,6 @@ public class ScientificNotation
 			input = input.replaceAll("[\\^]", "e");
 		}
 		BigDecimal bd = new BigDecimal(input);
-		System.out.println(bd);
 		return bd;
 	}
 }

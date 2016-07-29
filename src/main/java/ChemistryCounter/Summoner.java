@@ -20,7 +20,6 @@ public class Summoner
 {
 	public static ArrayList<ChemicalName> summoner(String userInput)
 	{
-		System.out.println("The compound in use presently is: "+userInput);
 		try
 		{
 			ArrayList<ChemicalName> managedElements = ElementManager.elements(userInput);

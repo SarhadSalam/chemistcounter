@@ -51,9 +51,9 @@ public class ChemicalName
 		return count;
 	}
 
-	public void setCount(int counter)
+	public void setCount(int count)
 	{
-		count = counter;
+		this.count = count;
 	}
 
 	public String getChemicalName()

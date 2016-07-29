@@ -6,6 +6,7 @@ package ChemistryCounter.ReactionManagers;
 
 import ChemistryCounter.ReactionManagers.ReactionDetector.ManageReactions;
 import ChemistryCounter.ReactionManagers.Stochiometry.EquationBalancer;
+import ChemistryCounter.ReactionManagers.Stochiometry.lib.InsertBalance;
 import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
 import ChemistryCounter.Summoner;
 import ChemistryCounter.UniversalGetters;
@@ -19,25 +20,21 @@ import java.util.ArrayList;
  */
 public class Manager
 {
-	public static String mixedName = "";
-	public static String reactants = "";
-	public static String products = "";
-
 	public static void main(String[] args)
-
 	{
-		String input = "Mg + H2O = Mg(OH)2 + H2";
-		String balanced = balance(input);
-		System.out.println(balanced);
+		String input = "H21 + O2 -> H2O";
+		UniversalGetters balanced = balance(input);
+//		The old system
+		String s = InsertBalance.insertBalance(balanced);
+		String eq = InsertBalance.equations(balanced, input);
 	}
 
-	private static String balance(String input)
+	private static UniversalGetters balance(String input)
 	{
 		try
 		{
-			UniversalGetters u = findElementInReactions(ManageReactions.manageReactions(input));
-			String balancedEquation = EquationBalancer.balanceEquation(u);
-			return balancedEquation;
+			UniversalGetters u = findElementInReactions(ManageReactions.splitReactions(input));
+			return ManageReactions.setMatrix(u);
 		} catch( NullPointerException e )
 		{
 			throw new NullPointerException();
@@ -46,10 +43,9 @@ public class Manager
 
 	private static UniversalGetters findElementInReactions(ArrayList<ReactionCompounds> compoundsArrayList)
 	{
-		mixedName = products+reactants;
 		UniversalGetters universal = new UniversalGetters();
-		ArrayList<ChemicalName> product = Summoner.summoner(products);
-		ArrayList<ChemicalName> reactant = Summoner.summoner(reactants);
+		ArrayList<ChemicalName> reactant = Summoner.summoner(ManageReactions.getReactant);
+		ArrayList<ChemicalName> product = Summoner.summoner(ManageReactions.getProduct);
 		universal.setCn(product, reactant);
 		universal.setReactionCompounds(compoundsArrayList);
 		return universal;

@@ -15,7 +15,7 @@ public class InsertBalance
 {
 	public static String insertBalance(UniversalGetters u)
 	{
-//		All error handling was done before so now you can just implement new methods directly.
+//		All error handling was done before so now I can just implement new methods directly.
 		String reactant = "";
 		String product = "";
 		for( int i = 0; i<u.getReactant().size(); i++ )
@@ -24,7 +24,6 @@ public class InsertBalance
 //			This is just extra case in case I screw up, cause you know I screw up. Code screws up. Life sometimes is not fair.
 			if( !u.getReactant().get(i).getChemicalSymbol().equals(u.getProduct().get(i).getChemicalSymbol()) )
 			{
-				System.out.println("Sarhad you fucking messed up fix it now!");
 				return null;
 			}
 
@@ -40,5 +39,11 @@ public class InsertBalance
 		}
 		String equation = reactant+"="+product;
 		return equation;
+	}
+
+	public static String equations(UniversalGetters u,String input)
+	{
+		input = input.replaceAll("\\s", "");
+		return null;
 	}
 }

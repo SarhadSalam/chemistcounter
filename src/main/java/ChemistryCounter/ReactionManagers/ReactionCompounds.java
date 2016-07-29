@@ -14,7 +14,6 @@ public class ReactionCompounds
 	private String name;
 	private String compoundStatus;
 	private int atomReactantOccurences;
-	private int atomProductOccurences;
 
 	public String getName()
 	{
@@ -45,15 +44,5 @@ public class ReactionCompounds
 	public void setAtomReactantOccurences(int atomReactantOccurences)
 	{
 		this.atomReactantOccurences = atomReactantOccurences;
-	}
-
-	public int getAtomProductOccurences()
-	{
-		return atomProductOccurences;
-	}
-
-	public void setAtomProductOccurences(int atomProductOccurences)
-	{
-		this.atomProductOccurences = atomProductOccurences;
 	}
 }

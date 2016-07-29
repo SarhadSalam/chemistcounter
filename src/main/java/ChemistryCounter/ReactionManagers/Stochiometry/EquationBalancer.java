@@ -1,7 +1,6 @@
 package ChemistryCounter.ReactionManagers.Stochiometry;
 
 import ChemistryCounter.ReactionManagers.Stochiometry.lib.GetLCM;
-import ChemistryCounter.ReactionManagers.Stochiometry.lib.InsertBalance;
 import ChemistryCounter.UniversalGetters;
 
 /**
@@ -9,12 +8,12 @@ import ChemistryCounter.UniversalGetters;
  */
 public class EquationBalancer
 {
-	public static String balanceEquation(UniversalGetters u)
+	public static UniversalGetters balanceEquation(UniversalGetters u)
 	{
 		try
 		{
 			u = GetLCM.getLCM(u);
-			return InsertBalance.insertBalance(u);
+			return u;
 		} catch( NullPointerException e )
 		{
 			throw new NullPointerException();

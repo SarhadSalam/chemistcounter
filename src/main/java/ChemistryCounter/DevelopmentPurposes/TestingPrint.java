@@ -29,12 +29,14 @@ public class TestingPrint
 				methods.add(i.getName());
 			}
 		}
-		String tabs = "\t\t\t\t";
-		System.out.println("Chemical Symbol\t Chemical Name\t Atomic weight\t Valence Electron\t Atom Count\t Composition \t Reaction Balance\t");
+		System.out.println();
+		System.out.format("%10s%15s%15s%20s%15s%15s%20s", "Chemical Symbol", "Chemical Name", "Atomic weight", "Valence Electron", "Atom Count", "Composition", "Reaction Balance");
 		for( ChemicalName s : list )
 		{
-			System.out.println(s.getChemicalSymbol()+tabs+s.getChemicalName()+tabs+s.getAtomicWeight()+tabs+s.getValenceElectron()+tabs+s.getCount()+tabs+s.getComposition()+tabs+s.getReactionBalance());
+			System.out.println();
+			System.out.format("%10s%15s%15s%20d%15s%15s%20s", s.getChemicalSymbol(), s.getChemicalName(), s.getAtomicWeight(), s.getValenceElectron(), s.getCount(), s.getComposition(), s.getReactionBalance());
 		}
+		System.out.println("\n");
 	}
 
 	public static void printReactions(ArrayList<ReactionCompounds> reactionCompoundNames)
@@ -49,24 +51,23 @@ public class TestingPrint
 				methods.add(i.getName());
 			}
 		}
-		String tabs = "\t\t\t\t";
 		for( ReactionCompounds r : reactionCompoundNames )
 		{
-			System.out.println(r.getName()+tabs+r.getCompoundStatus()+tabs);
+			System.out.println();
+			System.out.format("%10s%20s", r.getName(),r.getCompoundStatus());
 		}
-
 	}
 
 	public static void printEquations(UniversalGetters u)
 	{
-		System.out.println("Prodcuts");
+		System.out.println("Prodcuts:-");
 		TestingPrint.printCompounds(u.getProduct());
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~\t````````````````");
-		System.out.println("Reactants");
+		System.out.println("Reactants:-");
 		TestingPrint.printCompounds(u.getReactant());
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~\t````````````````");
-		System.out.println("Reaction Compounds");
+		System.out.println("Reaction Compounds:-");
 		TestingPrint.printReactions(u.getReactionCompounds());
-		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~\t````````````````");
+		System.out.println();
 	}
 }
