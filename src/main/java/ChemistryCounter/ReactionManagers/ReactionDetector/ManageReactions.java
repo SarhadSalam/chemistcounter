@@ -157,6 +157,8 @@ public class ManageReactions
 		SimpleMatrix nullSpace = svd.nullSpace();
 		nullSpace.print();
 
+		System.out.println(Arrays.deepToString(matrixRaw));
+		System.out.println(1/(0.085+0.446+0.891));
 		return u;
 	}
 }
