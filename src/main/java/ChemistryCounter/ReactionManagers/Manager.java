@@ -6,6 +6,7 @@ package ChemistryCounter.ReactionManagers;
 
 import ChemistryCounter.DevelopmentPurposes.TestingPrint;
 import ChemistryCounter.Exceptions.ElementNotFoundException;
+import ChemistryCounter.Exceptions.ReactionElementNotMatchedException;
 import ChemistryCounter.ReactionManagers.ReactionDetector.ManageReactions;
 import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
 import ChemistryCounter.Summoner;
@@ -22,7 +23,7 @@ public class Manager
 {
 	public static void main(String[] args)
 	{
-		String input = "H2+O2=H";
+		String input = "H2+O2=HOF";
 		UniversalGetters balanced = balance(input);
 	}
 
@@ -54,11 +55,42 @@ public class Manager
 			e.printStackTrace();
 		}
 
-//		Checks if they are equal and same
+		verification(reactant, product);
 
 		universal.setCn(product, reactant);
 		universal.setReactionCompounds(compoundsArrayList);
 		return universal;
+	}
+
+	private static void verification(ArrayList<ChemicalName> reactant, ArrayList<ChemicalName> product)
+	{
+		//		Checks if they are equal and same
+		assert reactant != null;
+		assert product != null;
+		if(reactant.size()!=product.size())
+		{
+			try
+			{
+				throw new ReactionElementNotMatchedException();
+			} catch( ReactionElementNotMatchedException e )
+			{
+				e.printStackTrace();
+			}
+		} else {
+			for( int i = 0; i<reactant.size(); i++ )
+			{
+				if(!reactant.get(i).getChemicalSymbol().equals(product.get(i).getChemicalSymbol()))
+				{
+					try
+					{
+						throw new ReactionElementNotMatchedException();
+					} catch( ReactionElementNotMatchedException e )
+					{
+						e.printStackTrace();
+					}
+				}
+			}
+		}
 	}
 
 }

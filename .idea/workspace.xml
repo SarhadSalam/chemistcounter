@@ -2,29 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a07e711-931c-4962-95de-25f48ccb6ca1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ElementNotFoundException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/matrix.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/test/IHaveNoIdeaWhatIsTheRelevanceOfThisFile.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/GetLCM.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/IHaveNoIdeaWhatIsTheRelevanceOfThisFile.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ReactionElementNotMatchedException.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/ReactionManagers/Manager.class" afterPath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/ReactionManagers/Manager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.class" afterPath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/ElementDetector/ElementManager.class" afterPath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/ElementDetector/ElementManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/ElementDetector/lib/Polyatomic.class" afterPath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/ElementDetector/lib/Polyatomic.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/Summoner.class" afterPath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/Summoner.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chemistsCounter.iml" afterPath="$PROJECT_DIR$/chemistsCounter.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/TestingPrint.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/TestingPrint.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Manager.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Manager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/InsertBalance.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/InsertBalance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Calculator/MolarMassCounter.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Calculator/MolarMassCounter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/DetailsGrabbers/ElementDetails.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/DetailsGrabbers/ElementDetails.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/ElementManager.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/ElementManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Normal.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Normal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Polyatomic.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Polyatomic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/GetLCM.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/GetLCM.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/Summoner.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/Summoner.java" />
     </list>
     <ignored path="chemistsCounter.iws" />
@@ -60,28 +44,7 @@
     <favorites_list name="chemistsCounter" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ElementNotFoundException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ElementNotFoundException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Manager.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Manager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33410674">
-              <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -427,12 +390,10 @@
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/Universal/ChemicalName.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/AtomCounter.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/UniversalHelpers.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/TestingPrint.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/ScientificNotation.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/InsertBalance.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionCompounds.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/GetLCM.java" />
         <option value="$PROJECT_DIR$/chemistsCounter.iml" />
         <option value="$PROJECT_DIR$/src/test/matrix.js" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/ElementManager.java" />
@@ -441,12 +402,15 @@
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/GetLCM.kt" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ElementNotFoundException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/Summoner.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Calculator/MolarMassCounter.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Polyatomic.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/DetailsGrabbers/ElementDetails.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/Summoner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ReactionElementNotMatchedException.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Manager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/GetLCM.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.java" />
       </list>
     </option>
   </component>
@@ -544,184 +508,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chemistsCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chemistsCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chemistsCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chemistsCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chemistsCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chemistsCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChemistryCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chemistsCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chemistsCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChemistryCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SingleManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chemistsCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chemistsCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChemistryCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ReactionManagers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chemistsCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chemistsCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChemistryCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Exceptions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chemistsCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chemistsCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChemistryCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DevelopmentPurposes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -734,7 +520,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="FindEle&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.DetailsGrabbers.ElementDetails#findElement&#10;Normal&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Normal.java&#10;pol&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Polyatomic.java&#10;elements&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.ElementDetector.ElementManager#elements&#10;summoner&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/Summoner.java&#10;Summoner&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/Summoner.java&#10;EquationBalancer&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.java&#10;Reac&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/ReactionCompounds.java&#10;ManageReactions&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.java&#10;findElem&#9;PSI&#9;JAVA://ChemistryCounter.ReactionManagers.Manager#findElementInReactions&#10;test&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/DevelopmentPurposes/TestingPrint.java&#10;insertBalance&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/InsertBalance.java&#10;balanceEquation&#9;PSI&#9;JAVA://ChemistryCounter.ReactionManagers.Stochiometry.EquationBalancer#balanceEquation&#10;setMultivale&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName#setMultiValenceElectron&#10;atomCounter&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.Cleaners.AtomCounter&#10;printEq&#9;PSI&#9;JAVA://ChemistryCounter.DevelopmentPurposes.TestingPrint#printEquations&#10;manageReactions&#9;PSI&#9;JAVA://ChemistryCounter.ReactionManagers.ReactionDetector.ManageReactions&#10;getChemic&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName#getChemicalName&#10;rea&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/ReactionCompounds.java&#10;ch&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/SingleManager/ElementDetector/Universal/ChemicalName.java&#10;eq&#9;PSI&#9;JAVA://ChemistryCounter.ReactionManagers.Stochiometry.EquationBalancer&#10;alphab&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.Cleaners.AlphabeticalOrder&#10;reaction&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/ReactionCompounds.java&#10;balanceEqua&#9;PSI&#9;JAVA://ChemistryCounter.ReactionManagers.Stochiometry.EquationBalancer#balanceEquation" />
+    <property name="SearchEverywhereHistoryKey" value="summo&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/Summoner.java&#10;FindEle&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.DetailsGrabbers.ElementDetails#findElement&#10;Normal&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Normal.java&#10;pol&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Polyatomic.java&#10;elements&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.ElementDetector.ElementManager#elements&#10;summoner&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/Summoner.java&#10;Summoner&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/Summoner.java&#10;EquationBalancer&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.java&#10;Reac&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/ReactionCompounds.java&#10;ManageReactions&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.java&#10;findElem&#9;PSI&#9;JAVA://ChemistryCounter.ReactionManagers.Manager#findElementInReactions&#10;test&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/DevelopmentPurposes/TestingPrint.java&#10;insertBalance&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/InsertBalance.java&#10;balanceEquation&#9;PSI&#9;JAVA://ChemistryCounter.ReactionManagers.Stochiometry.EquationBalancer#balanceEquation&#10;setMultivale&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName#setMultiValenceElectron&#10;atomCounter&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.Cleaners.AtomCounter&#10;printEq&#9;PSI&#9;JAVA://ChemistryCounter.DevelopmentPurposes.TestingPrint#printEquations&#10;manageReactions&#9;PSI&#9;JAVA://ChemistryCounter.ReactionManagers.ReactionDetector.ManageReactions&#10;getChemic&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName#getChemicalName&#10;rea&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/ReactionCompounds.java&#10;ch&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/SingleManager/ElementDetector/Universal/ChemicalName.java&#10;eq&#9;PSI&#9;JAVA://ChemistryCounter.ReactionManagers.Stochiometry.EquationBalancer&#10;alphab&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.Cleaners.AlphabeticalOrder&#10;reaction&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/ReactionCompounds.java&#10;balanceEqua&#9;PSI&#9;JAVA://ChemistryCounter.ReactionManagers.Stochiometry.EquationBalancer#balanceEquation" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="prop_add_unversioned_files" value="true" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
@@ -1106,7 +892,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="697" height="775" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1116,7 +902,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32957748" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35624123" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35624123" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42215988" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49192363" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1363,6 +1149,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3328467">
           <caret line="670" column="29" selection-start-line="670" selection-start-column="9" selection-end-line="670" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1446,24 +1233,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8722467">
-          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/GetLCM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/TestingPrint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33178654">
@@ -1496,14 +1265,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/Summoner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23649634">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Calculator/MolarMassCounter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4569343">
@@ -1522,16 +1283,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ElementNotFoundException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.3678832">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/Summoner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3678832">
+          <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Manager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33410674">
-          <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.35036495">
+          <caret line="81" column="43" selection-start-line="81" selection-start-column="43" selection-end-line="81" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2189781">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/GetLCM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3941606">
+          <caret line="53" column="63" selection-start-line="53" selection-start-column="63" selection-end-line="53" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ReactionElementNotMatchedException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.027737226">
+          <caret line="11" column="65" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
           <folding />
         </state>
       </provider>

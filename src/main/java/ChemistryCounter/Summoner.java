@@ -4,7 +4,6 @@
 
 package ChemistryCounter;
 
-import ChemistryCounter.DevelopmentPurposes.TestingPrint;
 import ChemistryCounter.Exceptions.ElementNotFoundException;
 import ChemistryCounter.SingleManager.Cleaners.AtomCounter;
 import ChemistryCounter.SingleManager.DetailsGrabbers.ElementDetails;
@@ -22,15 +21,10 @@ public class Summoner
 {
 	public static ArrayList<ChemicalName> summoner(String userInput) throws ElementNotFoundException
 	{
-		try
-		{
-			ArrayList<ChemicalName> managedElements = ElementManager.elements(userInput);
-			ArrayList<ChemicalName> elementName = ElementDetails.findElement(managedElements);
-			ArrayList<ChemicalName> counted = AtomCounter.atomCounter(elementName);
-			return counted;
-		} catch( NullPointerException e )
-		{
-			throw new NullPointerException();
-		}
+		ArrayList<ChemicalName> managedElements = ElementManager.elements(userInput);
+		ArrayList<ChemicalName> elementName = ElementDetails.findElement(managedElements);
+		ArrayList<ChemicalName> counted = AtomCounter.atomCounter(elementName);
+
+		return counted;
 	}
 }

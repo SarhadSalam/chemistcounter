@@ -1,5 +1,6 @@
 package ChemistryCounter.ReactionManagers.Stochiometry.lib;
 
+import ChemistryCounter.Exceptions.ReactionElementNotMatchedException;
 import ChemistryCounter.UniversalGetters;
 import com.google.common.math.IntMath;
 
@@ -14,13 +15,13 @@ import com.google.common.math.IntMath;
  */
 public class GetLCM
 {
-    public static UniversalGetters getLCM(UniversalGetters u)
+    public static UniversalGetters getLCM(UniversalGetters u) throws ReactionElementNotMatchedException
     {
         int productAtom, reactantAtom;
 
         if( u.getProduct().size() != u.getReactant().size() )
         {
-            throw new NullPointerException();
+            throw new ReactionElementNotMatchedException();
         }
 
         for( int i = 0; i<u.getReactant().size(); i++ )
@@ -50,7 +51,7 @@ public class GetLCM
 
             if( !u.getReactant().get(i).getChemicalName().equals(u.getProduct().get(i).getChemicalName()) )
             {
-                throw new NullPointerException();
+                throw new ReactionElementNotMatchedException();
             }
 
             //			Well cause the lcm is max*min divided by the gcd
