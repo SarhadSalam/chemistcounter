@@ -35,7 +35,7 @@ public class Polyatomic
 
 //		Deals with the non-polyatomic part
 		String nonPolyatomicCompound = String.join("", chemicalCompound.split("\\((.*?)\\)\\d*"));
-		if(!nonPolyatomicCompound.equals(""))
+		if( !nonPolyatomicCompound.equals("") )
 		{
 			//		Sends of the non polyatomic to normal manager
 			ArrayList<ChemicalName> nonPolyatomicElementsListName = Normal.manager(nonPolyatomicCompound);

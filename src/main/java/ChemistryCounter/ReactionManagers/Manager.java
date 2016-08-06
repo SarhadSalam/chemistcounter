@@ -4,7 +4,6 @@
 
 package ChemistryCounter.ReactionManagers;
 
-import ChemistryCounter.DevelopmentPurposes.TestingPrint;
 import ChemistryCounter.Exceptions.ElementNotFoundException;
 import ChemistryCounter.Exceptions.ReactionElementNotMatchedException;
 import ChemistryCounter.ReactionManagers.ReactionDetector.ManageReactions;
@@ -67,7 +66,7 @@ public class Manager
 		//		Checks if they are equal and same
 		assert reactant != null;
 		assert product != null;
-		if(reactant.size()!=product.size())
+		if( reactant.size() != product.size() )
 		{
 			try
 			{
@@ -76,10 +75,11 @@ public class Manager
 			{
 				e.printStackTrace();
 			}
-		} else {
+		} else
+		{
 			for( int i = 0; i<reactant.size(); i++ )
 			{
-				if(!reactant.get(i).getChemicalSymbol().equals(product.get(i).getChemicalSymbol()))
+				if( !reactant.get(i).getChemicalSymbol().equals(product.get(i).getChemicalSymbol()) )
 				{
 					try
 					{

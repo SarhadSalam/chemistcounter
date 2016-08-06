@@ -11,8 +11,23 @@ package ChemistryCounter.Exceptions;
  */
 public class ReactionElementNotMatchedException extends Exception
 {
-	public ReactionElementNotMatchedException() { super(); }
-	public ReactionElementNotMatchedException(String message) { super(message); }
-	public ReactionElementNotMatchedException(String message, Throwable cause) { super(message, cause); }
-	public ReactionElementNotMatchedException(Throwable cause) { super(cause); }
+	public ReactionElementNotMatchedException()
+	{
+		super();
+	}
+
+	public ReactionElementNotMatchedException(String message)
+	{
+		super(message);
+	}
+
+	public ReactionElementNotMatchedException(String message, Throwable cause)
+	{
+		super(message, cause);
+	}
+
+	public ReactionElementNotMatchedException(Throwable cause)
+	{
+		super(cause);
+	}
 }
