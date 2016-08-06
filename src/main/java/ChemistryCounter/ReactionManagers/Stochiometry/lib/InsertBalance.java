@@ -41,7 +41,7 @@ public class InsertBalance
 		return equation;
 	}
 
-	public static String equations(UniversalGetters u,String input)
+	public static String equations(UniversalGetters u, String input)
 	{
 		input = input.replaceAll("\\s", "");
 		return null;

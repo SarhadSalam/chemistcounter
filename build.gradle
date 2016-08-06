@@ -1,5 +1,5 @@
 group 'inc.sarhad.chemistry'
-version '1.0-ALPHA'
+version '1.0-BETA'
 
 apply plugin: 'java'
 

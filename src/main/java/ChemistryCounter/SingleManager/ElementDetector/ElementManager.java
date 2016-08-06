@@ -26,7 +26,7 @@ public class ElementManager
 		}
 
 //		If normal
-		if( !chemicalCompound.matches(".*\\(+.*")||!chemicalCompound.matches(".*\\)+.*") )
+		else
 		{
 			polyatomicElementsList = Normal.manager(chemicalCompound);
 		}

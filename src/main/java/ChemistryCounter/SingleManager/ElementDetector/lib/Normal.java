@@ -24,7 +24,7 @@ public class Normal
 		{
 			String elementName = splitElement[i];
 			ChemicalName element = new ChemicalName();
-//			If Element does not have valence electron
+//			If Element does not have valence electronP
 			if( !elementName.matches(".*\\d+.*") )
 			{
 				element.setChemicalSymbol(elementName);

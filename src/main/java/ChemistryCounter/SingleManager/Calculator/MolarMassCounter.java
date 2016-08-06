@@ -1,5 +1,6 @@
 package ChemistryCounter.SingleManager.Calculator;
 
+import ChemistryCounter.Exceptions.ElementNotFoundException;
 import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
 import ChemistryCounter.Summoner;
 
@@ -14,7 +15,14 @@ public class MolarMassCounter
 {
 	public static Double molar(String userInput)
 	{
-		ArrayList<ChemicalName> chemicalListArray = Summoner.summoner(userInput);
+		ArrayList<ChemicalName> chemicalListArray = null;
+		try
+		{
+			chemicalListArray = Summoner.summoner(userInput);
+		} catch( ElementNotFoundException e )
+		{
+			e.printStackTrace();
+		}
 		return molarCounter(chemicalListArray);
 	}
 

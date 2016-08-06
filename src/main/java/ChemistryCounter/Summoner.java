@@ -4,6 +4,8 @@
 
 package ChemistryCounter;
 
+import ChemistryCounter.DevelopmentPurposes.TestingPrint;
+import ChemistryCounter.Exceptions.ElementNotFoundException;
 import ChemistryCounter.SingleManager.Cleaners.AtomCounter;
 import ChemistryCounter.SingleManager.DetailsGrabbers.ElementDetails;
 import ChemistryCounter.SingleManager.ElementDetector.ElementManager;
@@ -13,12 +15,12 @@ import java.util.ArrayList;
 
 /**
  * Created by sarhaD on 14-May-16.
- * The super class through which any and all elements will be passed through. BOOM BIATCH!
+ * The super class through which any and all elements will be passed through.
  */
 
 public class Summoner
 {
-	public static ArrayList<ChemicalName> summoner(String userInput)
+	public static ArrayList<ChemicalName> summoner(String userInput) throws ElementNotFoundException
 	{
 		try
 		{

@@ -1,0 +1,12 @@
+ChemistryCounter
+ChemistryCounter.DevelopmentPurposes
+ChemistryCounter.ReactionManagers
+ChemistryCounter.ReactionManagers.ReactionDetector
+ChemistryCounter.ReactionManagers.Stochiometry
+ChemistryCounter.ReactionManagers.Stochiometry.lib
+ChemistryCounter.SingleManager.Calculator
+ChemistryCounter.SingleManager.Cleaners
+ChemistryCounter.SingleManager.DetailsGrabbers
+ChemistryCounter.SingleManager.ElementDetector
+ChemistryCounter.SingleManager.ElementDetector.Universal
+ChemistryCounter.SingleManager.ElementDetector.lib

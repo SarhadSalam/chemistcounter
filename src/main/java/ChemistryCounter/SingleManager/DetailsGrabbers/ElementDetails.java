@@ -4,6 +4,7 @@
 
 package ChemistryCounter.SingleManager.DetailsGrabbers;
 
+import ChemistryCounter.Exceptions.ElementNotFoundException;
 import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -21,7 +22,7 @@ import java.util.ArrayList;
  */
 public class ElementDetails
 {
-	public static ArrayList<ChemicalName> findElement(ArrayList<ChemicalName> unverifiedList)
+	public static ArrayList<ChemicalName> findElement(ArrayList<ChemicalName> unverifiedList) throws ElementNotFoundException
 	{
 		ArrayList<ChemicalName> finalVerifiedList = new ArrayList<>();
 		try
@@ -63,7 +64,7 @@ public class ElementDetails
 		}
 		if( !(unverifiedList.size() == finalVerifiedList.size()) )
 		{
-			throw new NullPointerException();
+			throw new ElementNotFoundException();
 		}
 		return finalVerifiedList;
 	}

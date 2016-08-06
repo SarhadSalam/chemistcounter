@@ -4,6 +4,8 @@
 
 package ChemistryCounter.ReactionManagers.ReactionDetector;
 
+import ChemistryCounter.DevelopmentPurposes.TestingPrint;
+import ChemistryCounter.Exceptions.ElementNotFoundException;
 import ChemistryCounter.ReactionManagers.ReactionCompounds;
 import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
 import ChemistryCounter.Summoner;
@@ -12,7 +14,6 @@ import org.ejml.simple.SimpleMatrix;
 import org.ejml.simple.SimpleSVD;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 /**
  * Created by sarhaD on 29-Jun-16.
@@ -51,8 +52,8 @@ public class ManageReactions
 				reactant = input.substring(i+1);
 			}
 		}
-		String[] compoundProducts = reactant.split("\\+");
-		for( String i : compoundProducts )
+		String[] compoundReactants = reactant.split("\\+");
+		for( String i : compoundReactants )
 		{
 			ReactionCompounds rc = new ReactionCompounds();
 			rc.setName(i);
@@ -83,11 +84,6 @@ public class ManageReactions
 			entireCompound.add(rc);
 		}
 		return product;
-	}
-
-	public static int balanced()
-	{
-		return 0;
 	}
 
 	public static UniversalGetters setMatrix(UniversalGetters u)
@@ -123,7 +119,8 @@ public class ManageReactions
 		{
 			compounds.add(rc.getName());
 		}
-		double[][] matrixRaw = new double[productList.size()][compounds.size()];
+
+		int[][] matrixRaw = new int[productList.size()][compounds.size()];
 
 //		As this is complex logic for me, I will start writing doc here.
 //		compounds contains all the compounds in the reaction. I will handle the negatives soon.
@@ -134,7 +131,14 @@ public class ManageReactions
 			String symbol = productList.get(i);
 			for( int j = 0; j<entireCompound.size(); j++ )
 			{
-				ArrayList<ChemicalName> cn = Summoner.summoner(entireCompound.get(j).getName());
+				ArrayList<ChemicalName> cn = null;
+				try
+				{
+					cn = Summoner.summoner(entireCompound.get(j).getName());
+				} catch( ElementNotFoundException e )
+				{
+					e.printStackTrace();
+				}
 				for( ChemicalName chemicalName : cn )
 				{
 					if( chemicalName.getChemicalSymbol().equals(symbol) )
@@ -142,23 +146,37 @@ public class ManageReactions
 						if( entireCompound.get(j).getCompoundStatus().equals("Product") )
 						{
 							matrixRaw[i][j] = -(chemicalName.getValenceElectron());
-						}else{
+						} else
+						{
 							matrixRaw[i][j] = chemicalName.getValenceElectron();
 						}
 					}
 				}
 			}
 		}
-
-		System.out.println(Arrays.deepToString(matrixRaw));
-
-		SimpleMatrix m = new SimpleMatrix(matrixRaw);
-		SimpleSVD svd = m.svd();
-		SimpleMatrix nullSpace = svd.nullSpace();
-		nullSpace.print();
-
-		System.out.println(Arrays.deepToString(matrixRaw));
-		System.out.println(1/(0.085+0.446+0.891));
+		solveMatrix(matrixRaw);
 		return u;
+	}
+
+	public static UniversalGetters solveMatrix(int[][] matrixRaw)
+	{
+
+		//		The matrix relationship for each equation will start at this point.
+
+//		The matrix int conversion to double.
+		double[][] matrixRawDouble = new double[matrixRaw.length][matrixRaw[0].length];
+
+		for( int i = 0; i<matrixRawDouble.length; i++ )
+		{
+			for( int j = 0; j<matrixRaw[0].length; j++ )
+			{
+				matrixRawDouble[i][j] = matrixRaw[i][j];
+			}
+		}
+
+		SimpleMatrix sm = new SimpleMatrix(matrixRawDouble);
+		SimpleSVD svd = sm.svd();
+		SimpleMatrix nullspace = svd.nullSpace();
+		return null;
 	}
 }

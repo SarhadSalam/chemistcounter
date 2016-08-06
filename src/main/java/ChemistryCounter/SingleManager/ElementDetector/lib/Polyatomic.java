@@ -4,7 +4,9 @@
 
 package ChemistryCounter.SingleManager.ElementDetector.lib;
 
+import ChemistryCounter.Exceptions.ElementNotFoundException;
 import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
+import ChemistryCounter.Summoner;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,11 +35,14 @@ public class Polyatomic
 
 //		Deals with the non-polyatomic part
 		String nonPolyatomicCompound = String.join("", chemicalCompound.split("\\((.*?)\\)\\d*"));
-//		Sends of the non polyatomic to normal manager
-		ArrayList<ChemicalName> nonPolyatomicElementsListName = Normal.manager(nonPolyatomicCompound);
+		if(!nonPolyatomicCompound.equals(""))
+		{
+			//		Sends of the non polyatomic to normal manager
+			ArrayList<ChemicalName> nonPolyatomicElementsListName = Normal.manager(nonPolyatomicCompound);
 
 //		Adds to the long list of elements in this single compound
-		polyatomicElementsList.addAll(nonPolyatomicElementsListName);
+			polyatomicElementsList.addAll(nonPolyatomicElementsListName);
+		}
 		return polyatomicElementsList;
 	}
 
@@ -76,10 +81,18 @@ public class Polyatomic
 					valenceElement.setValenceElectron(valenceElectronCount);
 					chemicalListContainer = elements;
 				}
+
 			} else
 			{
 //				In case polyatomic valence is not available in the input
-				ArrayList<ChemicalName> elements = Normal.manager(polyatomicValenceArrayFinal.get(0));
+				ArrayList<ChemicalName> elements = null;
+				try
+				{
+					elements = Summoner.summoner(polyatomicValenceArrayFinal.get(0));
+				} catch( ElementNotFoundException e )
+				{
+					e.printStackTrace();
+				}
 				chemicalListContainer.addAll(elements);
 			}
 		}

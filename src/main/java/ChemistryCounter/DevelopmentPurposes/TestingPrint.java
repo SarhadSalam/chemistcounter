@@ -54,7 +54,7 @@ public class TestingPrint
 		for( ReactionCompounds r : reactionCompoundNames )
 		{
 			System.out.println();
-			System.out.format("%10s%20s", r.getName(),r.getCompoundStatus());
+			System.out.format("%10s%20s", r.getName(), r.getCompoundStatus());
 		}
 	}
 

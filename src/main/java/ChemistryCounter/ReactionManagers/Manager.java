@@ -4,9 +4,9 @@
 
 package ChemistryCounter.ReactionManagers;
 
+import ChemistryCounter.DevelopmentPurposes.TestingPrint;
+import ChemistryCounter.Exceptions.ElementNotFoundException;
 import ChemistryCounter.ReactionManagers.ReactionDetector.ManageReactions;
-import ChemistryCounter.ReactionManagers.Stochiometry.EquationBalancer;
-import ChemistryCounter.ReactionManagers.Stochiometry.lib.InsertBalance;
 import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
 import ChemistryCounter.Summoner;
 import ChemistryCounter.UniversalGetters;
@@ -22,19 +22,18 @@ public class Manager
 {
 	public static void main(String[] args)
 	{
-		String input = "H21 + O2 -> H2O";
+		String input = "H2+O2=H";
 		UniversalGetters balanced = balance(input);
-//		The old system
-		String s = InsertBalance.insertBalance(balanced);
-		String eq = InsertBalance.equations(balanced, input);
 	}
 
 	private static UniversalGetters balance(String input)
 	{
+
 		try
 		{
-			UniversalGetters u = findElementInReactions(ManageReactions.splitReactions(input));
-			return ManageReactions.setMatrix(u);
+			UniversalGetters splitReaction = findElementInReactions(ManageReactions.splitReactions(input));
+			UniversalGetters solveEquations = ManageReactions.setMatrix(splitReaction);
+			return solveEquations;
 		} catch( NullPointerException e )
 		{
 			throw new NullPointerException();
@@ -44,8 +43,19 @@ public class Manager
 	private static UniversalGetters findElementInReactions(ArrayList<ReactionCompounds> compoundsArrayList)
 	{
 		UniversalGetters universal = new UniversalGetters();
-		ArrayList<ChemicalName> reactant = Summoner.summoner(ManageReactions.getReactant);
-		ArrayList<ChemicalName> product = Summoner.summoner(ManageReactions.getProduct);
+		ArrayList<ChemicalName> reactant = null;
+		ArrayList<ChemicalName> product = null;
+		try
+		{
+			reactant = Summoner.summoner(ManageReactions.getReactant);
+			product = Summoner.summoner(ManageReactions.getProduct);
+		} catch( ElementNotFoundException e )
+		{
+			e.printStackTrace();
+		}
+
+//		Checks if they are equal and same
+
 		universal.setCn(product, reactant);
 		universal.setReactionCompounds(compoundsArrayList);
 		return universal;
