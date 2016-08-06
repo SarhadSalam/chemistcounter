@@ -4,16 +4,15 @@
 
 package ChemistryCounter.ReactionManagers.ReactionDetector;
 
-import ChemistryCounter.DevelopmentPurposes.TestingPrint;
 import ChemistryCounter.Exceptions.ElementNotFoundException;
 import ChemistryCounter.ReactionManagers.ReactionCompounds;
 import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
 import ChemistryCounter.Summoner;
 import ChemistryCounter.UniversalGetters;
 import org.ejml.simple.SimpleMatrix;
-import org.ejml.simple.SimpleSVD;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Created by sarhaD on 29-Jun-16.
@@ -145,7 +144,8 @@ public class ManageReactions
 					{
 						if( entireCompound.get(j).getCompoundStatus().equals("Product") )
 						{
-							matrixRaw[i][j] = -(chemicalName.getValenceElectron());
+//							matrixRaw[i][j] = -(chemicalName.getValenceElectron());
+							matrixRaw[i][j] = (chemicalName.getValenceElectron());
 						} else
 						{
 							matrixRaw[i][j] = chemicalName.getValenceElectron();
@@ -154,29 +154,79 @@ public class ManageReactions
 				}
 			}
 		}
-		solveMatrix(matrixRaw);
-		return u;
+		return solveMatrix(matrixRaw);
 	}
 
 	public static UniversalGetters solveMatrix(int[][] matrixRaw)
 	{
 
 		//		The matrix relationship for each equation will start at this point.
+		int compound = matrixRaw[0].length;
+		int element = matrixRaw.length;
 
-//		The matrix int conversion to double.
-		double[][] matrixRawDouble = new double[matrixRaw.length][matrixRaw[0].length];
+		Double[] balanced = new Double[compound-1];
 
-		for( int i = 0; i<matrixRawDouble.length; i++ )
+		if( compound == element )
 		{
-			for( int j = 0; j<matrixRaw[0].length; j++ )
+			System.out.println("Square matrix deal later biatch");
+			return null;
+
+//			TODO: Work with square matrices
+		} else
+		{
+			balanced = nullspaceMatrix(matrixRaw, compound, element);
+			System.out.println(Arrays.toString(balanced));
+		}
+
+		return null;
+	}
+
+	private static Double[] nullspaceMatrix(int[][] matrixRaw, int compound, int element)
+	{
+		//		The matrix int conversion to double.
+		double[][] matrixRawDouble = new double[element+1][compound];
+
+		for( int i = 0; i<element; i++ )
+		{
+			for( int j = 0; j<compound; j++ )
 			{
 				matrixRawDouble[i][j] = matrixRaw[i][j];
 			}
 		}
+		matrixRawDouble[element][compound-1] = 1;
 
-		SimpleMatrix sm = new SimpleMatrix(matrixRawDouble);
-		SimpleSVD svd = sm.svd();
-		SimpleMatrix nullspace = svd.nullSpace();
-		return null;
+		SimpleMatrix simpleMatrix = new SimpleMatrix(matrixRawDouble);
+		SimpleMatrix inverted = simpleMatrix.invert();
+
+		Double[] transpose = new Double[compound];
+		for( int i = 0; i<compound; i++ )
+		{
+			transpose[i] = (inverted.get(i, compound-1));
+		}
+
+//		Caclulates the minimum tranpose multi-dim vector regardless of magnitude.
+		double minTranpose = 0;
+		for( Double aTranspose : transpose )
+		{
+			double tempMin = Math.abs(aTranspose);
+			if( minTranpose == 0 )
+			{
+				minTranpose = tempMin;
+			} else
+			{
+				if( tempMin<minTranpose )
+				{
+					minTranpose = tempMin;
+				}
+			}
+		}
+
+		for( int i = 0; i<transpose.length; i++ )
+		{
+			transpose[i] = transpose[i]/minTranpose;
+			transpose[i] = (double) Math.round(transpose[i]);
+		}
+
+		return transpose;
 	}
 }

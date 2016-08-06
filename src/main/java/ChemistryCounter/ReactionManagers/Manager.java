@@ -22,7 +22,9 @@ public class Manager
 {
 	public static void main(String[] args)
 	{
-		String input = "H2+O2=H2O";
+		String input = "KI + KClO3 + HCl = I2 + H2O + KCl";
+		String inputx = "CO + CO2 + H2 = CH4 + H2O ";
+		String inputi = "FeS2 + HNO3 = Fe2(SO4)3 + NO + H2SO4";
 		balance(input);
 	}
 
