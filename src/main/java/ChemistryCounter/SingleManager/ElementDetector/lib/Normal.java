@@ -20,9 +20,8 @@ public class Normal
 		String[] splitElement = chemicalCompound.split("(?=[A-Z])");
 		ArrayList<ChemicalName> chemicalList = new ArrayList<>();
 //			Detects compounds
-		for( int i = 0; i<splitElement.length; i++ )
+		for( String elementName : splitElement )
 		{
-			String elementName = splitElement[i];
 			ChemicalName element = new ChemicalName();
 //			If Element does not have valence electronP
 			if( !elementName.matches(".*\\d+.*") )

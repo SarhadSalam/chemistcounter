@@ -11,12 +11,10 @@ public class ScientificNotation
 {
 	public static BigDecimal convertUserInput(String input)
 	{
-		int caretPosition = 0;
 		if( input.contains("^") )
 		{
 			input = input.replaceAll("[\\^]", "e");
 		}
-		BigDecimal bd = new BigDecimal(input);
-		return bd;
+		return new BigDecimal(input);
 	}
 }

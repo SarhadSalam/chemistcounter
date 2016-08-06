@@ -4,7 +4,6 @@
 
 package ChemistryCounter.ReactionManagers;
 
-import ChemistryCounter.DevelopmentPurposes.TestingPrint;
 import ChemistryCounter.Exceptions.ElementNotFoundException;
 import ChemistryCounter.Exceptions.ReactionElementNotMatchedException;
 import ChemistryCounter.ReactionManagers.ReactionDetector.ManageReactions;
@@ -23,8 +22,8 @@ public class Manager
 {
 	public static void main(String[] args)
 	{
-		String input = "H2+O2=HOF";
-		UniversalGetters balanced = balance(input);
+		String input = "H2+O2=H2O";
+		balance(input);
 	}
 
 	private static UniversalGetters balance(String input)
@@ -33,8 +32,7 @@ public class Manager
 		try
 		{
 			UniversalGetters splitReaction = findElementInReactions(ManageReactions.splitReactions(input));
-			UniversalGetters solveEquations = ManageReactions.setMatrix(splitReaction);
-			return solveEquations;
+			return ManageReactions.setMatrix(splitReaction);
 		} catch( NullPointerException e )
 		{
 			throw new NullPointerException();
@@ -65,9 +63,7 @@ public class Manager
 	private static void verification(ArrayList<ChemicalName> reactant, ArrayList<ChemicalName> product)
 	{
 		//		Checks if they are equal and same
-		assert reactant != null;
-		assert product != null;
-		if(reactant.size()!=product.size())
+		if( reactant.size() != product.size() )
 		{
 			try
 			{
@@ -76,10 +72,11 @@ public class Manager
 			{
 				e.printStackTrace();
 			}
-		} else {
+		} else
+		{
 			for( int i = 0; i<reactant.size(); i++ )
 			{
-				if(!reactant.get(i).getChemicalSymbol().equals(product.get(i).getChemicalSymbol()))
+				if( !reactant.get(i).getChemicalSymbol().equals(product.get(i).getChemicalSymbol()) )
 				{
 					try
 					{

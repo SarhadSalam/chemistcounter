@@ -50,10 +50,9 @@ public class Polyatomic
 	{
 		ArrayList<ChemicalName> chemicalListContainer = new ArrayList<>();
 //		Goes through all instances of the polyatomic compounds
-		for( int i = 0; i<polyatomicElements.size(); i++ )
+		for( String valenceElectron : polyatomicElements )
 		{
-			String valenceElectron = polyatomicElements.get(i);
-//			Removes the brackets
+			//			Removes the brackets
 			String[] polyatomicValenceArray = valenceElectron.split("[?=()]");
 			ArrayList<String> polyatomicValenceArrayFinal = new ArrayList<>();
 

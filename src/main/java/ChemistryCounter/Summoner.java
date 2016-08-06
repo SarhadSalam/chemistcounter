@@ -23,8 +23,6 @@ public class Summoner
 	{
 		ArrayList<ChemicalName> managedElements = ElementManager.elements(userInput);
 		ArrayList<ChemicalName> elementName = ElementDetails.findElement(managedElements);
-		ArrayList<ChemicalName> counted = AtomCounter.atomCounter(elementName);
-
-		return counted;
+		return AtomCounter.atomCounter(elementName);
 	}
 }

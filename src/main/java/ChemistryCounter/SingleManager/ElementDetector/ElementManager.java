@@ -18,7 +18,7 @@ public class ElementManager
 {
 	public static ArrayList<ChemicalName> elements(String chemicalCompound)
 	{
-		ArrayList<ChemicalName> polyatomicElementsList = null;
+		ArrayList<ChemicalName> polyatomicElementsList;
 //		If polyatomic
 		if( chemicalCompound.matches(".*\\(+.*")||chemicalCompound.matches(".*\\)+.*") )
 		{
