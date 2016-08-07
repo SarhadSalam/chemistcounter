@@ -25,10 +25,27 @@ import java.util.regex.Pattern;
  */
 public class ManageReactions
 {
+	/**
+	 * The reactants are stored in the string getReactant.
+	 */
 	public static String getReactant = "";
+
+	/**
+	 * The products are stored in the string getProduct.
+	 */
 	public static String getProduct = "";
+
+	/**
+	 * The entire compound is stored below.
+	 */
 	private static ArrayList<ReactionCompounds> entireCompound = new ArrayList<>();
 
+	/**
+	 * The method below splits the reaction.
+	 *
+	 * @param input The user input
+	 * @return the entire compound
+	 */
 	public static ArrayList<ReactionCompounds> splitReactions(String input)
 	{
 		input = input.replace(" ", "");
@@ -45,6 +62,12 @@ public class ManageReactions
 		return entireCompound;
 	}
 
+	/**
+	 * The method below sets the product.
+	 *
+	 * @param input The user input
+	 * @return product
+	 */
 	private static String setProduct(String input)
 	{
 		String product = "";
@@ -72,13 +95,22 @@ public class ManageReactions
 		return getProduct;
 	}
 
-	private static String fixCoefficent(String product)
+	/**
+	 * The method below returns the comoound in polyatomic form to avoid rewriting code. E.g. 2H2 would become (H2)2.
+	 *
+	 * @param element The element to get the coefficitent
+	 * @return compound in a polyatomic form.
+	 * @see ChemistryCounter.SingleManager.ElementDetector.lib.Polyatomic
+	 * @see Summoner
+	 * @see ChemistryCounter.SingleManager.ElementDetector.lib.Normal
+	 */
+	private static String fixCoefficent(String element)
 	{
 		String compound = "";
 		int polytaomic = 0;
-		compound = product.replaceFirst("[\\d]*", "");
+		compound = element.replaceFirst("[\\d]*", "");
 		Pattern pattern = Pattern.compile("[\\d]*");
-		Matcher matcher = pattern.matcher(product);
+		Matcher matcher = pattern.matcher(element);
 		if( matcher.find() )
 		{
 			polytaomic = Integer.parseInt(matcher.group(0));
@@ -114,6 +146,14 @@ public class ManageReactions
 		return getReactant;
 	}
 
+	/**
+	 * The method setMatrix sets the complicated Matrix.
+	 *
+	 * @param u The universal matrix required to set the matrix. Later it is solved
+	 * @return Solve matrix
+	 * @throws ReactionNotBalancableException	Reaction cannot be balanced.
+	 * @throws ReactionElementNotMatchedException	Reaction cannot be matched with the given elements and compounds.
+	 */
 	public static Double[] setMatrix(UniversalGetters u) throws ReactionNotBalancableException, ReactionElementNotMatchedException
 	{
 		ArrayList<String> productList = new ArrayList<>();
@@ -186,6 +226,13 @@ public class ManageReactions
 		return solveMatrix(matrixRaw);
 	}
 
+	/**
+	 * The method solves the matrix.
+	 *
+	 * @param matrixRaw The 2D arrays containing matrixRaw.
+	 * @return balanced matrix
+	 * @throws ReactionNotBalancableException	Reaction cannot be balanced.
+	 */
 	public static Double[] solveMatrix(int[][] matrixRaw) throws ReactionNotBalancableException
 	{
 
@@ -243,6 +290,14 @@ public class ManageReactions
 		return transpose;
 	}
 
+	/**
+	 * The method below balances the nullspace matrix.
+	 *
+	 * @param compound        The compound amount
+	 * @param matrixRawDouble The 2D Double Matrix Raw
+	 * @return Transpose nullspace vector
+	 * @throws ReactionNotBalancableException	Reaction cannot be balanced.
+	 */
 	private static Double[] balanceNullspaceMatrix(int compound, double[][] matrixRawDouble) throws ReactionNotBalancableException
 	{
 		SimpleMatrix simpleMatrix = new SimpleMatrix(matrixRawDouble);

@@ -22,6 +22,13 @@ import java.util.ArrayList;
  */
 public class ElementDetails
 {
+	/**
+	 * The method finds elements and whether they exist.
+	 *
+	 * @param unverifiedList The unverfied list that does not contain any element details and might not exist.
+	 * @return A final verified list.
+	 * @throws ElementNotFoundException Element was not found.
+	 */
 	public static ArrayList<ChemicalName> findElement(ArrayList<ChemicalName> unverifiedList) throws ElementNotFoundException
 	{
 		ArrayList<ChemicalName> finalVerifiedList = new ArrayList<>();
@@ -64,7 +71,7 @@ public class ElementDetails
 		}
 		if( !(unverifiedList.size() == finalVerifiedList.size()) )
 		{
-			throw new ElementNotFoundException("There is no such element in the periodic table. Yikes");
+			throw new ElementNotFoundException("There is no such element in the periodic table.");
 		}
 		return finalVerifiedList;
 	}

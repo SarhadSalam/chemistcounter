@@ -16,6 +16,12 @@ import java.util.HashSet;
  */
 public class AtomCounter
 {
+	/**
+	 * The method below counts the number of atoms.
+	 *
+	 * @param uncountedList The uncounted list which has no atom counter.
+	 * @return counted list
+	 */
 	public static ArrayList<ChemicalName> atomCounter(ArrayList<ChemicalName> uncountedList)
 	{
 		ArrayList<ChemicalName> countedList = new ArrayList<>();

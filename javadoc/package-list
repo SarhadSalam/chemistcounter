@@ -1,5 +1,6 @@
 ChemistryCounter
 ChemistryCounter.DevelopmentPurposes
+ChemistryCounter.Exceptions
 ChemistryCounter.ReactionManagers
 ChemistryCounter.ReactionManagers.ReactionDetector
 ChemistryCounter.ReactionManagers.Stochiometry

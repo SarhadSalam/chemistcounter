@@ -22,6 +22,11 @@ import java.util.ArrayList;
  */
 public class Manager
 {
+	/**
+	 * The method will be deleted cause its main lel.
+	 *
+	 * @param args The main args
+	 */
 	public static void main(String[] args)
 	{
 		String[] samples = {"KI + KClO3 + HCl = I2H + H2O + KCl", "H2F+O2=H2OF", "Na+Cl=NaCl", "C2+O2->CO2", "C2+O2->CO", "FeS2 + HNO3 = Fe2(SO4)3 + NO + H2SO4"};
@@ -41,6 +46,14 @@ public class Manager
 		System.out.println("Balanced: "+balanced);
 	}
 
+	/**
+	 * The method balances the equation.
+	 *
+	 * @param input The user input
+	 * @return equation
+	 * @throws ReactionElementNotMatchedException	Reaction cannot be matched with the given elements and compounds.
+	 * @throws ReactionNotBalancableException	Reaction cannot be balanced.
+	 */
 	private static String balance(String input) throws ReactionElementNotMatchedException, ReactionNotBalancableException
 	{
 //		The real logic
@@ -53,6 +66,12 @@ public class Manager
 		return equation;
 	}
 
+	/**
+	 * The method below finds elements in a reaction.
+	 *
+	 * @param compoundsArrayList The array list containing compound.
+	 * @return universal
+	 */
 	private static UniversalGetters findElementInReactions(ArrayList<ReactionCompounds> compoundsArrayList)
 	{
 		UniversalGetters universal = new UniversalGetters();
@@ -80,6 +99,13 @@ public class Manager
 		return universal;
 	}
 
+	/**
+	 * The method verifies whether the reactions are properly parsed.
+	 *
+	 * @param reactant The reactant
+	 * @param product  The product
+	 * @throws ReactionElementNotMatchedException	Reaction cannot be matched with the given elements and compounds.
+	 */
 	private static void verification(ArrayList<ChemicalName> reactant, ArrayList<ChemicalName> product) throws ReactionElementNotMatchedException
 	{
 		//		Checks if they are equal and same

@@ -15,21 +15,40 @@ package ChemistryCounter.Exceptions;
  */
 public class ElementNotFoundException extends Exception
 {
+	/**
+	 * The exception is thrown when Element is invalid.
+	 */
 	public ElementNotFoundException()
 	{
 		super();
 	}
 
+	/**
+	 * The exception is thrown when Element is invalid.
+	 *
+	 * @param message The message for the exception.
+	 */
 	public ElementNotFoundException(String message)
 	{
 		super(message);
 	}
 
+	/**
+	 * The exception is thrown when Element is invalid.
+	 *
+	 * @param message The message for the exception.
+	 * @param cause   The cause for the exception
+	 */
 	public ElementNotFoundException(String message, Throwable cause)
 	{
 		super(message, cause);
 	}
 
+	/**
+	 * The exception is thrown when Element is invalid.
+	 *
+	 * @param cause The cause for the exception
+	 */
 	public ElementNotFoundException(Throwable cause)
 	{
 		super(cause);

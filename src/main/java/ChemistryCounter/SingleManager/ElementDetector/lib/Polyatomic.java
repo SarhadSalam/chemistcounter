@@ -19,6 +19,12 @@ import java.util.regex.Pattern;
  */
 public class Polyatomic
 {
+	/**
+	 * The method below manages the polyatomic compounds.
+	 *
+	 * @param chemicalCompound The Chemical Compound which is polyatomic
+	 * @return The polyatomic elements list.
+	 */
 	public static ArrayList<ChemicalName> manager(String chemicalCompound)
 	{
 		ArrayList<String> polyatomicElements = new ArrayList<>();
@@ -46,6 +52,12 @@ public class Polyatomic
 		return polyatomicElementsList;
 	}
 
+	/**
+	 * The method bracketManager manages and terminates the brackets.
+	 *
+	 * @param polyatomicElements Polyatomic elements is minmised by the managing method.
+	 * @return Element List
+	 */
 	private static ArrayList<ChemicalName> bracketManager(ArrayList<String> polyatomicElements)
 	{
 		ArrayList<ChemicalName> chemicalListContainer = new ArrayList<>();

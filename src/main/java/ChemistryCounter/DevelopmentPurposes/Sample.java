@@ -9,6 +9,9 @@ package ChemistryCounter.DevelopmentPurposes;
  */
 public class Sample
 {
+	/**
+	 * The method name contains samples.
+	 */
 	public static void name()
 	{
 /*

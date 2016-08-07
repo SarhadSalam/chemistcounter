@@ -17,6 +17,11 @@ import java.util.ArrayList;
  */
 public class TestingPrint
 {
+	/**
+	 * The method print compound print compounds.
+	 *
+	 * @param list The list.
+	 */
 	public static void printCompounds(ArrayList<ChemicalName> list)
 	{
 		ArrayList<String> methods = new ArrayList<>();
@@ -39,6 +44,11 @@ public class TestingPrint
 		System.out.println("\n");
 	}
 
+	/**
+	 * The method print compound print reactions.
+	 *
+	 * @param reactionCompoundNames The list.
+	 */
 	public static void printReactions(ArrayList<ReactionCompounds> reactionCompoundNames)
 	{
 		ArrayList<String> methods = new ArrayList<>();
@@ -58,6 +68,11 @@ public class TestingPrint
 		}
 	}
 
+	/**
+	 * The method below prints equations.
+	 *
+	 * @param u Univer getters
+	 */
 	public static void printEquations(UniversalGetters u)
 	{
 		System.out.println("Prodcuts:-");

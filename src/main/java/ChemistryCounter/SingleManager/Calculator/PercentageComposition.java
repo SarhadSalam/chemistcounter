@@ -15,6 +15,11 @@ import java.util.ArrayList;
  */
 public class PercentageComposition
 {
+	/**
+	 * The percentage compostion in a compound.
+	 *
+	 * @param compound The compound to find the composition
+	 */
 	public static void percentage(ArrayList<ChemicalName> compound)
 	{
 		ArrayList<Double> list = new ArrayList<>();

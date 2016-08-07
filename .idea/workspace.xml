@@ -2,8 +2,176 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a07e711-931c-4962-95de-25f48ccb6ca1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/Helpers.txt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/DevelopmentPurposes/Bugs.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/DevelopmentPurposes/Sample.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/DevelopmentPurposes/TestingPrint.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/ReactionManagers/Manager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/ReactionManagers/ReactionCompounds.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/Calculator/MolarMassCounter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/Calculator/MoleCounter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/Calculator/PercentageComposition.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/Cleaners/AtomCounter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/Cleaners/ScientificNotation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/Cleaners/SignificantFigures.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/DetailsGrabbers/ElementDetails.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/ElementDetector/ElementManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/ElementDetector/Universal/ChemicalName.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/ElementDetector/lib/Normal.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/ElementDetector/lib/Polyatomic.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/Summoner.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/UniversalGetters.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/DevelopmentPurposes/Bugs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/DevelopmentPurposes/Sample.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/DevelopmentPurposes/TestingPrint.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/DevelopmentPurposes/class-use/Bugs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/DevelopmentPurposes/class-use/Sample.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/DevelopmentPurposes/class-use/TestingPrint.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/DevelopmentPurposes/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/DevelopmentPurposes/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/DevelopmentPurposes/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/DevelopmentPurposes/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Manager.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/ReactionCompounds.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/ReactionDetector/class-use/ManageReactions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/ReactionDetector/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/ReactionDetector/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/ReactionDetector/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/ReactionDetector/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/class-use/EquationBalancer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/lib/GetLCM.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/lib/InsertBalance.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/lib/class-use/GetLCM.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/lib/class-use/InsertBalance.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/lib/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/lib/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/lib/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/lib/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/class-use/Manager.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/class-use/ReactionCompounds.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Calculator/MolarMassCounter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Calculator/MoleCounter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Calculator/PercentageComposition.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Calculator/class-use/MolarMassCounter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Calculator/class-use/MoleCounter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Calculator/class-use/PercentageComposition.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Calculator/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Calculator/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Calculator/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Calculator/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Cleaners/AlphabeticalOrder.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Cleaners/AtomCounter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Cleaners/ScientificNotation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Cleaners/SignificantFigures.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Cleaners/class-use/AlphabeticalOrder.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Cleaners/class-use/AtomCounter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Cleaners/class-use/ScientificNotation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Cleaners/class-use/SignificantFigures.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Cleaners/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Cleaners/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Cleaners/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Cleaners/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/DetailsGrabbers/ElementDetails.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/DetailsGrabbers/class-use/ElementDetails.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/DetailsGrabbers/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/DetailsGrabbers/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/DetailsGrabbers/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/DetailsGrabbers/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/ElementManager.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/Universal/ChemicalName.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/Universal/class-use/ChemicalName.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/Universal/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/Universal/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/Universal/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/Universal/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/class-use/ElementManager.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/lib/Normal.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/lib/Polyatomic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/lib/class-use/Normal.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/lib/class-use/Polyatomic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/lib/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/lib/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/lib/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/lib/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/Summoner.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/UniversalGetters.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/class-use/Summoner.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/class-use/UniversalGetters.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/allclasses-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/allclasses-noframe.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/constant-values.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/deprecated-list.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/help-doc.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-10.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-11.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-12.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-13.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-14.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-15.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-16.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-4.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-5.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-6.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-7.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-8.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-9.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/overview-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/overview-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/overview-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/package-list" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/stylesheet.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chemistsCounter.iml" afterPath="$PROJECT_DIR$/chemistsCounter.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/Bugs.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/Bugs.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/Sample.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/Sample.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/TestingPrint.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/TestingPrint.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ElementNotFoundException.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ElementNotFoundException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ReactionElementNotMatchedException.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ReactionElementNotMatchedException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ReactionNotBalancableException.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ReactionNotBalancableException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Manager.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Manager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionCompounds.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionCompounds.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/BeautifyReaction.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/BeautifyReaction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/GetLCM.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/GetLCM.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/InsertBalance.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/InsertBalance.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Calculator/MolarMassCounter.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Calculator/MolarMassCounter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Calculator/PercentageComposition.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Calculator/PercentageComposition.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/AlphabeticalOrder.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/AlphabeticalOrder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/AtomCounter.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/AtomCounter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/ScientificNotation.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/ScientificNotation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/SignificantFigures.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/SignificantFigures.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/DetailsGrabbers/ElementDetails.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/DetailsGrabbers/ElementDetails.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/ElementManager.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/ElementManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/Universal/ChemicalName.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/Universal/ChemicalName.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Normal.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Normal.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Polyatomic.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Polyatomic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/Summoner.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/Summoner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/UniversalGetters.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/UniversalGetters.java" />
     </list>
     <ignored path="chemistsCounter.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,18 +206,7 @@
     <favorites_list name="chemistsCounter" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Helpers.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/Helpers.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -229,7 +386,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="2941192959717" />
+        <entry key="$PROJECT_DIR$" value="2941194908504" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -386,8 +543,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/test/java/delme.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/ht.html" />
-        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/UniversalGetters.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/AlphabeticalOrder.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/Exception/ChemicalExists.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/test/java/sample.java" />
@@ -397,29 +552,34 @@
         <option value="$PROJECT_DIR$/src/test/matrix.js" />
         <option value="$PROJECT_DIR$/src/test/java/IHaveNoIdeaWhatIsTheRelevanceOfThisFile.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/GetLCM.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ElementNotFoundException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Calculator/MolarMassCounter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ReactionElementNotMatchedException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/Summoner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ReactionNotBalancable.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/ElementManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/Universal/ChemicalName.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Polyatomic.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Normal.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/SignificantFigures.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/ScientificNotation.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/AtomCounter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Polyatomic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/Universal/ChemicalName.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/GetLCM.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/InsertBalance.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ReactionNotBalancable.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ReactionNotBalancableException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/DetailsGrabbers/ElementDetails.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/Bugs.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ReactionElementNotMatchedException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ElementNotFoundException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/Sample.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/TestingPrint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/Bugs.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/AlphabeticalOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Calculator/PercentageComposition.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Calculator/MolarMassCounter.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionCompounds.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/GetLCM.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/BeautifyReaction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/DetailsGrabbers/ElementDetails.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Manager.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/Summoner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/UniversalGetters.java" />
       </list>
     </option>
   </component>
@@ -530,14 +690,16 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ColorIdeProjectViewPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="chemistsCounter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -579,10 +741,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -610,17 +768,19 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="copyright" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/EJML-simple-0.29.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="tes&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/DevelopmentPurposes/TestingPrint.java&#10;Mana&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.java&#10;Reac&#9;PSI&#9;JAVA://ChemistryCounter.ReactionManagers.ReactionCompounds&#10;React&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/ReactionCompounds.java&#10;getName&#9;PSI&#9;JAVA://ChemistryCounter.ReactionManagers.ReactionCompounds#getName&#10;unive&#9;PSI&#9;JAVA://ChemistryCounter.UniversalGetters&#10;universa&#9;FILE&#9;file://W:/chemistsCounter/build/classes/main/ChemistryCounter/UniversalGetters.class&#10;Testin&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/DevelopmentPurposes/TestingPrint.java&#10;reactionba&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName#reactionBalance&#10;summo&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/Summoner.java&#10;FindEle&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.DetailsGrabbers.ElementDetails#findElement&#10;Normal&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Normal.java&#10;pol&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Polyatomic.java&#10;elements&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.ElementDetector.ElementManager#elements&#10;summoner&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/Summoner.java&#10;Summoner&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/Summoner.java&#10;EquationBalancer&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.java&#10;ManageReactions&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.java&#10;findElem&#9;PSI&#9;JAVA://ChemistryCounter.ReactionManagers.Manager#findElementInReactions&#10;test&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/DevelopmentPurposes/TestingPrint.java&#10;insertBalance&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/InsertBalance.java&#10;balanceEquation&#9;PSI&#9;JAVA://ChemistryCounter.ReactionManagers.Stochiometry.EquationBalancer#balanceEquation&#10;setMultivale&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName#setMultiValenceElectron&#10;atomCounter&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.Cleaners.AtomCounter&#10;printEq&#9;PSI&#9;JAVA://ChemistryCounter.DevelopmentPurposes.TestingPrint#printEquations&#10;manageReactions&#9;PSI&#9;JAVA://ChemistryCounter.ReactionManagers.ReactionDetector.ManageReactions&#10;getChemic&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName#getChemicalName&#10;rea&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/ReactionCompounds.java&#10;ch&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/SingleManager/ElementDetector/Universal/ChemicalName.java&#10;eq&#9;PSI&#9;JAVA://ChemistryCounter.ReactionManagers.Stochiometry.EquationBalancer&#10;alphab&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.Cleaners.AlphabeticalOrder&#10;reaction&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/ReactionCompounds.java&#10;balanceEqua&#9;PSI&#9;JAVA://ChemistryCounter.ReactionManagers.Stochiometry.EquationBalancer#balanceEquation" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/UniversalGetters.java&#10;uni&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/UniversalGetters.java&#10;tes&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/DevelopmentPurposes/TestingPrint.java&#10;Mana&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.java&#10;Reac&#9;PSI&#9;JAVA://ChemistryCounter.ReactionManagers.ReactionCompounds&#10;React&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/ReactionCompounds.java&#10;getName&#9;PSI&#9;JAVA://ChemistryCounter.ReactionManagers.ReactionCompounds#getName&#10;unive&#9;PSI&#9;JAVA://ChemistryCounter.UniversalGetters&#10;universa&#9;FILE&#9;file://W:/chemistsCounter/build/classes/main/ChemistryCounter/UniversalGetters.class&#10;Testin&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/DevelopmentPurposes/TestingPrint.java&#10;reactionba&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName#reactionBalance&#10;summo&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/Summoner.java&#10;FindEle&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.DetailsGrabbers.ElementDetails#findElement&#10;Normal&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Normal.java&#10;pol&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Polyatomic.java&#10;elements&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.ElementDetector.ElementManager#elements&#10;summoner&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/Summoner.java&#10;Summoner&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/Summoner.java&#10;EquationBalancer&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.java&#10;ManageReactions&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.java&#10;findElem&#9;PSI&#9;JAVA://ChemistryCounter.ReactionManagers.Manager#findElementInReactions&#10;test&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/DevelopmentPurposes/TestingPrint.java&#10;insertBalance&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/InsertBalance.java&#10;balanceEquation&#9;PSI&#9;JAVA://ChemistryCounter.ReactionManagers.Stochiometry.EquationBalancer#balanceEquation&#10;setMultivale&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName#setMultiValenceElectron&#10;atomCounter&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.Cleaners.AtomCounter&#10;printEq&#9;PSI&#9;JAVA://ChemistryCounter.DevelopmentPurposes.TestingPrint#printEquations&#10;manageReactions&#9;PSI&#9;JAVA://ChemistryCounter.ReactionManagers.ReactionDetector.ManageReactions&#10;getChemic&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName#getChemicalName&#10;rea&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/ReactionCompounds.java&#10;ch&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/SingleManager/ElementDetector/Universal/ChemicalName.java&#10;eq&#9;PSI&#9;JAVA://ChemistryCounter.ReactionManagers.Stochiometry.EquationBalancer&#10;alphab&#9;PSI&#9;JAVA://ChemistryCounter.SingleManager.Cleaners.AlphabeticalOrder&#10;reaction&#9;FILE&#9;file://W:/chemistsCounter/src/main/java/ChemistryCounter/ReactionManagers/ReactionCompounds.java&#10;balanceEqua&#9;PSI&#9;JAVA://ChemistryCounter.ReactionManagers.Stochiometry.EquationBalancer#balanceEquation" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="prop_add_unversioned_files" value="true" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
@@ -954,20 +1114,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="697" height="775" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32258064" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32132965" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32957748" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28190744" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819074" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28330997" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42075735" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4493392" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38032305" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Reviews" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819074" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1000,14 +1160,14 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40252453" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32258064" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32132965" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32957748" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28190744" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819074" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28330997" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42105263" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4493392" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42075735" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38032305" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Reviews" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819074" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1030,7 +1190,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="43" />
+      <option name="time" value="47" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1081,13 +1241,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chemistsCounter.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0510949">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gradlew.bat">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6569343">
@@ -1098,13 +1251,6 @@
     <entry file="file://$PROJECT_DIR$/gradlew">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.9459854">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javadoc/allclasses-frame.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5034803">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -1130,100 +1276,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Calculator/MolarMassCounter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Calculator/MoleCounter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Calculator/PercentageComposition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/AlphabeticalOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/ElementManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6832117">
-          <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/SignificantFigures.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.44671533">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/ScientificNotation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3678832">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/AtomCounter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2350365">
-          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Polyatomic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9048724">
-          <caret line="93" column="17" selection-start-line="93" selection-start-column="17" selection-end-line="93" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/Universal/ChemicalName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5140187">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/InsertBalance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6832117">
-          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ReactionElementNotMatchedException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11320755">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="16" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_74/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2993763">
           <caret line="105" column="13" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1231,57 +1287,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2993763">
           <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/DetailsGrabbers/ElementDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5945946">
-          <caret line="66" column="101" selection-start-line="66" selection-start-column="101" selection-end-line="66" selection-end-column="101" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/Summoner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51975054">
-          <caret line="24" column="66" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Normal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36180905">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ElementNotFoundException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0259366">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/UniversalGetters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4092219">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="method#setCn#0;class#UniversalGetters#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/Bugs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3371758">
-          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1289,7 +1294,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0518732">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1297,7 +1301,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9481268">
           <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1305,7 +1308,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3328467">
           <caret line="678" column="56" selection-start-line="678" selection-start-column="56" selection-end-line="678" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1313,96 +1315,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3678832">
           <caret line="63" column="7" selection-start-line="53" selection-start-column="16" selection-end-line="63" selection-end-column="7" />
-          <folding>
-            <element signature="e#1247#1248#0" expanded="false" />
-            <element signature="e#1270#1271#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ReactionNotBalancableException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4729927">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34160584">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/TestingPrint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2603306">
-          <caret line="53" column="53" selection-start-line="53" selection-start-column="53" selection-end-line="53" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionCompounds.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33471075">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/GetLCM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15766424">
-          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#GetLCM#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20875913">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#8115#0" expanded="true" />
-            <element signature="method#splitReactions#0;class#ManageReactions#0" expanded="false" />
-            <element signature="method#setProduct#0;class#ManageReactions#0" expanded="false" />
-            <element signature="method#setMatrix#0;class#ManageReactions#0" expanded="false" />
-            <element signature="method#solveMatrix#0;class#ManageReactions#0" expanded="false" />
-            <element signature="method#squareMatrix#0;class#ManageReactions#0" expanded="false" />
-            <element signature="method#nullspaceMatrix#0;class#ManageReactions#0" expanded="false" />
-            <element signature="method#balanceNullspaceMatrix#0;class#ManageReactions#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/BeautifyReaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#2505#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="method#balancedEquation#0;class#BeautifyReaction#0" expanded="false" />
-            <element signature="method#getEquation#0;class#BeautifyReaction#0" expanded="false" />
-            <marker date="1470596373310" expanded="false" signature="947:1288" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42043796">
-          <caret line="26" column="114" selection-start-line="26" selection-start-column="114" selection-end-line="26" selection-end-column="114" />
-          <folding>
-            <element signature="e#0#3148#0" expanded="true" />
-            <element signature="method#findElementInReactions#0;class#Manager#0" expanded="false" />
-            <element signature="method#verification#0;class#Manager#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1410,7 +1322,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="38.7854">
           <caret line="1083" column="40" selection-start-line="1083" selection-start-column="40" selection-end-line="1083" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1418,7 +1329,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07883212">
           <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1430,27 +1340,330 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/Sample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.026277373">
-          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/properties_general.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25547445">
           <caret line="367" column="13" selection-start-line="367" selection-start-column="13" selection-end-line="367" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/ElementManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2890511">
+          <caret line="19" column="133" selection-start-line="19" selection-start-column="133" selection-end-line="19" selection-end-column="133" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Helpers.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/Universal/ChemicalName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21021898">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding>
+            <element signature="docComment;class#ChemicalName#0" expanded="false" />
+            <element signature="docComment;field#symbol#0;class#ChemicalName#0" expanded="false" />
+            <element signature="docComment;field#chemicalName#0;class#ChemicalName#0" expanded="false" />
+            <element signature="docComment;field#atomicWeight#0;class#ChemicalName#0" expanded="false" />
+            <element signature="docComment;field#valenceElectron#0;class#ChemicalName#0" expanded="false" />
+            <element signature="docComment;field#count#0;class#ChemicalName#0" expanded="false" />
+            <element signature="docComment;field#multiValenceElectron#0;class#ChemicalName#0" expanded="false" />
+            <element signature="docComment;field#composition#0;class#ChemicalName#0" expanded="false" />
+            <element signature="docComment;method#getChemicalSymbol#0;class#ChemicalName#0" expanded="false" />
+            <element signature="e#1118#1119#0" expanded="false" />
+            <element signature="e#1138#1139#0" expanded="false" />
+            <element signature="docComment;method#setChemicalSymbol#0;class#ChemicalName#0" expanded="false" />
+            <element signature="e#1288#1289#0" expanded="false" />
+            <element signature="e#1315#1316#0" expanded="false" />
+            <element signature="docComment;method#getValenceElectron#0;class#ChemicalName#0" expanded="false" />
+            <element signature="docComment;method#setValenceElectron#0;class#ChemicalName#0" expanded="false" />
+            <element signature="e#1723#1724#0" expanded="false" />
+            <element signature="e#1768#1769#0" expanded="false" />
+            <element signature="docComment;method#getCount#0;class#ChemicalName#0" expanded="false" />
+            <element signature="e#1897#1898#0" expanded="false" />
+            <element signature="e#1916#1917#0" expanded="false" />
+            <element signature="docComment;method#setCount#0;class#ChemicalName#0" expanded="false" />
+            <element signature="e#2030#2031#0" expanded="false" />
+            <element signature="e#2055#2056#0" expanded="false" />
+            <element signature="docComment;method#getChemicalName#0;class#ChemicalName#0" expanded="false" />
+            <element signature="e#2192#2193#0" expanded="false" />
+            <element signature="e#2218#2219#0" expanded="false" />
+            <element signature="docComment;method#setChemicalName#0;class#ChemicalName#0" expanded="false" />
+            <element signature="e#2368#2369#0" expanded="false" />
+            <element signature="e#2407#2408#0" expanded="false" />
+            <element signature="docComment;method#getAtomicWeight#0;class#ChemicalName#0" expanded="false" />
+            <element signature="e#2529#2530#0" expanded="false" />
+            <element signature="e#2555#2556#0" expanded="false" />
+            <element signature="docComment;method#setAtomicWeight#0;class#ChemicalName#0" expanded="false" />
+            <element signature="e#2721#2722#0" expanded="false" />
+            <element signature="e#2760#2761#0" expanded="false" />
+            <element signature="docComment;method#setMultiValenceElectron#0;class#ChemicalName#0" expanded="false" />
+            <element signature="docComment;method#getComposition#0;class#ChemicalName#0" expanded="false" />
+            <element signature="e#3180#3181#0" expanded="false" />
+            <element signature="e#3205#3206#0" expanded="false" />
+            <element signature="docComment;method#setComposition#0;class#ChemicalName#0" expanded="false" />
+            <element signature="e#3349#3350#0" expanded="false" />
+            <element signature="e#3386#3387#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Polyatomic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2087591">
+          <caret line="54" column="69" selection-start-line="54" selection-start-column="69" selection-end-line="54" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Normal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2890511">
+          <caret line="17" column="81" selection-start-line="17" selection-start-column="81" selection-end-line="17" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/SignificantFigures.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15766424">
+          <caret line="16" column="68" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/ScientificNotation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26277372">
+          <caret line="16" column="65" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/AtomCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.026277373">
+          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Calculator/MoleCounter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/InsertBalance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2875912">
+          <caret line="54" column="34" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+          <folding>
+            <element signature="docComment;method#insertBalance#0;class#InsertBalance#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ReactionElementNotMatchedException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10510949">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="14" selection-end-column="3" />
+          <folding>
+            <element signature="docComment;class#ReactionElementNotMatchedException#0" expanded="false" />
+            <element signature="docComment;method#ReactionElementNotMatchedException#0;class#ReactionElementNotMatchedException#0" expanded="false" />
+            <element signature="e#1037#1038#0" expanded="false" />
+            <element signature="e#1065#1066#0" expanded="false" />
+            <element signature="docComment;method#ReactionElementNotMatchedException#3;class#ReactionElementNotMatchedException#0" expanded="false" />
+            <element signature="e#1239#1240#0" expanded="false" />
+            <element signature="e#1258#1259#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ReactionNotBalancableException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="54" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="54" />
+          <folding>
+            <element signature="docComment;method#ReactionNotBalancableException#1;class#ReactionNotBalancableException#0" expanded="false" />
+            <element signature="docComment;method#ReactionNotBalancableException#2;class#ReactionNotBalancableException#0" expanded="false" />
+            <element signature="docComment;method#ReactionNotBalancableException#3;class#ReactionNotBalancableException#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Calculator/PercentageComposition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1839416">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+          <folding>
+            <element signature="docComment;class#PercentageComposition#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Calculator/MolarMassCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31532848">
+          <caret line="38" column="49" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionCompounds.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60437953">
+          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+          <folding>
+            <element signature="docComment;field#name#0;class#ReactionCompounds#0" expanded="false" />
+            <element signature="docComment;field#compoundStatus#0;class#ReactionCompounds#0" expanded="false" />
+            <element signature="docComment;field#originalName#0;class#ReactionCompounds#0" expanded="false" />
+            <element signature="docComment;method#getReactionBalance#0;class#ReactionCompounds#0" expanded="false" />
+            <element signature="e#802#803#0" expanded="true" />
+            <element signature="e#831#832#0" expanded="true" />
+            <element signature="docComment;method#setReactionBalance#0;class#ReactionCompounds#0" expanded="false" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1033#1034#0" expanded="true" />
+            <element signature="docComment;method#getName#0;class#ReactionCompounds#0" expanded="false" />
+            <element signature="e#1118#1119#0" expanded="true" />
+            <element signature="e#1136#1137#0" expanded="true" />
+            <element signature="docComment;method#setName#0;class#ReactionCompounds#0" expanded="false" />
+            <element signature="e#1269#1270#0" expanded="true" />
+            <element signature="e#1292#1293#0" expanded="true" />
+            <element signature="docComment;method#getCompoundStatus#0;class#ReactionCompounds#0" expanded="false" />
+            <element signature="e#1413#1414#0" expanded="true" />
+            <element signature="e#1441#1442#0" expanded="true" />
+            <element signature="docComment;method#setCompoundStatus#0;class#ReactionCompounds#0" expanded="false" />
+            <element signature="e#1600#1601#0" expanded="true" />
+            <element signature="e#1643#1644#0" expanded="true" />
+            <element signature="docComment;method#getOriginalName#0;class#ReactionCompounds#0" expanded="false" />
+            <element signature="e#2078#2079#0" expanded="true" />
+            <element signature="e#2104#2105#0" expanded="true" />
+            <element signature="docComment;method#setOriginalName#0;class#ReactionCompounds#0" expanded="false" />
+            <element signature="e#2255#2256#0" expanded="true" />
+            <element signature="e#2294#2295#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/AlphabeticalOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1839416">
+          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chemistsCounter.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9474453">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/TestingPrint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26277372">
+          <caret line="69" column="41" selection-start-line="69" selection-start-column="41" selection-end-line="69" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/Sample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1839416">
+          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/Bugs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1839416">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ElementNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49279538">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7805383">
+          <caret line="233" column="76" selection-start-line="233" selection-start-column="76" selection-end-line="233" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/GetLCM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4078675">
+          <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Manager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3706004">
+          <caret line="106" column="117" selection-start-line="106" selection-start-column="117" selection-end-line="106" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/BeautifyReaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="67" column="76" selection-start-line="67" selection-start-column="76" selection-end-line="67" selection-end-column="76" />
+          <folding>
+            <element signature="docComment;method#balancedEquation#0;class#BeautifyReaction#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3706004">
+          <caret line="20" column="100" selection-start-line="20" selection-start-column="100" selection-end-line="20" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/DetailsGrabbers/ElementDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="29" column="62" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/UniversalGetters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46169773">
+          <caret line="34" column="59" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
+          <folding>
+            <element signature="docComment;class#UniversalGetters#0" expanded="true" />
+            <element signature="docComment;method#getProduct#0;class#UniversalGetters#0" expanded="true" />
+            <element signature="docComment;method#getReactionCompounds#0;class#UniversalGetters#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/Summoner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7805383">
+          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+          <folding>
+            <element signature="docComment;method#summoner#0;class#Summoner#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

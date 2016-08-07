@@ -19,6 +19,14 @@ import com.google.common.math.IntMath;
  */
 public class GetLCM
 {
+	/**
+	 * The method below gets the LCM.
+	 *
+	 * @param u The universal getters and setters
+	 * @return UniversalGetters
+	 * @throws ReactionElementNotMatchedException	Reaction cannot be matched with the given elements and compounds.
+	 * @deprecated The method presently is useless.
+	 */
 	public static UniversalGetters getLCM(UniversalGetters u) throws ReactionElementNotMatchedException
 	{
 		int productAtom, reactantAtom;

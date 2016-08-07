@@ -13,6 +13,12 @@ import java.math.BigDecimal;
  */
 public class ScientificNotation
 {
+	/**
+	 * The method below converts and sets in scientific notation.
+	 *
+	 * @param input The input converts user input to big decimal
+	 * @return in Scientific Notation.
+	 */
 	public static BigDecimal convertUserInput(String input)
 	{
 		if( input.contains("^") )

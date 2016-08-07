@@ -22,6 +22,14 @@ import java.util.regex.Pattern;
  */
 public class BeautifyReaction
 {
+	/**
+	 * The method balancedEquation beautifies the method/
+	 *
+	 * @param splitReaction the reaction solved which remains to be beautified.
+	 * @param d             2D Double
+	 * @return equation
+	 * @throws ReactionNotBalancableException	Reaction cannot be balanced.
+	 */
 	public static String balancedEquation(UniversalGetters splitReaction, Double[] d) throws ReactionNotBalancableException
 	{
 		String product = "";
@@ -51,6 +59,14 @@ public class BeautifyReaction
 		return equation;
 	}
 
+	/**
+	 * The method below gets the equation.
+	 *
+	 * @param givenName The original names given by the used
+	 * @param eq        The eq which is a ReactionCompounds
+	 * @return givenName
+	 * @throws ReactionNotBalancableException	Reaction cannot be balanced.
+	 */
 	private static String getEquation(String givenName, ReactionCompounds eq) throws ReactionNotBalancableException
 	{
 		String name = eq.getName();

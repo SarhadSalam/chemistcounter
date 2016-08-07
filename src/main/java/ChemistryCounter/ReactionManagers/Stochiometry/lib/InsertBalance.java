@@ -17,6 +17,14 @@ import ChemistryCounter.UniversalGetters;
  */
 public class InsertBalance
 {
+	/**
+	 * This method inserts the balance.
+	 *
+	 * @param u UniversalGetters u which is the universal get and set.
+	 * @return equation
+	 * @see ChemistryCounter.ReactionManagers.ReactionDetector.ManageReactions
+	 * @deprecated insertBalance is no longer used since 1.0-ALPHA.
+	 */
 	public static String insertBalance(UniversalGetters u)
 	{
 //		All error handling was done before so now I can just implement new methods directly.
@@ -39,6 +47,13 @@ public class InsertBalance
 		return equation;
 	}
 
+	/**
+	 * @param u     The universalgetter is passed to remove the spaces
+	 * @param input the user input
+	 * @return null
+	 * @see ChemistryCounter.ReactionManagers.ReactionDetector.ManageReactions
+	 * @deprecated no longer used since 1.0-ALPHA
+	 */
 	public static String equations(UniversalGetters u, String input)
 	{
 		input = input.replaceAll("\\s", "");

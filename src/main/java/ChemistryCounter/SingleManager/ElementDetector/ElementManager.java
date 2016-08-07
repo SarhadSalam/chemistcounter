@@ -16,20 +16,26 @@ import java.util.ArrayList;
  */
 public class ElementManager
 {
+	/**
+	 * The method elements below determines whether its polyatomic or normal and forwards it to Polyatomic manager of Normal manager.
+	 *
+	 * @param chemicalCompound The chemical compound that was inputted by the user, which is forwarded by the summoner.
+	 * @return elementsList
+	 */
 	public static ArrayList<ChemicalName> elements(String chemicalCompound)
 	{
-		ArrayList<ChemicalName> polyatomicElementsList;
+		ArrayList<ChemicalName> elementsList;
 //		If polyatomic
 		if( chemicalCompound.matches(".*\\(+.*")||chemicalCompound.matches(".*\\)+.*") )
 		{
-			polyatomicElementsList = Polyatomic.manager(chemicalCompound);
+			elementsList = Polyatomic.manager(chemicalCompound);
 		}
 
 //		If normal
 		else
 		{
-			polyatomicElementsList = Normal.manager(chemicalCompound);
+			elementsList = Normal.manager(chemicalCompound);
 		}
-		return polyatomicElementsList;
+		return elementsList;
 	}
 }

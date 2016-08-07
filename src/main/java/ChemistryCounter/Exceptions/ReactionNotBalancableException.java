@@ -15,21 +15,40 @@ package ChemistryCounter.Exceptions;
  */
 public class ReactionNotBalancableException extends Exception
 {
+	/**
+	 * The exception when Reaction cannot be balanced.
+	 */
 	public ReactionNotBalancableException()
 	{
 		super();
 	}
 
+	/**
+	 * The exception when Reaction cannot be balanced.
+	 *
+	 * @param message The reason behind exception.
+	 */
 	public ReactionNotBalancableException(String message)
 	{
 		super(message);
 	}
 
+	/**
+	 * The exception when Reaction cannot be balanced.
+	 *
+	 * @param message The reason behind exception.
+	 * @param cause   The cause behind exception.
+	 */
 	public ReactionNotBalancableException(String message, Throwable cause)
 	{
 		super(message, cause);
 	}
 
+	/**
+	 * The exception when Reaction cannot be balanced.
+	 *
+	 * @param cause The cause behind exception.
+	 */
 	public ReactionNotBalancableException(Throwable cause)
 	{
 		super(cause);

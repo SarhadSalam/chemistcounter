@@ -9,13 +9,13 @@ package ChemistryCounter.DevelopmentPurposes;
  */
 public class Bugs
 {
-	public static void main(String[] args)
+	/**
+	 * The method contains bugs.
+	 */
+	public static void bugs()
 	{
 		/**
 		 * Bugs go in here
-		 */
-		/**
-		 * 1. Beautify equations output.
 		 */
 	}
 }

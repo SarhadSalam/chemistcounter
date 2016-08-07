@@ -13,12 +13,19 @@ import ChemistryCounter.UniversalGetters;
  */
 public class EquationBalancer
 {
+	/**
+	 * The method balances the equation
+	 *
+	 * @param u The universal getters and setters
+	 * @return universal getters
+	 * @throws ReactionElementNotMatchedException	Reaction cannot be matched with the given input.
+	 * @see ChemistryCounter.ReactionManagers.Manager
+	 * @deprecated
+	 */
 	public static UniversalGetters balanceEquation(UniversalGetters u) throws ReactionElementNotMatchedException
 	{
-
 		u = GetLCM.getLCM(u);
 		return u;
-
 	}
 
 }

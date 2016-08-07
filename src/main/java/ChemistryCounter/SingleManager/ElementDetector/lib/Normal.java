@@ -14,6 +14,12 @@ import java.util.ArrayList;
  */
 public class Normal
 {
+	/**
+	 * The method normal manager sets and gets the normal elements and compounds.
+	 *
+	 * @param chemicalCompound The normal chemical compound is managed in the normal class.
+	 * @return Chemical List
+	 */
 	public static ArrayList<ChemicalName> manager(String chemicalCompound)
 	{
 //		Split Based on capital letters
