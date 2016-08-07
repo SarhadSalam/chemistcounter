@@ -2,176 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a07e711-931c-4962-95de-25f48ccb6ca1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/DevelopmentPurposes/Bugs.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/DevelopmentPurposes/Sample.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/DevelopmentPurposes/TestingPrint.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/ReactionManagers/Manager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/ReactionManagers/ReactionCompounds.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/Calculator/MolarMassCounter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/Calculator/MoleCounter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/Calculator/PercentageComposition.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/Cleaners/AtomCounter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/Cleaners/ScientificNotation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/Cleaners/SignificantFigures.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/DetailsGrabbers/ElementDetails.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/ElementDetector/ElementManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/ElementDetector/Universal/ChemicalName.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/ElementDetector/lib/Normal.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/SingleManager/ElementDetector/lib/Polyatomic.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/Summoner.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ChemistryCounter/UniversalGetters.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/DevelopmentPurposes/Bugs.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/DevelopmentPurposes/Sample.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/DevelopmentPurposes/TestingPrint.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/DevelopmentPurposes/class-use/Bugs.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/DevelopmentPurposes/class-use/Sample.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/DevelopmentPurposes/class-use/TestingPrint.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/DevelopmentPurposes/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/DevelopmentPurposes/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/DevelopmentPurposes/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/DevelopmentPurposes/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Manager.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/ReactionCompounds.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/ReactionDetector/class-use/ManageReactions.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/ReactionDetector/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/ReactionDetector/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/ReactionDetector/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/ReactionDetector/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/class-use/EquationBalancer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/lib/GetLCM.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/lib/InsertBalance.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/lib/class-use/GetLCM.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/lib/class-use/InsertBalance.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/lib/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/lib/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/lib/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/lib/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/Stochiometry/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/class-use/Manager.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/class-use/ReactionCompounds.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/ReactionManagers/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Calculator/MolarMassCounter.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Calculator/MoleCounter.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Calculator/PercentageComposition.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Calculator/class-use/MolarMassCounter.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Calculator/class-use/MoleCounter.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Calculator/class-use/PercentageComposition.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Calculator/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Calculator/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Calculator/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Calculator/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Cleaners/AlphabeticalOrder.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Cleaners/AtomCounter.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Cleaners/ScientificNotation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Cleaners/SignificantFigures.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Cleaners/class-use/AlphabeticalOrder.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Cleaners/class-use/AtomCounter.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Cleaners/class-use/ScientificNotation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Cleaners/class-use/SignificantFigures.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Cleaners/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Cleaners/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Cleaners/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/Cleaners/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/DetailsGrabbers/ElementDetails.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/DetailsGrabbers/class-use/ElementDetails.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/DetailsGrabbers/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/DetailsGrabbers/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/DetailsGrabbers/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/DetailsGrabbers/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/ElementManager.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/Universal/ChemicalName.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/Universal/class-use/ChemicalName.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/Universal/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/Universal/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/Universal/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/Universal/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/class-use/ElementManager.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/lib/Normal.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/lib/Polyatomic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/lib/class-use/Normal.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/lib/class-use/Polyatomic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/lib/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/lib/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/lib/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/lib/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/SingleManager/ElementDetector/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/Summoner.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/UniversalGetters.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/class-use/Summoner.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/class-use/UniversalGetters.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/ChemistryCounter/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/allclasses-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/allclasses-noframe.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/constant-values.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/deprecated-list.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/help-doc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-1.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-10.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-11.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-12.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-13.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-14.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-15.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-16.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-3.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-4.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-5.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-6.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-7.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-8.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index-files/index-9.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/overview-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/overview-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/overview-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/package-list" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/script.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc/stylesheet.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chemistsCounter.iml" afterPath="$PROJECT_DIR$/chemistsCounter.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/Bugs.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/Bugs.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/Sample.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/Sample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/TestingPrint.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/DevelopmentPurposes/TestingPrint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ElementNotFoundException.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ElementNotFoundException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ReactionElementNotMatchedException.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ReactionElementNotMatchedException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ReactionNotBalancableException.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ReactionNotBalancableException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Manager.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Manager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionCompounds.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionCompounds.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/BeautifyReaction.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/BeautifyReaction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/EquationBalancer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/GetLCM.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/GetLCM.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/InsertBalance.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/InsertBalance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Calculator/MolarMassCounter.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Calculator/MolarMassCounter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Calculator/PercentageComposition.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Calculator/PercentageComposition.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/AlphabeticalOrder.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/AlphabeticalOrder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/AtomCounter.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/AtomCounter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/ScientificNotation.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/ScientificNotation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/SignificantFigures.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/Cleaners/SignificantFigures.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/DetailsGrabbers/ElementDetails.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/DetailsGrabbers/ElementDetails.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/ElementManager.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/ElementManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/Universal/ChemicalName.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/Universal/ChemicalName.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Normal.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Normal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Polyatomic.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Polyatomic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/Summoner.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/Summoner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChemistryCounter/UniversalGetters.java" afterPath="$PROJECT_DIR$/src/main/java/ChemistryCounter/UniversalGetters.java" />
     </list>
     <ignored path="chemistsCounter.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -386,7 +219,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="2941194908504" />
+        <entry key="$PROJECT_DIR$" value="2941204627281" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -553,7 +386,6 @@
         <option value="$PROJECT_DIR$/src/test/java/IHaveNoIdeaWhatIsTheRelevanceOfThisFile.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/GetLCM.kt" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/Exceptions/ReactionNotBalancable.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/ElementManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/Universal/ChemicalName.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/SingleManager/ElementDetector/lib/Polyatomic.java" />
@@ -580,6 +412,7 @@
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/ReactionDetector/ManageReactions.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/Summoner.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChemistryCounter/UniversalGetters.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
       </list>
     </option>
   </component>
@@ -697,10 +530,6 @@
               <option name="myItemId" value="chemistsCounter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -709,60 +538,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="chemistsCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chemistsCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chemistsCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chemistsCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chemistsCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chemistsCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chemistsCounter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -776,7 +551,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.general" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/EJML-simple-0.29.jar!/" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -1118,13 +893,13 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32132965" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3211781" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819074" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28330997" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28330997" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42075735" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38032305" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1322,13 +1097,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="38.7854">
           <caret line="1083" column="40" selection-start-line="1083" selection-start-column="40" selection-end-line="1083" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07883212">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1603,14 +1371,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/GetLCM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4078675">
-          <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Manager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3706004">
@@ -1663,6 +1423,24 @@
           <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
           <folding>
             <element signature="docComment;method#summoner#0;class#Summoner#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07883212">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChemistryCounter/ReactionManagers/Stochiometry/lib/GetLCM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13138686">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+          <folding>
+            <element signature="docComment;method#getLCM#0;class#GetLCM#0" expanded="true" />
           </folding>
         </state>
       </provider>
