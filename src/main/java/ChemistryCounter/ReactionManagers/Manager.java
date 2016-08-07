@@ -1,11 +1,13 @@
 /*
- * Copyright (c) 2016. Chemists Counter belongs to Sarhad Maisoon Salam. Any copyright infringement will be legally pursued..
+ * Copyright (c) 2016.  Chemists Counter belongs to Sarhad Maisoon Salam. Any copyright infringement will be legally pursued. Please contact the developer at sarhadmaisoon18@gmail.com.
  */
 
 package ChemistryCounter.ReactionManagers;
 
 import ChemistryCounter.Exceptions.ElementNotFoundException;
 import ChemistryCounter.Exceptions.ReactionElementNotMatchedException;
+import ChemistryCounter.Exceptions.ReactionNotBalancableException;
+import ChemistryCounter.ReactionManagers.ReactionDetector.BeautifyReaction;
 import ChemistryCounter.ReactionManagers.ReactionDetector.ManageReactions;
 import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
 import ChemistryCounter.Summoner;
@@ -22,23 +24,33 @@ public class Manager
 {
 	public static void main(String[] args)
 	{
-		String input = "KI + KClO3 + HCl = I2 + H2O + KCl";
-		String inputx = "CO + CO2 + H2 = CH4 + H2O ";
-		String inputi = "FeS2 + HNO3 = Fe2(SO4)3 + NO + H2SO4";
-		balance(input);
-	}
+		String[] samples = {"KI + KClO3 + HCl = I2H + H2O + KCl", "H2F+O2=H2OF", "Na+Cl=NaCl", "C2+O2->CO2", "C2+O2->CO", "FeS2 + HNO3 = Fe2(SO4)3 + NO + H2SO4"};
+		String working = "H2+2O2= 2H2O";
 
-	private static UniversalGetters balance(String input)
-	{
+		System.out.println("Unbalanced: "+working);
 
+		String balanced = null;
 		try
 		{
-			UniversalGetters splitReaction = findElementInReactions(ManageReactions.splitReactions(input));
-			return ManageReactions.setMatrix(splitReaction);
-		} catch( NullPointerException e )
+			balanced = balance(working);
+		} catch( ReactionElementNotMatchedException|ReactionNotBalancableException e )
 		{
-			throw new NullPointerException();
+			e.printStackTrace();
 		}
+
+		System.out.println("Balanced: "+balanced);
+	}
+
+	private static String balance(String input) throws ReactionElementNotMatchedException, ReactionNotBalancableException
+	{
+//		The real logic
+		UniversalGetters splitReaction = findElementInReactions(ManageReactions.splitReactions(input));
+		Double[] d = ManageReactions.setMatrix(splitReaction);
+
+//		The beautify
+		String equation = BeautifyReaction.balancedEquation(splitReaction, d);
+
+		return equation;
 	}
 
 	private static UniversalGetters findElementInReactions(ArrayList<ReactionCompounds> compoundsArrayList)
@@ -55,38 +67,33 @@ public class Manager
 			e.printStackTrace();
 		}
 
-		verification(reactant, product);
+		try
+		{
+			verification(reactant, product);
+		} catch( ReactionElementNotMatchedException e )
+		{
+			e.printStackTrace();
+		}
 
 		universal.setCn(product, reactant);
 		universal.setReactionCompounds(compoundsArrayList);
 		return universal;
 	}
 
-	private static void verification(ArrayList<ChemicalName> reactant, ArrayList<ChemicalName> product)
+	private static void verification(ArrayList<ChemicalName> reactant, ArrayList<ChemicalName> product) throws ReactionElementNotMatchedException
 	{
 		//		Checks if they are equal and same
 		if( reactant.size() != product.size() )
 		{
-			try
-			{
-				throw new ReactionElementNotMatchedException();
-			} catch( ReactionElementNotMatchedException e )
-			{
-				e.printStackTrace();
-			}
+			throw new ReactionElementNotMatchedException("The elements in the reactants and products do not match.");
+
 		} else
 		{
 			for( int i = 0; i<reactant.size(); i++ )
 			{
 				if( !reactant.get(i).getChemicalSymbol().equals(product.get(i).getChemicalSymbol()) )
 				{
-					try
-					{
-						throw new ReactionElementNotMatchedException();
-					} catch( ReactionElementNotMatchedException e )
-					{
-						e.printStackTrace();
-					}
+					throw new ReactionElementNotMatchedException("The elements in the reactants are different from the products.");
 				}
 			}
 		}

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016. Chemists Counter belongs to Sarhad Maisoon Salam. Any copyright infringement will be legally pursued..
+ * Copyright (c) 2016.  Chemists Counter belongs to Sarhad Maisoon Salam. Any copyright infringement will be legally pursued. Please contact the developer at sarhadmaisoon18@gmail.com.
  */
 
 package ChemistryCounter.ReactionManagers;
@@ -13,7 +13,18 @@ public class ReactionCompounds
 {
 	private String name;
 	private String compoundStatus;
-	private int atomReactantOccurences;
+	private String originalName = "";
+	private int reactionBalance;
+
+	public int getReactionBalance()
+	{
+		return reactionBalance;
+	}
+
+	public void setReactionBalance(int reactionBalance)
+	{
+		this.reactionBalance = reactionBalance;
+	}
 
 	public String getName()
 	{
@@ -35,14 +46,13 @@ public class ReactionCompounds
 		this.compoundStatus = compoundStatus;
 	}
 
-	public int getAtomReactantOccurences()
+	public String getOriginalName()
 	{
-
-		return atomReactantOccurences;
+		return originalName;
 	}
 
-	public void setAtomReactantOccurences(int atomReactantOccurences)
+	public void setOriginalName(String originalName)
 	{
-		this.atomReactantOccurences = atomReactantOccurences;
+		this.originalName = originalName;
 	}
 }

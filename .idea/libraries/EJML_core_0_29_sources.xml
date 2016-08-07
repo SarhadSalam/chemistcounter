@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="EJML-core-0.29-sources">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/EJML-core-0.29.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/EJML-dense64-0.29.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/EJML-denseC64-0.29.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/EJML-equation-0.29.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/EJML-simple-0.29.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/EJML-core-0.29-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/EJML-dense64-0.29-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/EJML-denseC64-0.29-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/EJML-equation-0.29-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/EJML-simple-0.29-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

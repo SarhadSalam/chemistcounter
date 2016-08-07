@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016. Chemists Counter belongs to Sarhad Maisoon Salam. Any copyright infringement will be legally pursued..
+ * Copyright (c) 2016.  Chemists Counter belongs to Sarhad Maisoon Salam. Any copyright infringement will be legally pursued. Please contact the developer at sarhadmaisoon18@gmail.com.
  */
 
 package ChemistryCounter.SingleManager.DetailsGrabbers;
@@ -64,7 +64,7 @@ public class ElementDetails
 		}
 		if( !(unverifiedList.size() == finalVerifiedList.size()) )
 		{
-			throw new ElementNotFoundException();
+			throw new ElementNotFoundException("There is no such element in the periodic table. Yikes");
 		}
 		return finalVerifiedList;
 	}

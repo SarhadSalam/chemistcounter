@@ -8,31 +8,30 @@ package ChemistryCounter.Exceptions;
  * Class Details:-
  * Author: Sarhad
  * User: sarha
- * Date: 06-Aug-16
- * Time : 6:05 PM
+ * Date: 07-Aug-16
+ * Time : 1:55 AM
  * Project Name: chemistsCounter
- * Class Name: ElementNotFoundException
+ * Class Name: ReactionNotBalancableException
  */
-public class ElementNotFoundException extends Exception
+public class ReactionNotBalancableException extends Exception
 {
-	public ElementNotFoundException()
+	public ReactionNotBalancableException()
 	{
 		super();
 	}
 
-	public ElementNotFoundException(String message)
+	public ReactionNotBalancableException(String message)
 	{
 		super(message);
 	}
 
-	public ElementNotFoundException(String message, Throwable cause)
+	public ReactionNotBalancableException(String message, Throwable cause)
 	{
 		super(message, cause);
 	}
 
-	public ElementNotFoundException(Throwable cause)
+	public ReactionNotBalancableException(Throwable cause)
 	{
 		super(cause);
 	}
 }
-

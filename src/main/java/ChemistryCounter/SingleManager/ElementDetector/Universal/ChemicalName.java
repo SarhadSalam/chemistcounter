@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016. Chemists Counter belongs to Sarhad Maisoon Salam. Any copyright infringement will be legally pursued..
+ * Copyright (c) 2016.  Chemists Counter belongs to Sarhad Maisoon Salam. Any copyright infringement will be legally pursued. Please contact the developer at sarhadmaisoon18@gmail.com.
  */
 
 package ChemistryCounter.SingleManager.ElementDetector.Universal;
@@ -11,7 +11,6 @@ package ChemistryCounter.SingleManager.ElementDetector.Universal;
 
 public class ChemicalName
 {
-	public boolean reactionsRelation = false;
 	private String symbol;
 	private String chemicalName;
 	private double atomicWeight;
@@ -19,7 +18,6 @@ public class ChemicalName
 	private int count;
 	private int multiValenceElectron;
 	private double composition;
-	private int reactionBalance;
 
 	public String getChemicalSymbol()
 	{
@@ -89,22 +87,5 @@ public class ChemicalName
 	public void setComposition(Double composition)
 	{
 		this.composition = composition;
-	}
-
-	public int getReactionBalance()
-	{
-		if( reactionsRelation )
-		{
-			return reactionBalance;
-		}
-		return 0;
-	}
-
-	public void setReactionBalance(int reactionBalance)
-	{
-		if( reactionsRelation )
-		{
-			this.reactionBalance = reactionBalance;
-		}
 	}
 }

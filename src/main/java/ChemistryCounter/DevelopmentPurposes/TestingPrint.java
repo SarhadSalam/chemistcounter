@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016. Chemists Counter belongs to Sarhad Maisoon Salam. Any copyright infringement will be legally pursued..
+ * Copyright (c) 2016.  Chemists Counter belongs to Sarhad Maisoon Salam. Any copyright infringement will be legally pursued. Please contact the developer at sarhadmaisoon18@gmail.com.
  */
 
 package ChemistryCounter.DevelopmentPurposes;
@@ -34,7 +34,7 @@ public class TestingPrint
 		for( ChemicalName s : list )
 		{
 			System.out.println();
-			System.out.format("%10s%15s%15s%20d%15s%15s%20s", s.getChemicalSymbol(), s.getChemicalName(), s.getAtomicWeight(), s.getValenceElectron(), s.getCount(), s.getComposition(), s.getReactionBalance());
+			System.out.format("%10s%15s%15s%20d%15s%20s", s.getChemicalSymbol(), s.getChemicalName(), s.getAtomicWeight(), s.getValenceElectron(), s.getCount(), s.getComposition());
 		}
 		System.out.println("\n");
 	}
@@ -54,7 +54,7 @@ public class TestingPrint
 		for( ReactionCompounds r : reactionCompoundNames )
 		{
 			System.out.println();
-			System.out.format("%10s%20s", r.getName(), r.getCompoundStatus());
+			System.out.format("%10s%10s%20s", r.getName(), r.getOriginalName(), r.getCompoundStatus());
 		}
 	}
 

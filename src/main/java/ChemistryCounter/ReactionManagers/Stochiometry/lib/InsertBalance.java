@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2016.  Chemists Counter belongs to Sarhad Maisoon Salam. Any copyright infringement will be legally pursued. Please contact the developer at sarhadmaisoon18@gmail.com.
+ */
+
 package ChemistryCounter.ReactionManagers.Stochiometry.lib;
 
 import ChemistryCounter.UniversalGetters;
@@ -27,15 +31,9 @@ public class InsertBalance
 				return null;
 			}
 
-			if( !(u.getReactant().get(i).getReactionBalance() == 1)||!(u.getProduct().get(i).getReactionBalance() == 1) )
-			{
-				reactant = reactant+u.getReactant().get(i).getReactionBalance()+u.getReactant().get(i).getChemicalSymbol();
-				product = product+u.getProduct().get(i).getReactionBalance()+u.getProduct().get(i).getChemicalSymbol();
-			} else
-			{
-				reactant = reactant+u.getReactant().get(i).getChemicalSymbol();
-				product = product+u.getProduct().get(i).getChemicalSymbol();
-			}
+			reactant = reactant+u.getReactant().get(i).getChemicalSymbol();
+			product = product+u.getProduct().get(i).getChemicalSymbol();
+
 		}
 		String equation = reactant+"="+product;
 		return equation;
