@@ -15,6 +15,7 @@ package ChemistryCounter.Exceptions;
  */
 public class ElementNotFoundException extends Exception
 {
+	
 	/**
 	 * The exception is thrown when Element is invalid.
 	 */
@@ -22,7 +23,7 @@ public class ElementNotFoundException extends Exception
 	{
 		super();
 	}
-
+	
 	/**
 	 * The exception is thrown when Element is invalid.
 	 *
@@ -32,7 +33,7 @@ public class ElementNotFoundException extends Exception
 	{
 		super(message);
 	}
-
+	
 	/**
 	 * The exception is thrown when Element is invalid.
 	 *
@@ -43,7 +44,7 @@ public class ElementNotFoundException extends Exception
 	{
 		super(message, cause);
 	}
-
+	
 	/**
 	 * The exception is thrown when Element is invalid.
 	 *

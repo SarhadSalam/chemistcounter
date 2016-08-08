@@ -17,6 +17,7 @@ import java.math.RoundingMode;
  */
 public class MoleCounter
 {
+
 	public static Double mole(Double mass, String userInput)
 	{
 		Double molar = MolarMassCounter.molar(userInput);

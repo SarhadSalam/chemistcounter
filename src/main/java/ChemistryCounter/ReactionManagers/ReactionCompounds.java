@@ -11,26 +11,27 @@ package ChemistryCounter.ReactionManagers;
  */
 public class ReactionCompounds
 {
+	
 	/**
 	 * The name is stored below
 	 */
 	private String name;
-
+	
 	/**
 	 * The compoundStatus is stored below
 	 */
 	private String compoundStatus;
-
+	
 	/**
 	 * The originalName is stored below
 	 */
 	private String originalName = "";
-
+	
 	/**
 	 * The reactionBalance is stored below
 	 */
 	private int reactionBalance;
-
+	
 	/**
 	 * The method gets reactions balance.
 	 *
@@ -40,7 +41,7 @@ public class ReactionCompounds
 	{
 		return reactionBalance;
 	}
-
+	
 	/**
 	 * The method sets reactions balance
 	 *
@@ -50,7 +51,7 @@ public class ReactionCompounds
 	{
 		this.reactionBalance = reactionBalance;
 	}
-
+	
 	/**
 	 * The method gets name
 	 *
@@ -60,7 +61,7 @@ public class ReactionCompounds
 	{
 		return name;
 	}
-
+	
 	/**
 	 * The method sets the reaction name
 	 *
@@ -70,7 +71,7 @@ public class ReactionCompounds
 	{
 		this.name = name;
 	}
-
+	
 	/**
 	 * The method sets the compound status.
 	 *
@@ -80,7 +81,7 @@ public class ReactionCompounds
 	{
 		return compoundStatus;
 	}
-
+	
 	/**
 	 * The method sets the compound status.
 	 *
@@ -90,11 +91,12 @@ public class ReactionCompounds
 	{
 		this.compoundStatus = compoundStatus;
 	}
-
+	
 	/**
 	 * The method is not always used however is used in case the original name is 2H2 and is converted to (H2)2.
 	 *
 	 * @return originalName
+	 *
 	 * @see ChemistryCounter.SingleManager.ElementDetector.lib.Polyatomic
 	 * @see ChemistryCounter.SingleManager.ElementDetector.lib.Normal
 	 * @see ChemistryCounter.Summoner
@@ -104,7 +106,7 @@ public class ReactionCompounds
 	{
 		return originalName;
 	}
-
+	
 	/**
 	 * The method sets the original names.
 	 *

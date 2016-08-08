@@ -19,12 +19,15 @@ import com.google.common.math.IntMath;
  */
 public class GetLCM
 {
+
 	/**
 	 * The method below gets the LCM.
 	 *
 	 * @param u The universal getters and setters
+	 *
 	 * @return UniversalGetters
-	 * @throws ReactionElementNotMatchedException	Reaction cannot be matched with the given elements and compounds.
+	 *
+	 * @throws ReactionElementNotMatchedException Reaction cannot be matched with the given elements and compounds.
 	 * @deprecated The method presently is useless.
 	 */
 	public static UniversalGetters getLCM(UniversalGetters u) throws ReactionElementNotMatchedException
@@ -67,8 +70,8 @@ public class GetLCM
 			}
 
 			//			Well cause the lcm is max*min divided by the gcd
-			min = (max*min)/gcd;
-			max = (max*minTemp)/gcd;
+			min = ( max*min )/gcd;
+			max = ( max*minTemp )/gcd;
 		}
 		return u;
 	}

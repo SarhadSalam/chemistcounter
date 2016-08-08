@@ -17,10 +17,12 @@ import java.util.ArrayList;
  */
 public class MolarMassCounter
 {
+
 	/**
 	 * The method below finds the molar.
 	 *
 	 * @param userInput The molar mass is userInput.
+	 *
 	 * @return molarCounter
 	 */
 	public static Double molar(String userInput)
@@ -35,11 +37,12 @@ public class MolarMassCounter
 		}
 		return molarCounter(chemicalListArray);
 	}
-
+	
 	/**
 	 * The method below caluclated molar counter.
 	 *
 	 * @param chemicalListArray The molar is counted
+	 *
 	 * @return molar mass
 	 */
 	public static Double molarCounter(ArrayList<ChemicalName> chemicalListArray)

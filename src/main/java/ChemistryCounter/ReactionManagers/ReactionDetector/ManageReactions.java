@@ -25,25 +25,27 @@ import java.util.regex.Pattern;
  */
 public class ManageReactions
 {
+	
 	/**
 	 * The reactants are stored in the string getReactant.
 	 */
 	public static String getReactant = "";
-
+	
 	/**
 	 * The products are stored in the string getProduct.
 	 */
 	public static String getProduct = "";
-
+	
 	/**
 	 * The entire compound is stored below.
 	 */
 	private static ArrayList<ReactionCompounds> entireCompound = new ArrayList<>();
-
+	
 	/**
 	 * The method below splits the reaction.
 	 *
 	 * @param input The user input
+	 *
 	 * @return the entire compound
 	 */
 	public static ArrayList<ReactionCompounds> splitReactions(String input)
@@ -51,7 +53,7 @@ public class ManageReactions
 		input = input.replace(" ", "");
 		for( int i = 0; i<input.length(); i++ )
 		{
-			if( input.charAt(i) == '-'&&input.charAt(i+1) == '>' )
+			if( input.charAt(i) == '-' && input.charAt(i+1) == '>' )
 			{
 				input = input.replace("-", "");
 				input = input.replace(">", "=");
@@ -61,11 +63,12 @@ public class ManageReactions
 		setReactant(input);
 		return entireCompound;
 	}
-
+	
 	/**
 	 * The method below sets the product.
 	 *
 	 * @param input The user input
+	 *
 	 * @return product
 	 */
 	private static String setProduct(String input)
@@ -94,31 +97,7 @@ public class ManageReactions
 		}
 		return getProduct;
 	}
-
-	/**
-	 * The method below returns the comoound in polyatomic form to avoid rewriting code. E.g. 2H2 would become (H2)2.
-	 *
-	 * @param element The element to get the coefficitent
-	 * @return compound in a polyatomic form.
-	 * @see ChemistryCounter.SingleManager.ElementDetector.lib.Polyatomic
-	 * @see Summoner
-	 * @see ChemistryCounter.SingleManager.ElementDetector.lib.Normal
-	 */
-	private static String fixCoefficent(String element)
-	{
-		String compound = "";
-		int polytaomic = 0;
-		compound = element.replaceFirst("[\\d]*", "");
-		Pattern pattern = Pattern.compile("[\\d]*");
-		Matcher matcher = pattern.matcher(element);
-		if( matcher.find() )
-		{
-			polytaomic = Integer.parseInt(matcher.group(0));
-		}
-		compound = "("+compound+")"+polytaomic;
-		return compound;
-	}
-
+	
 	private static String setReactant(String input)
 	{
 		String reactant = "";
@@ -145,14 +124,42 @@ public class ManageReactions
 		}
 		return getReactant;
 	}
-
+	
+	/**
+	 * The method below returns the comoound in polyatomic form to avoid rewriting code. E.g. 2H2 would become (H2)2.
+	 *
+	 * @param element The element to get the coefficitent
+	 *
+	 * @return compound in a polyatomic form.
+	 *
+	 * @see ChemistryCounter.SingleManager.ElementDetector.lib.Polyatomic
+	 * @see Summoner
+	 * @see ChemistryCounter.SingleManager.ElementDetector.lib.Normal
+	 */
+	private static String fixCoefficent(String element)
+	{
+		String compound = "";
+		int polytaomic = 0;
+		compound = element.replaceFirst("[\\d]*", "");
+		Pattern pattern = Pattern.compile("[\\d]*");
+		Matcher matcher = pattern.matcher(element);
+		if( matcher.find() )
+		{
+			polytaomic = Integer.parseInt(matcher.group(0));
+		}
+		compound = "("+compound+")"+polytaomic;
+		return compound;
+	}
+	
 	/**
 	 * The method setMatrix sets the complicated Matrix.
 	 *
 	 * @param u The universal matrix required to set the matrix. Later it is solved
+	 *
 	 * @return Solve matrix
-	 * @throws ReactionNotBalancableException	Reaction cannot be balanced.
-	 * @throws ReactionElementNotMatchedException	Reaction cannot be matched with the given elements and compounds.
+	 *
+	 * @throws ReactionNotBalancableException     Reaction cannot be balanced.
+	 * @throws ReactionElementNotMatchedException Reaction cannot be matched with the given elements and compounds.
 	 */
 	public static Double[] setMatrix(UniversalGetters u) throws ReactionNotBalancableException, ReactionElementNotMatchedException
 	{
@@ -175,7 +182,7 @@ public class ManageReactions
 		}
 		for( int i = 0; i<productList.size(); i++ )
 		{
-			if( !(productList.get(i).equals(reactantList.get(i))) )
+			if( !( productList.get(i).equals(reactantList.get(i)) ) )
 			{
 				throw new ReactionElementNotMatchedException();
 			}
@@ -187,13 +194,13 @@ public class ManageReactions
 		{
 			compounds.add(rc.getName());
 		}
-
+		
 		int[][] matrixRaw = new int[productList.size()][compounds.size()];
 
 //		As this is complex logic for me, I will start writing doc here.
 //		compounds contains all the compounds in the reaction. I will handle the negatives soon.
 //		At this point, product list is equal to reactant list.
-
+		
 		for( int i = 0; i<productList.size(); i++ )
 		{
 			String symbol = productList.get(i);
@@ -214,7 +221,7 @@ public class ManageReactions
 						if( entireCompound.get(j).getCompoundStatus().equals("Product") )
 						{
 //							matrixRaw[i][j] = -(chemicalName.getValenceElectron());
-							matrixRaw[i][j] = (chemicalName.getValenceElectron());
+							matrixRaw[i][j] = ( chemicalName.getValenceElectron() );
 						} else
 						{
 							matrixRaw[i][j] = chemicalName.getValenceElectron();
@@ -225,23 +232,25 @@ public class ManageReactions
 		}
 		return solveMatrix(matrixRaw);
 	}
-
+	
 	/**
 	 * The method solves the matrix.
 	 *
 	 * @param matrixRaw The 2D arrays containing matrixRaw.
+	 *
 	 * @return balanced matrix
-	 * @throws ReactionNotBalancableException	Reaction cannot be balanced.
+	 *
+	 * @throws ReactionNotBalancableException Reaction cannot be balanced.
 	 */
 	public static Double[] solveMatrix(int[][] matrixRaw) throws ReactionNotBalancableException
 	{
-
+		
 		//		The matrix relationship for each equation will start at this point.
 		int compound = matrixRaw[0].length;
 		int element = matrixRaw.length;
-
+		
 		Double[] balanced;
-
+		
 		if( compound == element )
 		{
 			balanced = squareMatrix(matrixRaw, compound, element);
@@ -249,15 +258,15 @@ public class ManageReactions
 		{
 			balanced = nullspaceMatrix(matrixRaw, compound, element);
 		}
-
+		
 		return balanced;
 	}
-
+	
 	private static Double[] squareMatrix(int[][] matrixRaw, int compound, int element) throws ReactionNotBalancableException
 	{
 		//		The matrix int conversion to double.
 		double[][] matrixRawDouble = new double[element][compound];
-
+		
 		for( int i = 0; i<element; i++ )
 		{
 			for( int j = 0; j<compound; j++ )
@@ -265,17 +274,17 @@ public class ManageReactions
 				matrixRawDouble[i][j] = matrixRaw[i][j];
 			}
 		}
-
+		
 		Double[] transpose = balanceNullspaceMatrix(compound, matrixRawDouble);
-
+		
 		return transpose;
 	}
-
+	
 	private static Double[] nullspaceMatrix(int[][] matrixRaw, int compound, int element) throws ReactionNotBalancableException
 	{
 		//		The matrix int conversion to double.
 		double[][] matrixRawDouble = new double[element+1][compound];
-
+		
 		for( int i = 0; i<element; i++ )
 		{
 			for( int j = 0; j<compound; j++ )
@@ -284,19 +293,21 @@ public class ManageReactions
 			}
 		}
 		matrixRawDouble[element][compound-1] = 1;
-
+		
 		Double[] transpose = balanceNullspaceMatrix(compound, matrixRawDouble);
-
+		
 		return transpose;
 	}
-
+	
 	/**
 	 * The method below balances the nullspace matrix.
 	 *
 	 * @param compound        The compound amount
 	 * @param matrixRawDouble The 2D Double Matrix Raw
+	 *
 	 * @return Transpose nullspace vector
-	 * @throws ReactionNotBalancableException	Reaction cannot be balanced.
+	 *
+	 * @throws ReactionNotBalancableException Reaction cannot be balanced.
 	 */
 	private static Double[] balanceNullspaceMatrix(int compound, double[][] matrixRawDouble) throws ReactionNotBalancableException
 	{
@@ -316,11 +327,11 @@ public class ManageReactions
 			}
 			inverted = simpleMatrix.invert();
 		}
-
+		
 		Double[] transpose = new Double[compound];
 		for( int i = 0; i<compound; i++ )
 		{
-			transpose[i] = (inverted.get(i, compound-1));
+			transpose[i] = ( inverted.get(i, compound-1) );
 		}
 
 //		Caclulates the minimum tranpose multi-dim vector regardless of magnitude.
@@ -342,14 +353,14 @@ public class ManageReactions
 
 //		The sum list is created to verify whether the reaction is balancable
 		int[] sumList = new int[transpose.length];
-
+		
 		for( int i = 0; i<transpose.length; i++ )
 		{
 			sumList[i] = (int) Math.round(transpose[i]);
 			transpose[i] = transpose[i]/minTranpose;
 			transpose[i] = (double) Math.round(transpose[i]);
 		}
-
+		
 		return transpose;
 	}
 }

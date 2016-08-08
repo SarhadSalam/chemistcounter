@@ -22,11 +22,14 @@ import java.util.ArrayList;
  */
 public class ElementDetails
 {
+
 	/**
 	 * The method finds elements and whether they exist.
 	 *
 	 * @param unverifiedList The unverfied list that does not contain any element details and might not exist.
+	 *
 	 * @return A final verified list.
+	 *
 	 * @throws ElementNotFoundException Element was not found.
 	 */
 	public static ArrayList<ChemicalName> findElement(ArrayList<ChemicalName> unverifiedList) throws ElementNotFoundException
@@ -38,14 +41,14 @@ public class ElementDetails
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 			Document doc = dBuilder.parse(molarMass);
-
+			
 			doc.getDocumentElement().normalize();
-
+			
 			NodeList nList = doc.getElementsByTagName("element");
-
+			
 			for( int i = 0; i<nList.getLength(); i++ )
 			{
-
+				
 				Node nNode = nList.item(i);
 				Element eElement = (Element) nNode;
 				String symbol = eElement.getElementsByTagName("symbol").item(0).getTextContent();
@@ -56,7 +59,7 @@ public class ElementDetails
 					if( symbol.equals(z.getChemicalSymbol()) )
 					{
 //						Sets the variable data
-
+						
 						verifiedListInstance.setChemicalName(eElement.getElementsByTagName("name").item(0).getTextContent());
 						verifiedListInstance.setAtomicWeight(Double.parseDouble(eElement.getElementsByTagName("atomic_weight").item(0).getTextContent()));
 						verifiedListInstance.setChemicalSymbol(symbol);
@@ -69,7 +72,7 @@ public class ElementDetails
 		{
 			e.printStackTrace();
 		}
-		if( !(unverifiedList.size() == finalVerifiedList.size()) )
+		if( !( unverifiedList.size() == finalVerifiedList.size() ) )
 		{
 			throw new ElementNotFoundException("There is no such element in the periodic table.");
 		}

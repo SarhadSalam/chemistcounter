@@ -19,10 +19,13 @@ import java.util.ArrayList;
 
 public class Summoner
 {
+	
 	/**
 	 * @param userInput The string that contains the user input to simplify
+	 *
 	 * @return ArrayList elementDetails
-	 * @throws ElementNotFoundException		Element was not found.
+	 *
+	 * @throws ElementNotFoundException Element was not found.
 	 */
 	public static ArrayList<ChemicalName> summoner(String userInput) throws ElementNotFoundException
 	{

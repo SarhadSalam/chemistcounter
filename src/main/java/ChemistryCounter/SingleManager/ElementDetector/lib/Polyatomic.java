@@ -14,15 +14,17 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Created by sarhaD on 20-May-16.
- * The file deals with several instances of polyatomic compounds and passes on to the Normal Manager to deal with other levels of complexity.
+ * Created by sarhaD on 20-May-16. The file deals with several instances of polyatomic compounds and passes on to the
+ * Normal Manager to deal with other levels of complexity.
  */
 public class Polyatomic
 {
+
 	/**
 	 * The method below manages the polyatomic compounds.
 	 *
 	 * @param chemicalCompound The Chemical Compound which is polyatomic
+	 *
 	 * @return The polyatomic elements list.
 	 */
 	public static ArrayList<ChemicalName> manager(String chemicalCompound)
@@ -56,6 +58,7 @@ public class Polyatomic
 	 * The method bracketManager manages and terminates the brackets.
 	 *
 	 * @param polyatomicElements Polyatomic elements is minmised by the managing method.
+	 *
 	 * @return Element List
 	 */
 	private static ArrayList<ChemicalName> bracketManager(ArrayList<String> polyatomicElements)

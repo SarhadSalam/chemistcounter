@@ -9,6 +9,7 @@ package ChemistryCounter.DevelopmentPurposes;
  */
 public class Bugs
 {
+
 	/**
 	 * The method contains bugs.
 	 */

@@ -11,12 +11,14 @@ import java.math.BigDecimal;
  */
 public class SignificantFigures
 {
-	public static int decimalPlaces = 0;
 
+	public static int decimalPlaces = 0;
+	
 	/**
 	 * The method below rounds figures and sets significant figures.
 	 *
 	 * @param userInput The significant figures are managed by a huge user input.
+	 *
 	 * @return count in significant figures.
 	 */
 	public static int roundingFigures(BigDecimal userInput)

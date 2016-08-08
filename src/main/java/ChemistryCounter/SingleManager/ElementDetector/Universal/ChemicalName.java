@@ -11,41 +11,42 @@ package ChemistryCounter.SingleManager.ElementDetector.Universal;
 
 public class ChemicalName
 {
+	
 	/**
 	 * The chemical symbol is stored.
 	 */
 	private String symbol;
-
+	
 	/**
 	 * The chemical name is stored.
 	 */
 	private String chemicalName;
-
+	
 	/**
 	 * The atomic weight is stored as double.
 	 */
 	private double atomicWeight;
-
+	
 	/**
 	 * The valence electron is stored as int.
 	 */
 	private int valenceElectron;
-
+	
 	/**
 	 * The atom count is stored as int
 	 */
 	private int count;
-
+	
 	/**
 	 * The multivalenceelectron is set as int.
 	 */
 	private int multiValenceElectron;
-
+	
 	/**
 	 * The composition is set in a compound.
 	 */
 	private double composition;
-
+	
 	/**
 	 * The method gets chemical symbol
 	 *
@@ -55,7 +56,7 @@ public class ChemicalName
 	{
 		return symbol;
 	}
-
+	
 	/**
 	 * The method sets chemical name
 	 *
@@ -65,7 +66,7 @@ public class ChemicalName
 	{
 		this.symbol = symbol;
 	}
-
+	
 	/**
 	 * The method gets valence electron.
 	 *
@@ -73,14 +74,14 @@ public class ChemicalName
 	 */
 	public int getValenceElectron()
 	{
-
+		
 		if( multiValenceElectron != 0 )
 		{
 			return multiValenceElectron;
 		}
 		return valenceElectron;
 	}
-
+	
 	/**
 	 * The method sets the valence electron of the element.
 	 *
@@ -90,7 +91,7 @@ public class ChemicalName
 	{
 		this.valenceElectron = valenceElectron;
 	}
-
+	
 	/**
 	 * The method gets the count of atoms in a reaction and or compound.
 	 *
@@ -100,7 +101,7 @@ public class ChemicalName
 	{
 		return count;
 	}
-
+	
 	/**
 	 * The method sets count.
 	 *
@@ -110,7 +111,7 @@ public class ChemicalName
 	{
 		this.count = count;
 	}
-
+	
 	/**
 	 * The method gets the element of the chemical name.
 	 *
@@ -120,7 +121,7 @@ public class ChemicalName
 	{
 		return chemicalName;
 	}
-
+	
 	/**
 	 * The method sets the chemical name.
 	 *
@@ -130,7 +131,7 @@ public class ChemicalName
 	{
 		this.chemicalName = chemicalName;
 	}
-
+	
 	/**
 	 * The method below gets the atomic weight.
 	 *
@@ -140,7 +141,7 @@ public class ChemicalName
 	{
 		return atomicWeight;
 	}
-
+	
 	/**
 	 * The method below sets the atomic weight.
 	 *
@@ -150,7 +151,7 @@ public class ChemicalName
 	{
 		this.atomicWeight = atomicWeight;
 	}
-
+	
 	/**
 	 * The method below sets the multi valence electron.
 	 *
@@ -160,7 +161,7 @@ public class ChemicalName
 	{
 		this.multiValenceElectron = multiValenceElectron+this.multiValenceElectron;
 	}
-
+	
 	/**
 	 * The method below gets the composition.
 	 *
@@ -170,7 +171,7 @@ public class ChemicalName
 	{
 		return composition;
 	}
-
+	
 	/**
 	 * The method below sets the composition.
 	 *

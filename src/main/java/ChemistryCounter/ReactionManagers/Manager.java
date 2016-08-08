@@ -22,8 +22,9 @@ import java.util.ArrayList;
  */
 public class Manager
 {
+	
 	/**
-	 * The method will be deleted cause its main lel.
+	 * The method will be deleted cause its main.
 	 *
 	 * @param args The main args
 	 */
@@ -31,9 +32,9 @@ public class Manager
 	{
 		String[] samples = {"KI + KClO3 + HCl = I2H + H2O + KCl", "H2F+O2=H2OF", "Na+Cl=NaCl", "C2+O2->CO2", "C2+O2->CO", "FeS2 + HNO3 = Fe2(SO4)3 + NO + H2SO4"};
 		String working = "H2+2O2= 2H2O";
-
+		
 		System.out.println("Unbalanced: "+working);
-
+		
 		String balanced = null;
 		try
 		{
@@ -42,17 +43,19 @@ public class Manager
 		{
 			e.printStackTrace();
 		}
-
+		
 		System.out.println("Balanced: "+balanced);
 	}
-
+	
 	/**
 	 * The method balances the equation.
 	 *
 	 * @param input The user input
+	 *
 	 * @return equation
-	 * @throws ReactionElementNotMatchedException	Reaction cannot be matched with the given elements and compounds.
-	 * @throws ReactionNotBalancableException	Reaction cannot be balanced.
+	 *
+	 * @throws ReactionElementNotMatchedException Reaction cannot be matched with the given elements and compounds.
+	 * @throws ReactionNotBalancableException     Reaction cannot be balanced.
 	 */
 	private static String balance(String input) throws ReactionElementNotMatchedException, ReactionNotBalancableException
 	{
@@ -62,14 +65,15 @@ public class Manager
 
 //		The beautify
 		String equation = BeautifyReaction.balancedEquation(splitReaction, d);
-
+		
 		return equation;
 	}
-
+	
 	/**
 	 * The method below finds elements in a reaction.
 	 *
 	 * @param compoundsArrayList The array list containing compound.
+	 *
 	 * @return universal
 	 */
 	private static UniversalGetters findElementInReactions(ArrayList<ReactionCompounds> compoundsArrayList)
@@ -85,7 +89,7 @@ public class Manager
 		{
 			e.printStackTrace();
 		}
-
+		
 		try
 		{
 			verification(reactant, product);
@@ -93,18 +97,19 @@ public class Manager
 		{
 			e.printStackTrace();
 		}
-
+		
 		universal.setCn(product, reactant);
 		universal.setReactionCompounds(compoundsArrayList);
 		return universal;
 	}
-
+	
 	/**
 	 * The method verifies whether the reactions are properly parsed.
 	 *
 	 * @param reactant The reactant
 	 * @param product  The product
-	 * @throws ReactionElementNotMatchedException	Reaction cannot be matched with the given elements and compounds.
+	 *
+	 * @throws ReactionElementNotMatchedException Reaction cannot be matched with the given elements and compounds.
 	 */
 	private static void verification(ArrayList<ChemicalName> reactant, ArrayList<ChemicalName> product) throws ReactionElementNotMatchedException
 	{
@@ -112,7 +117,7 @@ public class Manager
 		if( reactant.size() != product.size() )
 		{
 			throw new ReactionElementNotMatchedException("The elements in the reactants and products do not match.");
-
+			
 		} else
 		{
 			for( int i = 0; i<reactant.size(); i++ )
@@ -124,5 +129,4 @@ public class Manager
 			}
 		}
 	}
-
 }

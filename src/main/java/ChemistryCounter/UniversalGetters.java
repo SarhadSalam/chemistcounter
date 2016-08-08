@@ -16,21 +16,22 @@ import java.util.ArrayList;
  */
 public class UniversalGetters
 {
+	
 	/**
 	 * The variable getProduct stores the product as an array list.
 	 */
 	private ArrayList<ChemicalName> getProduct;
-
+	
 	/**
 	 * The variable getReactant stores the product as an array list.
 	 */
 	private ArrayList<ChemicalName> getReactant;
-
+	
 	/**
 	 * The variable getReactionCompounds stores the product as an array list.
 	 */
 	private ArrayList<ReactionCompounds> getReactionCompounds;
-
+	
 	/**
 	 * The method getProduct gets the reactant in ArrayList.
 	 *
@@ -40,7 +41,7 @@ public class UniversalGetters
 	{
 		return getReactant;
 	}
-
+	
 	/**
 	 * The method getProduct gets the product in ArrayList.
 	 *
@@ -50,7 +51,7 @@ public class UniversalGetters
 	{
 		return getProduct;
 	}
-
+	
 	/**
 	 * The method getProduct gets the compounds in a reaction in ArrayList.
 	 *
@@ -60,7 +61,7 @@ public class UniversalGetters
 	{
 		return getReactionCompounds;
 	}
-
+	
 	/**
 	 * The method sets the list of entire compounds.
 	 *
@@ -70,7 +71,7 @@ public class UniversalGetters
 	{
 		this.getReactionCompounds = getReactionCompounds;
 	}
-
+	
 	/**
 	 * The method sets chemical name.
 	 *
@@ -82,5 +83,5 @@ public class UniversalGetters
 		this.getProduct = getProduct;
 		this.getReactant = getReactant;
 	}
-
+	
 }

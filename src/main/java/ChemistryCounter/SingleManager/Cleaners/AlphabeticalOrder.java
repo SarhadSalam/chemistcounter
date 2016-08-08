@@ -15,10 +15,12 @@ import java.util.Comparator;
  */
 public class AlphabeticalOrder
 {
+
 	/**
 	 * The method sets them in alphabetical order.
 	 *
 	 * @param uncategorizedList The list is not alphabeticaly categorized.
+	 *
 	 * @return categorizedList
 	 */
 	public static ArrayList<ChemicalName> alphabeticalOrder(ArrayList<ChemicalName> uncategorizedList)

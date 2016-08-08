@@ -15,6 +15,7 @@ package ChemistryCounter.Exceptions;
  */
 public class ReactionElementNotMatchedException extends Exception
 {
+	
 	/**
 	 * The exception when Reaction cannot be matched.
 	 */
@@ -22,7 +23,7 @@ public class ReactionElementNotMatchedException extends Exception
 	{
 		super();
 	}
-
+	
 	/**
 	 * The exception when Reaction cannot be matched.
 	 *
@@ -32,7 +33,7 @@ public class ReactionElementNotMatchedException extends Exception
 	{
 		super(message);
 	}
-
+	
 	/**
 	 * The exception when Reaction cannot be matched.
 	 *
@@ -43,7 +44,7 @@ public class ReactionElementNotMatchedException extends Exception
 	{
 		super(message, cause);
 	}
-
+	
 	/**
 	 * The exception when Reaction cannot be matched.
 	 *
