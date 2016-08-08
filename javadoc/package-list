@@ -5,6 +5,7 @@ ChemistryCounter.ReactionManagers
 ChemistryCounter.ReactionManagers.ReactionDetector
 ChemistryCounter.ReactionManagers.Stochiometry
 ChemistryCounter.ReactionManagers.Stochiometry.lib
+ChemistryCounter.SingleManager
 ChemistryCounter.SingleManager.Calculator
 ChemistryCounter.SingleManager.Cleaners
 ChemistryCounter.SingleManager.DetailsGrabbers

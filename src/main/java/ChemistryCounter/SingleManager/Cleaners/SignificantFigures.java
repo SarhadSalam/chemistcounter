@@ -8,18 +8,20 @@ import java.math.BigDecimal;
 
 /**
  * Created by sarhaD on 29-May-16.
+ * <p>
+ * The significant figures is set in the SignificantFigures class.
  */
 public class SignificantFigures
 {
-
-	public static int decimalPlaces = 0;
+	
+	private static int decimalPlaces = 0;
 	
 	/**
-	 * The method below rounds figures and sets significant figures.
+	 * The method below rounds figures and sets rounding figures after any operation such as Multiplication or Division.
 	 *
 	 * @param userInput The significant figures are managed by a huge user input.
 	 *
-	 * @return count in significant figures.
+	 * @return count The rounding in significant figures.
 	 */
 	public static int roundingFigures(BigDecimal userInput)
 	{

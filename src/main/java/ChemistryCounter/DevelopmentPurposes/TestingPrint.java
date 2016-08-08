@@ -19,9 +19,9 @@ public class TestingPrint
 {
 	
 	/**
-	 * The method below prints equations.
+	 * The method printEquations below prints equations.
 	 *
-	 * @param u Univer getters
+	 * @param u Universal getters
 	 */
 	public static void printEquations(UniversalGetters u)
 	{
@@ -37,7 +37,7 @@ public class TestingPrint
 	}
 	
 	/**
-	 * The method print compound print compounds.
+	 * The method printCompounds prints compounds.
 	 *
 	 * @param list The list.
 	 */
@@ -64,7 +64,7 @@ public class TestingPrint
 	}
 	
 	/**
-	 * The method print compound print reactions.
+	 * The method printReactions prints reactions.
 	 *
 	 * @param reactionCompoundNames The list.
 	 */

@@ -9,7 +9,7 @@ import ChemistryCounter.Exceptions.ReactionElementNotMatchedException;
 import ChemistryCounter.Exceptions.ReactionNotBalancableException;
 import ChemistryCounter.ReactionManagers.ReactionCompounds;
 import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
-import ChemistryCounter.Summoner;
+import ChemistryCounter.SingleManager.Summoner;
 import ChemistryCounter.UniversalGetters;
 import org.ejml.factory.SingularMatrixException;
 import org.ejml.simple.SimpleMatrix;
@@ -21,7 +21,7 @@ import java.util.regex.Pattern;
 /**
  * Created by sarhaD on 29-Jun-16.
  * <p>
- * This class is the algorithm used to manage reactions.
+ * The class ManageReactions is the algorithm used to balance reactions.
  */
 public class ManageReactions
 {
@@ -37,12 +37,12 @@ public class ManageReactions
 	public static String getProduct = "";
 	
 	/**
-	 * The entire compound is stored below.
+	 * The entire compound is stored in entireCompound.
 	 */
 	private static ArrayList<ReactionCompounds> entireCompound = new ArrayList<>();
 	
 	/**
-	 * The method below splits the reaction.
+	 * The method splitReactions below splits the reaction.
 	 *
 	 * @param input The user input
 	 *
@@ -65,7 +65,7 @@ public class ManageReactions
 	}
 	
 	/**
-	 * The method below sets the product.
+	 * The method setProduct below sets the product.
 	 *
 	 * @param input The user input
 	 *
@@ -98,6 +98,13 @@ public class ManageReactions
 		return getProduct;
 	}
 	
+	/**
+	 * The method setReactant sets the reactant/
+	 *
+	 * @param input The input which is to be given only the reactant
+	 *
+	 * @return getReactant which contains the reactant
+	 */
 	private static String setReactant(String input)
 	{
 		String reactant = "";
@@ -126,9 +133,9 @@ public class ManageReactions
 	}
 	
 	/**
-	 * The method below returns the comoound in polyatomic form to avoid rewriting code. E.g. 2H2 would become (H2)2.
+	 * The method below returns the compound in polyatomic form to avoid rewriting code. E.g. 2H2 would become (H2)2.
 	 *
-	 * @param element The element to get the coefficitent
+	 * @param element The element to get the coefficient
 	 *
 	 * @return compound in a polyatomic form.
 	 *
@@ -138,7 +145,7 @@ public class ManageReactions
 	 */
 	private static String fixCoefficent(String element)
 	{
-		String compound = "";
+		String compound;
 		int polytaomic = 0;
 		compound = element.replaceFirst("[\\d]*", "");
 		Pattern pattern = Pattern.compile("[\\d]*");
@@ -152,7 +159,7 @@ public class ManageReactions
 	}
 	
 	/**
-	 * The method setMatrix sets the complicated Matrix.
+	 * The method setMatrix sets the complicated Matrix to balance the equation.
 	 *
 	 * @param u The universal matrix required to set the matrix. Later it is solved
 	 *
@@ -164,7 +171,6 @@ public class ManageReactions
 	public static Double[] setMatrix(UniversalGetters u) throws ReactionNotBalancableException, ReactionElementNotMatchedException
 	{
 		ArrayList<String> productList = new ArrayList<>();
-		ArrayList<String> reactantList = new ArrayList<>();
 		ArrayList<String> compounds = new ArrayList<>();
 
 //		The steps below are verification steps
@@ -172,30 +178,14 @@ public class ManageReactions
 		{
 			productList.add(product.getChemicalSymbol());
 		}
-		for( ChemicalName reactant : u.getReactant() )
-		{
-			reactantList.add(reactant.getChemicalSymbol());
-		}
-		if( productList.size() != reactantList.size() )
-		{
-			throw new ReactionElementNotMatchedException();
-		}
-		for( int i = 0; i<productList.size(); i++ )
-		{
-			if( !( productList.get(i).equals(reactantList.get(i)) ) )
-			{
-				throw new ReactionElementNotMatchedException();
-			}
-		}
 
 //		The real tricks begin here
-//		TODO: The simple matrix will take the input productList.size and compound list.
 		for( ReactionCompounds rc : entireCompound )
 		{
 			compounds.add(rc.getName());
 		}
 		
-		int[][] matrixRaw = new int[productList.size()][compounds.size()];
+		double[][] matrixRaw = new double[productList.size()][compounds.size()];
 
 //		As this is complex logic for me, I will start writing doc here.
 //		compounds contains all the compounds in the reaction. I will handle the negatives soon.
@@ -206,7 +196,7 @@ public class ManageReactions
 			String symbol = productList.get(i);
 			for( int j = 0; j<entireCompound.size(); j++ )
 			{
-				ArrayList<ChemicalName> cn = null;
+				ArrayList<ChemicalName> cn = new ArrayList<>();
 				try
 				{
 					cn = Summoner.summoner(entireCompound.get(j).getName());
@@ -220,7 +210,6 @@ public class ManageReactions
 					{
 						if( entireCompound.get(j).getCompoundStatus().equals("Product") )
 						{
-//							matrixRaw[i][j] = -(chemicalName.getValenceElectron());
 							matrixRaw[i][j] = ( chemicalName.getValenceElectron() );
 						} else
 						{
@@ -234,7 +223,7 @@ public class ManageReactions
 	}
 	
 	/**
-	 * The method solves the matrix.
+	 * The method solveMatrix solves the matrix by inverting it.
 	 *
 	 * @param matrixRaw The 2D arrays containing matrixRaw.
 	 *
@@ -242,7 +231,7 @@ public class ManageReactions
 	 *
 	 * @throws ReactionNotBalancableException Reaction cannot be balanced.
 	 */
-	public static Double[] solveMatrix(int[][] matrixRaw) throws ReactionNotBalancableException
+	private static Double[] solveMatrix(double[][] matrixRaw) throws ReactionNotBalancableException
 	{
 		
 		//		The matrix relationship for each equation will start at this point.
@@ -253,7 +242,7 @@ public class ManageReactions
 		
 		if( compound == element )
 		{
-			balanced = squareMatrix(matrixRaw, compound, element);
+			balanced = squareMatrix(matrixRaw, compound);
 		} else
 		{
 			balanced = nullspaceMatrix(matrixRaw, compound, element);
@@ -262,45 +251,38 @@ public class ManageReactions
 		return balanced;
 	}
 	
-	private static Double[] squareMatrix(int[][] matrixRaw, int compound, int element) throws ReactionNotBalancableException
+	/**
+	 * The method square matrix is called in case the matrix created by the user input is a square matrix.
+	 *
+	 * @param matrixRaw The matrix raw which is double format
+	 * @param compound  The compound length
+	 *
+	 * @return Balanced Nullspace Matrix
+	 *
+	 * @throws ReactionNotBalancableException The reaction could not be balanced.
+	 */
+	private static Double[] squareMatrix(double[][] matrixRaw, int compound) throws ReactionNotBalancableException
 	{
-		//		The matrix int conversion to double.
-		double[][] matrixRawDouble = new double[element][compound];
 		
-		for( int i = 0; i<element; i++ )
-		{
-			for( int j = 0; j<compound; j++ )
-			{
-				matrixRawDouble[i][j] = matrixRaw[i][j];
-			}
-		}
-		
-		Double[] transpose = balanceNullspaceMatrix(compound, matrixRawDouble);
-		
-		return transpose;
+		return balanceNullspaceMatrix(compound, matrixRaw);
 	}
 	
-	private static Double[] nullspaceMatrix(int[][] matrixRaw, int compound, int element) throws ReactionNotBalancableException
+	private static Double[] nullspaceMatrix(double[][] matrixRaw, int compound, int element) throws ReactionNotBalancableException
 	{
 		//		The matrix int conversion to double.
 		double[][] matrixRawDouble = new double[element+1][compound];
 		
 		for( int i = 0; i<element; i++ )
 		{
-			for( int j = 0; j<compound; j++ )
-			{
-				matrixRawDouble[i][j] = matrixRaw[i][j];
-			}
+			System.arraycopy(matrixRaw[i], 0, matrixRawDouble[i], 0, compound);
 		}
 		matrixRawDouble[element][compound-1] = 1;
 		
-		Double[] transpose = balanceNullspaceMatrix(compound, matrixRawDouble);
-		
-		return transpose;
+		return balanceNullspaceMatrix(compound, matrixRawDouble);
 	}
 	
 	/**
-	 * The method below balances the nullspace matrix.
+	 * The method balanceNullspaceMatrix below balances the nullspace matrix.
 	 *
 	 * @param compound        The compound amount
 	 * @param matrixRawDouble The 2D Double Matrix Raw
@@ -327,7 +309,6 @@ public class ManageReactions
 			}
 			inverted = simpleMatrix.invert();
 		}
-		
 		Double[] transpose = new Double[compound];
 		for( int i = 0; i<compound; i++ )
 		{
@@ -352,11 +333,9 @@ public class ManageReactions
 		}
 
 //		The sum list is created to verify whether the reaction is balancable
-		int[] sumList = new int[transpose.length];
 		
 		for( int i = 0; i<transpose.length; i++ )
 		{
-			sumList[i] = (int) Math.round(transpose[i]);
 			transpose[i] = transpose[i]/minTranpose;
 			transpose[i] = (double) Math.round(transpose[i]);
 		}

@@ -5,8 +5,13 @@
 package ChemistryCounter.SingleManager.ElementDetector.Universal;
 
 /**
- * Created by sarhaD on 23-May-16.
- * The place where all the magic happens. Creates an ArrayList data type. The methods in this file speak for themselves.
+ * Created by sarhaD on 23-May-16. The getters and setters in ChemicalName contain various details of specific elements.
+ * <p>
+ * The details which have a getter and setter in the following class contains: 1. Chemical Symbol 2. Chemical Name 3.
+ * Atomic Weight 4. Valence Electron (The valence electron is rather a wrong term, because the valence electron in this
+ * case is just the number of electrons the element contains according to the user input. 5. Count of atoms 6. Multi
+ * valence electron takes effect in case the compound given is polyatomic. 7. Composition sets the amount in percentage
+ * an element is present in a compound.
  */
 
 public class ChemicalName
@@ -38,7 +43,7 @@ public class ChemicalName
 	private int count;
 	
 	/**
-	 * The multivalenceelectron is set as int.
+	 * The multi valence electron is set as int.
 	 */
 	private int multiValenceElectron;
 	
@@ -48,7 +53,7 @@ public class ChemicalName
 	private double composition;
 	
 	/**
-	 * The method gets chemical symbol
+	 * The method getChemicalSymbol gets chemical symbol
 	 *
 	 * @return Chemical Symbol
 	 */
@@ -58,7 +63,7 @@ public class ChemicalName
 	}
 	
 	/**
-	 * The method sets chemical name
+	 * The method setChemicalSymbol sets chemical name
 	 *
 	 * @param symbol The chemical symbol is passed in.
 	 */
@@ -68,7 +73,7 @@ public class ChemicalName
 	}
 	
 	/**
-	 * The method gets valence electron.
+	 * The method getValenceElectron gets valence electron.
 	 *
 	 * @return valenceElectron
 	 */
@@ -83,7 +88,7 @@ public class ChemicalName
 	}
 	
 	/**
-	 * The method sets the valence electron of the element.
+	 * The method setValenceElectron sets the valence electron of the element.
 	 *
 	 * @param valenceElectron valence electron of the element
 	 */
@@ -93,7 +98,7 @@ public class ChemicalName
 	}
 	
 	/**
-	 * The method gets the count of atoms in a reaction and or compound.
+	 * The method getCount gets the count of atoms in a reaction and or compound.
 	 *
 	 * @return count
 	 */
@@ -103,9 +108,9 @@ public class ChemicalName
 	}
 	
 	/**
-	 * The method sets count.
+	 * The method setCount sets count.
 	 *
-	 * @param count The count of atoms
+	 * @param count The count of atoms in an element.
 	 */
 	public void setCount(int count)
 	{
@@ -113,7 +118,7 @@ public class ChemicalName
 	}
 	
 	/**
-	 * The method gets the element of the chemical name.
+	 * The method getChemicalName gets the element of the chemical name.
 	 *
 	 * @return Name of the element
 	 */
@@ -123,9 +128,9 @@ public class ChemicalName
 	}
 	
 	/**
-	 * The method sets the chemical name.
+	 * The method setChemicalName sets the chemical name.
 	 *
-	 * @param chemicalName Name of an element
+	 * @param chemicalName Name of the element
 	 */
 	public void setChemicalName(String chemicalName)
 	{
@@ -133,7 +138,7 @@ public class ChemicalName
 	}
 	
 	/**
-	 * The method below gets the atomic weight.
+	 * The method getAtomicWeight below gets the atomic weight.
 	 *
 	 * @return Atomic Weight
 	 */
@@ -143,7 +148,7 @@ public class ChemicalName
 	}
 	
 	/**
-	 * The method below sets the atomic weight.
+	 * The method setAtomicWeight below sets the atomic weight.
 	 *
 	 * @param atomicWeight Atomic weight of the element
 	 */
@@ -153,9 +158,9 @@ public class ChemicalName
 	}
 	
 	/**
-	 * The method below sets the multi valence electron.
+	 * The method setMultiValenceElectron below sets the multi valence electron.
 	 *
-	 * @param multiValenceElectron Multi Valence Electron.
+	 * @param multiValenceElectron Multi Valence Electron in a polyatomic element.
 	 */
 	public void setMultiValenceElectron(int multiValenceElectron)
 	{
@@ -163,7 +168,7 @@ public class ChemicalName
 	}
 	
 	/**
-	 * The method below gets the composition.
+	 * The method getComposition below gets the composition.
 	 *
 	 * @return composition of the element in the compound
 	 */
@@ -173,9 +178,9 @@ public class ChemicalName
 	}
 	
 	/**
-	 * The method below sets the composition.
+	 * The method setComposition below sets the composition.
 	 *
-	 * @param composition Composition
+	 * @param composition Composition of the element in a compound.
 	 */
 	public void setComposition(Double composition)
 	{

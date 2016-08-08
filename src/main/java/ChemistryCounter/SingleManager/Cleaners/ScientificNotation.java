@@ -9,17 +9,17 @@ import java.math.BigDecimal;
 /**
  * Created by sarhaD on 29-May-16.
  * <p>
- * This returns numbers in scientific notations
+ * The class ScientificNotation converts the input to scientific notation.
  */
 public class ScientificNotation
 {
-
+	
 	/**
-	 * The method below converts and sets in scientific notation.
+	 * The method below converts a normal input into scientific notation.
 	 *
-	 * @param input The input converts user input to big decimal
+	 * @param input The input to be converted to user input to big decimal
 	 *
-	 * @return in Scientific Notation.
+	 * @return BigDecimal(input)  the Big Decimal is inputted in Scientific Notation.
 	 */
 	public static BigDecimal convertUserInput(String input)
 	{

@@ -10,15 +10,15 @@ import java.util.ArrayList;
 
 /**
  * Created by sarhaD on 23-May-16.
- * The file manages all kinds of elements when they are sorted out and gone through the algorithm.
+ * The file manages all kinds of elements when they are sorted out and gone through the polyatomic algorithm.
  */
 public class Normal
 {
-
+	
 	/**
-	 * The method normal manager sets and gets the normal elements and compounds.
+	 * The method normal manager sets and gets the normal elements in compounds.
 	 *
-	 * @param chemicalCompound The normal chemical compound is managed in the normal class.
+	 * @param chemicalCompound The normal chemical compound is managed in the normal class through this parameter.
 	 *
 	 * @return Chemical List
 	 */

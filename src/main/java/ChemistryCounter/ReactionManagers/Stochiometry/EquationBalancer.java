@@ -10,10 +10,15 @@ import ChemistryCounter.UniversalGetters;
 
 /**
  * Created by sarhaD on 30-Jun-16.
+ * <p>
+ * The class EquationBalancer balanced equations which was solved using getting the lcm of certain numbers.
+ *
+ * @see ChemistryCounter.ReactionManagers.Manager
+ * @deprecated
  */
 public class EquationBalancer
 {
-
+	
 	/**
 	 * The method balances the equation
 	 *
@@ -30,5 +35,5 @@ public class EquationBalancer
 		u = GetLCM.getLCM(u);
 		return u;
 	}
-
+	
 }

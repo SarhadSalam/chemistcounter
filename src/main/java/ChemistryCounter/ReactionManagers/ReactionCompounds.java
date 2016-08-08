@@ -4,36 +4,38 @@
 
 package ChemistryCounter.ReactionManagers;
 
+import ChemistryCounter.SingleManager.Summoner;
+
 /**
  * Created by sarhaD on 27-Jun-16.
  * <p>
- * This class is returns and sets the reaction compounds.
+ * This class ReactionCompounds returns and sets the reaction compounds.
  */
 public class ReactionCompounds
 {
 	
 	/**
-	 * The name is stored below
+	 * The name is stored in name
 	 */
 	private String name;
 	
 	/**
-	 * The compoundStatus is stored below
+	 * The compoundStatus is stored in compoundStatus
 	 */
 	private String compoundStatus;
 	
 	/**
-	 * The originalName is stored below
+	 * The originalName is stored in originalName
 	 */
 	private String originalName = "";
 	
 	/**
-	 * The reactionBalance is stored below
+	 * The reactionBalance is stored in reactionBalance
 	 */
 	private int reactionBalance;
 	
 	/**
-	 * The method gets reactions balance.
+	 * The method getReactionBalance gets reactions balance.
 	 *
 	 * @return reaction balance
 	 */
@@ -43,7 +45,7 @@ public class ReactionCompounds
 	}
 	
 	/**
-	 * The method sets reactions balance
+	 * The method setReactionBalance sets reactions balance
 	 *
 	 * @param reactionBalance The reaction balance
 	 */
@@ -53,7 +55,7 @@ public class ReactionCompounds
 	}
 	
 	/**
-	 * The method gets name
+	 * The method getName gets element or compound name
 	 *
 	 * @return name
 	 */
@@ -63,7 +65,7 @@ public class ReactionCompounds
 	}
 	
 	/**
-	 * The method sets the reaction name
+	 * The method setName sets the element or compound name
 	 *
 	 * @param name The name of reaction name.
 	 */
@@ -73,7 +75,7 @@ public class ReactionCompounds
 	}
 	
 	/**
-	 * The method sets the compound status.
+	 * The method getCompoundStatus sets the compound status.
 	 *
 	 * @return compoundStatus
 	 */
@@ -83,7 +85,7 @@ public class ReactionCompounds
 	}
 	
 	/**
-	 * The method sets the compound status.
+	 * The method setCompoundStatus sets the compound status (whether its a product or reactant).
 	 *
 	 * @param compoundStatus The compound status
 	 */
@@ -99,7 +101,7 @@ public class ReactionCompounds
 	 *
 	 * @see ChemistryCounter.SingleManager.ElementDetector.lib.Polyatomic
 	 * @see ChemistryCounter.SingleManager.ElementDetector.lib.Normal
-	 * @see ChemistryCounter.Summoner
+	 * @see Summoner
 	 * @see ChemistryCounter.ReactionManagers.ReactionDetector.ManageReactions
 	 */
 	public String getOriginalName()

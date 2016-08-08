@@ -19,12 +19,13 @@ import java.util.regex.Pattern;
  * Time : 9:09 PM
  * Project Name: chemistsCounter
  * Class Name: BeautifyReaction
+ * The class BeautifyReaction beautifies the reaction.
  */
 public class BeautifyReaction
 {
 	
 	/**
-	 * The method balancedEquation beautifies the method/
+	 * The method balancedEquation beautifies the reaction after balancing is done.
 	 *
 	 * @param splitReaction the reaction solved which remains to be beautified.
 	 * @param d             2D Double
@@ -32,6 +33,7 @@ public class BeautifyReaction
 	 * @return equation
 	 *
 	 * @throws ReactionNotBalancableException Reaction cannot be balanced.
+	 * @see ChemistryCounter.ReactionManagers.Manager
 	 */
 	public static String balancedEquation(UniversalGetters splitReaction, Double[] d) throws ReactionNotBalancableException
 	{
@@ -63,7 +65,7 @@ public class BeautifyReaction
 	}
 	
 	/**
-	 * The method below gets the equation.
+	 * The method getEquation below beautifies several equation details.
 	 *
 	 * @param givenName The original names given by the used
 	 * @param eq        The eq which is a ReactionCompounds
@@ -93,6 +95,8 @@ public class BeautifyReaction
 		
 		if( eq.getReactionBalance() == 1 )
 		{
+//			given name can be put[utted with 1 by uncommenting the line below
+//			givenName = givenName+"1"+name+" + ";
 			givenName = givenName+name+" + ";
 		} else if( eq.getReactionBalance() == 0 )
 		{
@@ -108,5 +112,39 @@ public class BeautifyReaction
 			}
 		}
 		return givenName;
+	}
+	
+	/**
+	 * The method below uglifies the equation which is used in verification and development processes. It will be
+	 * removed in future versions while cleaning up code.
+	 *
+	 * @param splitReaction The universal information containing split reaction.
+	 * @param d             The double transpose balanced valence electron.
+	 *
+	 * @return String of uglified equation
+	 *
+	 * @see BeautifyReaction
+	 * @deprecated
+	 */
+	public static String uglifyEquation(UniversalGetters splitReaction, Double[] d)
+	{
+		String product = "";
+		String reactant = "";
+		String equation = "";
+		
+		for( int i = 0; i<splitReaction.getReactionCompounds().size(); i++ )
+		{
+			ReactionCompounds rc = splitReaction.getReactionCompounds().get(i);
+			String tempname = rc.getName();
+			if( rc.getCompoundStatus().equals("Reactant") )
+			{
+				reactant = reactant+rc.getReactionBalance()+tempname+" + ";
+			} else
+			{
+				product = product+rc.getReactionBalance()+tempname+" + ";
+			}
+		}
+		equation = reactant+" = "+product;
+		return equation;
 	}
 }

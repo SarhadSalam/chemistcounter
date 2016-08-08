@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/chemistsCounter.iml" filepath="$PROJECT_DIR$/chemistsCounter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chemistsCounter.iml" filepath="$PROJECT_DIR$/.idea/modules/chemistsCounter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chemistsCounter_main.iml" filepath="$PROJECT_DIR$/.idea/modules/chemistsCounter_main.iml" group="chemistsCounter" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chemistsCounter_test.iml" filepath="$PROJECT_DIR$/.idea/modules/chemistsCounter_test.iml" group="chemistsCounter" />
     </modules>
   </component>
 </project>

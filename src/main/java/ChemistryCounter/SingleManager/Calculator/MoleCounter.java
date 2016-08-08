@@ -13,25 +13,46 @@ import java.math.RoundingMode;
 /**
  * Created by sarhaD on 27-May-16.
  * <p>
- * This calculates the mole.
+ * The class MoleCounter calculates the mole of a substance.
  */
 public class MoleCounter
 {
-
+	
+	/**
+	 * The method mole converts the user input into moles in a given mass.
+	 *
+	 * @param mass      The mass of the element/compound for which mole to be calculated.
+	 * @param userInput The user input is the element/compound.
+	 *
+	 * @return The mole.
+	 */
 	public static Double mole(Double mass, String userInput)
 	{
 		Double molar = MolarMassCounter.molar(userInput);
 		return mass/molar;
 	}
-
+	
+	/**
+	 * The method atomMole finds the mole in atoms of the element/compound.
+	 *
+	 * @param atom The amount of moles in an atom.
+	 *
+	 * @return The moles in an atom.
+	 */
 	public static BigDecimal atomMole(BigDecimal atom)
 	{
 		BigDecimal avoNumber = avogadroNumber();
 		int round = SignificantFigures.roundingFigures(atom);
 		return atom.divide(avoNumber, 500, RoundingMode.CEILING).abs(new MathContext(round));
 	}
-
-	public static BigDecimal avogadroNumber()
+	
+	/**
+	 * The method avogadroNumber just fetches the avogadro number. A separate method was created just because I found it
+	 * to be amusing.
+	 *
+	 * @return Avogadro's Number
+	 */
+	private static BigDecimal avogadroNumber()
 	{
 		return new BigDecimal("6.0221415e23").round(new MathContext(8));
 	}

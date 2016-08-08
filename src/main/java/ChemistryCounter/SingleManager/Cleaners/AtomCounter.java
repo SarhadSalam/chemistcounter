@@ -12,17 +12,19 @@ import java.util.HashSet;
 
 /**
  * Created by sarhaD on 24-May-16.
- * The file handles Atom Count by creating a HashMap and comparing the values in the HashMap.
+ * <p>
+ * The file handles Atom Count by creating a HashMap and comparing the values in the HashMap. The atom count is later
+ * saved in the ArrayList containing chemical name.
  */
 public class AtomCounter
 {
 	
 	/**
-	 * The method below counts the number of atoms.
+	 * The method below counts the number of atoms in a compound or reaction.
 	 *
 	 * @param uncountedList The uncounted list which has no atom counter.
 	 *
-	 * @return counted list
+	 * @return counted The counted list contains the number of atoms.
 	 */
 	public static ArrayList<ChemicalName> atomCounter(ArrayList<ChemicalName> uncountedList)
 	{

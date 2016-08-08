@@ -11,21 +11,21 @@ import java.util.ArrayList;
 /**
  * Created by sarhaD on 29-May-16.
  * <p>
- * This calculates the percentage composition of any compound.
+ * The percentage compostion in a compound is found out in this method.
  */
 public class PercentageComposition
 {
-
+	
 	/**
-	 * The percentage compostion in a compound.
+	 * The percentage compostion in a compound is found out in this method.
 	 *
-	 * @param compound The compound to find the composition
+	 * @param compound The element in a compound to find the composition
 	 */
 	public static void percentage(ArrayList<ChemicalName> compound)
 	{
 		ArrayList<Double> list = new ArrayList<>();
 		Double molarMass = MolarMassCounter.molarCounter(compound);
-
+		
 		for( ChemicalName item : compound )
 		{
 			Double compositionPercent = ( ( item.getAtomicWeight()*item.getValenceElectron() )/molarMass )*100;

@@ -12,12 +12,14 @@ package ChemistryCounter.Exceptions;
  * Time : 6:05 PM
  * Project Name: chemistsCounter
  * Class Name: ElementNotFoundException
+ * <p>
+ * The ElementNotFoundException is thrown when Element was not found and does not exist.
  */
 public class ElementNotFoundException extends Exception
 {
 	
 	/**
-	 * The exception is thrown when Element is invalid.
+	 * The exception ElementNotFoundException is thrown when Element is invalid.
 	 */
 	public ElementNotFoundException()
 	{
@@ -25,7 +27,7 @@ public class ElementNotFoundException extends Exception
 	}
 	
 	/**
-	 * The exception is thrown when Element is invalid.
+	 * The exception ElementNotFoundException is thrown when Element is invalid.
 	 *
 	 * @param message The message for the exception.
 	 */
@@ -35,7 +37,7 @@ public class ElementNotFoundException extends Exception
 	}
 	
 	/**
-	 * The exception is thrown when Element is invalid.
+	 * The exception ElementNotFoundException is thrown when Element is invalid.
 	 *
 	 * @param message The message for the exception.
 	 * @param cause   The cause for the exception
@@ -46,7 +48,7 @@ public class ElementNotFoundException extends Exception
 	}
 	
 	/**
-	 * The exception is thrown when Element is invalid.
+	 * The exception ElementNotFoundException is thrown when Element is invalid.
 	 *
 	 * @param cause The cause for the exception
 	 */

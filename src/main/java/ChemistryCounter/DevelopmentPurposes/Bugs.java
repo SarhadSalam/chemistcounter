@@ -6,12 +6,14 @@ package ChemistryCounter.DevelopmentPurposes;
 
 /**
  * Created by sarhaD on 29-Jun-16.
+ * <p>
+ * The following class bugs contains a list of bugs. Exists for only development purposes.
  */
 public class Bugs
 {
-
+	
 	/**
-	 * The method contains bugs.
+	 * The method bugs contains bugs.
 	 */
 	public static void bugs()
 	{

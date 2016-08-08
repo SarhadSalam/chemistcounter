@@ -22,15 +22,16 @@ import java.util.ArrayList;
  */
 public class ElementDetails
 {
-
+	
 	/**
-	 * The method finds elements and whether they exist.
+	 * The method finds elements from the xml files and whether they exist. If they do not exist a new exception is
+	 * thrown saying the element was not found.
 	 *
-	 * @param unverifiedList The unverfied list that does not contain any element details and might not exist.
+	 * @param unverifiedList The unverified list that does not contain any element details and might not exist.
 	 *
-	 * @return A final verified list.
+	 * @return A final verified list that contains all elements inputted by the user.
 	 *
-	 * @throws ElementNotFoundException Element was not found.
+	 * @throws ElementNotFoundException Element was not found and is invalid.
 	 */
 	public static ArrayList<ChemicalName> findElement(ArrayList<ChemicalName> unverifiedList) throws ElementNotFoundException
 	{

@@ -2,12 +2,12 @@
  * Copyright (c) 2016.  Chemists Counter belongs to Sarhad Maisoon Salam. Any copyright infringement will be legally pursued. Please contact the developer at sarhadmaisoon18@gmail.com.
  */
 
-group 'inc.sarhad.chemistry'
-version '1.1-ALPHA'
+group 'inc.sarhad.chemistry.tools'
+version '1.2-ALPHA'
 
 apply plugin: 'java'
 
-sourceCompatibility = 1.5
+sourceCompatibility = 8
 
 repositories {
     mavenCentral()

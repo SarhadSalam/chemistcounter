@@ -12,12 +12,13 @@ package ChemistryCounter.Exceptions;
  * Time : 6:24 PM
  * Project Name: chemistsCounter
  * Class Name: ReactionElementNotMatchedException
+ * The exception ReactionElementNotMatchedException is thrown when the element in a reaction cannot be matched.
  */
 public class ReactionElementNotMatchedException extends Exception
 {
 	
 	/**
-	 * The exception when Reaction cannot be matched.
+	 * The exception ReactionElementNotMatchedException when Reaction cannot be matched.
 	 */
 	public ReactionElementNotMatchedException()
 	{
@@ -25,7 +26,7 @@ public class ReactionElementNotMatchedException extends Exception
 	}
 	
 	/**
-	 * The exception when Reaction cannot be matched.
+	 * The exception ReactionElementNotMatchedException when Reaction cannot be matched.
 	 *
 	 * @param message The reason behind exception.
 	 */
@@ -35,7 +36,7 @@ public class ReactionElementNotMatchedException extends Exception
 	}
 	
 	/**
-	 * The exception when Reaction cannot be matched.
+	 * The exception ReactionElementNotMatchedException when Reaction cannot be matched.
 	 *
 	 * @param message The reason behind exception.
 	 * @param cause   The cause behind exception.
@@ -46,7 +47,7 @@ public class ReactionElementNotMatchedException extends Exception
 	}
 	
 	/**
-	 * The exception when Reaction cannot be matched.
+	 * The exception ReactionElementNotMatchedException when Reaction cannot be matched.
 	 *
 	 * @param cause The cause behind exception.
 	 */

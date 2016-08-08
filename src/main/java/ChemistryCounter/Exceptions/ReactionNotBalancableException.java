@@ -12,12 +12,13 @@ package ChemistryCounter.Exceptions;
  * Time : 1:55 AM
  * Project Name: chemistsCounter
  * Class Name: ReactionNotBalancableException
+ * The exception ReactionNotBalancableException is thrown when the Reaction cannot be balanced.
  */
 public class ReactionNotBalancableException extends Exception
 {
 	
 	/**
-	 * The exception when Reaction cannot be balanced.
+	 * The exception ReactionNotBalancableException when Reaction cannot be balanced.
 	 */
 	public ReactionNotBalancableException()
 	{
@@ -25,7 +26,7 @@ public class ReactionNotBalancableException extends Exception
 	}
 	
 	/**
-	 * The exception when Reaction cannot be balanced.
+	 * The exception ReactionNotBalancableException when Reaction cannot be balanced.
 	 *
 	 * @param message The reason behind exception.
 	 */
@@ -35,7 +36,7 @@ public class ReactionNotBalancableException extends Exception
 	}
 	
 	/**
-	 * The exception when Reaction cannot be balanced.
+	 * The exception ReactionNotBalancableException when Reaction cannot be balanced.
 	 *
 	 * @param message The reason behind exception.
 	 * @param cause   The cause behind exception.
@@ -46,7 +47,7 @@ public class ReactionNotBalancableException extends Exception
 	}
 	
 	/**
-	 * The exception when Reaction cannot be balanced.
+	 * The exception ReactionNotBalancableException when Reaction cannot be balanced.
 	 *
 	 * @param cause The cause behind exception.
 	 */

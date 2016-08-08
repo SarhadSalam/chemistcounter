@@ -14,12 +14,16 @@ import ChemistryCounter.UniversalGetters;
  * Time : 2:17 AM
  * Project Name: chemistsCounter
  * Class Name: InsertBalance
+ * The class InsertBalance inserts the balance.
+ *
+ * @see ChemistryCounter.ReactionManagers.Manager
+ * @deprecated
  */
 public class InsertBalance
 {
 	
 	/**
-	 * This method inserts the balance.
+	 * This method insertBalance inserts the balance. This was an old method which yielded no proper results.
 	 *
 	 * @param u UniversalGetters u which is the universal get and set.
 	 *
@@ -46,11 +50,12 @@ public class InsertBalance
 			product = product+u.getProduct().get(i).getChemicalSymbol();
 			
 		}
-		String equation = reactant+"="+product;
-		return equation;
+		return reactant+"="+product;
 	}
 	
 	/**
+	 * The method equations is deprecated and is no longer in use.
+	 *
 	 * @param u     The universalgetter is passed to remove the spaces
 	 * @param input the user input
 	 *

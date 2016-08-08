@@ -6,26 +6,26 @@ package ChemistryCounter.SingleManager.Calculator;
 
 import ChemistryCounter.Exceptions.ElementNotFoundException;
 import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
-import ChemistryCounter.Summoner;
+import ChemistryCounter.SingleManager.Summoner;
 
 import java.util.ArrayList;
 
 /**
  * Created by sarhaD on 26-May-16.
  * <p>
- * This calculates Molar Mass.
+ * The class MolarMassCounter calculates Molar Mass.
  */
 public class MolarMassCounter
 {
-
+	
 	/**
-	 * The method below finds the molar.
+	 * The method molar below finds the molar mass of an element of compound.
 	 *
 	 * @param userInput The molar mass is userInput.
 	 *
 	 * @return molarCounter
 	 */
-	public static Double molar(String userInput)
+	static Double molar(String userInput)
 	{
 		ArrayList<ChemicalName> chemicalListArray = null;
 		try
@@ -39,13 +39,13 @@ public class MolarMassCounter
 	}
 	
 	/**
-	 * The method below caluclated molar counter.
+	 * The method molarCounter below calculates molar mass in case we have impending operations with the molar mass.
 	 *
 	 * @param chemicalListArray The molar is counted
 	 *
 	 * @return molar mass
 	 */
-	public static Double molarCounter(ArrayList<ChemicalName> chemicalListArray)
+	static Double molarCounter(ArrayList<ChemicalName> chemicalListArray)
 	{
 		double molarMass = 0.0;
 		for( ChemicalName item : chemicalListArray )

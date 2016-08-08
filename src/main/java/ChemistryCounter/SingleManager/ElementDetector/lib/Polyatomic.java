@@ -6,7 +6,7 @@ package ChemistryCounter.SingleManager.ElementDetector.lib;
 
 import ChemistryCounter.Exceptions.ElementNotFoundException;
 import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
-import ChemistryCounter.Summoner;
+import ChemistryCounter.SingleManager.Summoner;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,26 +15,28 @@ import java.util.regex.Pattern;
 
 /**
  * Created by sarhaD on 20-May-16. The file deals with several instances of polyatomic compounds and passes on to the
- * Normal Manager to deal with other levels of complexity.
+ * Normal Manager to solve the normal compounds.
  */
 public class Polyatomic
 {
-
+	
 	/**
-	 * The method below manages the polyatomic compounds.
+	 * The method below manages the polyatomic compounds by simplifying it to a normal compound so that it can be
+	 * further processed by the normal class.
 	 *
 	 * @param chemicalCompound The Chemical Compound which is polyatomic
 	 *
 	 * @return The polyatomic elements list.
+	 *
+	 * @see Normal
 	 */
 	public static ArrayList<ChemicalName> manager(String chemicalCompound)
 	{
 		ArrayList<String> polyatomicElements = new ArrayList<>();
-
 //		Separate the polyatomic compound and the normal compounds
 		Pattern removePolyatomic = Pattern.compile("\\((.*?)\\)\\d*");
 		Matcher polyatomicMatcher = removePolyatomic.matcher(chemicalCompound);
-
+		
 		while( polyatomicMatcher.find() )
 		{
 			polyatomicElements.add(polyatomicMatcher.group());
@@ -53,13 +55,15 @@ public class Polyatomic
 		}
 		return polyatomicElementsList;
 	}
-
+	
 	/**
-	 * The method bracketManager manages and terminates the brackets.
+	 * The method bracketManager manages and terminates the brackets which helps the polyatomic manager.
 	 *
 	 * @param polyatomicElements Polyatomic elements is minmised by the managing method.
 	 *
 	 * @return Element List
+	 *
+	 * @see Polyatomic
 	 */
 	private static ArrayList<ChemicalName> bracketManager(ArrayList<String> polyatomicElements)
 	{
@@ -80,22 +84,20 @@ public class Polyatomic
 					polyatomicValenceArrayFinal.remove(z);
 				}
 			}
-
 //			Ensures that the polyatomic compound does have a valence electron
 			if( valenceElectron.matches(".*\\)\\d.*") )
 			{
-				ArrayList<ChemicalName> elements = Normal.manager(polyatomicValenceArrayFinal.get(0));
-//				All kinds of magical thing goes on down there
-				for( int z = 0; z<elements.size(); z++ )
+				ArrayList<ChemicalName> elements;
+				elements = Normal.manager(polyatomicValenceArrayFinal.get(0));
+//			All kinds of magical thing goes on down there
+				for( ChemicalName valenceElement : elements )
 				{
-					ChemicalName valenceElement = elements.get(z);
 					int valenceElectronCount = valenceElement.getValenceElectron();
 					int polyatomicValenceElectron = Integer.parseInt(polyatomicValenceArrayFinal.get(1));
 					valenceElectronCount = valenceElectronCount*polyatomicValenceElectron;
 					valenceElement.setValenceElectron(valenceElectronCount);
-					chemicalListContainer = elements;
 				}
-
+				chemicalListContainer.addAll(elements);
 			} else
 			{
 //				In case polyatomic valence is not available in the input

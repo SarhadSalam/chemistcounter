@@ -10,7 +10,7 @@ import ChemistryCounter.Exceptions.ReactionNotBalancableException;
 import ChemistryCounter.ReactionManagers.ReactionDetector.BeautifyReaction;
 import ChemistryCounter.ReactionManagers.ReactionDetector.ManageReactions;
 import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
-import ChemistryCounter.Summoner;
+import ChemistryCounter.SingleManager.Summoner;
 import ChemistryCounter.UniversalGetters;
 
 import java.util.ArrayList;
@@ -18,37 +18,37 @@ import java.util.ArrayList;
 /**
  * Created by sarhaD on 27-Jun-16.
  * <p>
- * This is the reaction manager algorithm.
+ * This class Manager is the reaction manager algorithm. It forwards on the user input to ManageReactions. This class is
+ * built on several classes. I am not going to mention all classes which were built from here.
+ *
+ * @see ManageReactions
  */
 public class Manager
 {
 	
 	/**
-	 * The method will be deleted cause its main.
+	 * The method will be deleted cause its main. It's used for only dev purposes.
 	 *
 	 * @param args The main args
 	 */
 	public static void main(String[] args)
 	{
-		String[] samples = {"KI + KClO3 + HCl = I2H + H2O + KCl", "H2F+O2=H2OF", "Na+Cl=NaCl", "C2+O2->CO2", "C2+O2->CO", "FeS2 + HNO3 = Fe2(SO4)3 + NO + H2SO4"};
-		String working = "H2+2O2= 2H2O";
+		String[] sample = {"KI + KClO3 + HCl = I2H + H2O + KCl", "Na+Cl2=NaCl", "C2+O2->CO2", "C2+O2->CO", "FeS2 + HNO3 = Fe2(SO4)3 + NO + H2SO4"};
+		System.out.println("Unbalanced Equation: "+sample[1]);
 		
-		System.out.println("Unbalanced: "+working);
-		
-		String balanced = null;
+		String balanced;
 		try
 		{
-			balanced = balance(working);
-		} catch( ReactionElementNotMatchedException|ReactionNotBalancableException e )
+			balanced = balance(sample[1]);
+			System.out.println("Balanced Equation: "+balanced);
+		} catch( ReactionElementNotMatchedException|ReactionNotBalancableException|ElementNotFoundException e )
 		{
 			e.printStackTrace();
 		}
-		
-		System.out.println("Balanced: "+balanced);
 	}
 	
 	/**
-	 * The method balances the equation.
+	 * The method balance balances the equation with the help of matrices.
 	 *
 	 * @param input The user input
 	 *
@@ -56,47 +56,37 @@ public class Manager
 	 *
 	 * @throws ReactionElementNotMatchedException Reaction cannot be matched with the given elements and compounds.
 	 * @throws ReactionNotBalancableException     Reaction cannot be balanced.
+	 * @throws ElementNotFoundException           Element wasn't found in the periodic table.
+	 * @see ManageReactions
 	 */
-	private static String balance(String input) throws ReactionElementNotMatchedException, ReactionNotBalancableException
+	private static String balance(String input) throws ReactionElementNotMatchedException, ReactionNotBalancableException, ElementNotFoundException
 	{
 //		The real logic
 		UniversalGetters splitReaction = findElementInReactions(ManageReactions.splitReactions(input));
 		Double[] d = ManageReactions.setMatrix(splitReaction);
 
-//		The beautify
-		String equation = BeautifyReaction.balancedEquation(splitReaction, d);
-		
-		return equation;
+//		The beautify and return
+		return BeautifyReaction.balancedEquation(splitReaction, d);
 	}
 	
 	/**
-	 * The method below finds elements in a reaction.
+	 * The method findElementInReactions below finds elements in a reaction with the help of the summoner class.
 	 *
 	 * @param compoundsArrayList The array list containing compound.
 	 *
 	 * @return universal
+	 *
+	 * @throws ElementNotFoundException           Element wasn't found in the periodic table.
+	 * @throws ReactionElementNotMatchedException Element and or Compound weren't matched.
+	 * @see Summoner
 	 */
-	private static UniversalGetters findElementInReactions(ArrayList<ReactionCompounds> compoundsArrayList)
+	private static UniversalGetters findElementInReactions(ArrayList<ReactionCompounds> compoundsArrayList) throws ElementNotFoundException, ReactionElementNotMatchedException
 	{
 		UniversalGetters universal = new UniversalGetters();
-		ArrayList<ChemicalName> reactant = null;
-		ArrayList<ChemicalName> product = null;
-		try
-		{
-			reactant = Summoner.summoner(ManageReactions.getReactant);
-			product = Summoner.summoner(ManageReactions.getProduct);
-		} catch( ElementNotFoundException e )
-		{
-			e.printStackTrace();
-		}
+		ArrayList<ChemicalName> reactant = Summoner.summoner(ManageReactions.getReactant);
+		ArrayList<ChemicalName> product = Summoner.summoner(ManageReactions.getProduct);
 		
-		try
-		{
-			verification(reactant, product);
-		} catch( ReactionElementNotMatchedException e )
-		{
-			e.printStackTrace();
-		}
+		verification(reactant, product);
 		
 		universal.setCn(product, reactant);
 		universal.setReactionCompounds(compoundsArrayList);
@@ -104,7 +94,7 @@ public class Manager
 	}
 	
 	/**
-	 * The method verifies whether the reactions are properly parsed.
+	 * The method  verification verifies whether the reactions are properly parsed.
 	 *
 	 * @param reactant The reactant
 	 * @param product  The product

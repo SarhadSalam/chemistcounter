@@ -12,7 +12,10 @@ import java.util.ArrayList;
 /**
  * Created by sarhaD on 28-Jun-16.
  * <p>
- * This is the universal detail getters and setters for any types of reactions or compounds
+ * This is the universal detail getters and setters for any type of reactions or compounds. The class helps in managing
+ * reactions.
+ * <p>
+ * The basic idea behind stochiometry is developed from the getters and setters in this class.
  */
 public class UniversalGetters
 {
@@ -33,9 +36,9 @@ public class UniversalGetters
 	private ArrayList<ReactionCompounds> getReactionCompounds;
 	
 	/**
-	 * The method getProduct gets the reactant in ArrayList.
+	 * The method getReactant gets the reactant in ArrayList.
 	 *
-	 * @return getReactant.
+	 * @return Reactant as an array list.
 	 */
 	public ArrayList<ChemicalName> getReactant()
 	{
@@ -43,9 +46,9 @@ public class UniversalGetters
 	}
 	
 	/**
-	 * The method getProduct gets the product in ArrayList.
+	 * The method getProduct gets the product.
 	 *
-	 * @return getProduct.
+	 * @return Product Gets the product as an array list
 	 */
 	public ArrayList<ChemicalName> getProduct()
 	{
@@ -53,9 +56,9 @@ public class UniversalGetters
 	}
 	
 	/**
-	 * The method getProduct gets the compounds in a reaction in ArrayList.
+	 * The method getReactionCompounds gets the compounds in a reaction.
 	 *
-	 * @return getReactionCompounds.
+	 * @return Reaction Compounds
 	 */
 	public ArrayList<ReactionCompounds> getReactionCompounds()
 	{
@@ -63,7 +66,7 @@ public class UniversalGetters
 	}
 	
 	/**
-	 * The method sets the list of entire compounds.
+	 * The method sets the list of entire compounds in a reaction.
 	 *
 	 * @param getReactionCompounds The list of entire compounds in a reaction.
 	 */
@@ -73,7 +76,7 @@ public class UniversalGetters
 	}
 	
 	/**
-	 * The method sets chemical name.
+	 * The method sets chemical name involved in a reaction.
 	 *
 	 * @param getProduct  The product of an equation.
 	 * @param getReactant The reactant of an equation.

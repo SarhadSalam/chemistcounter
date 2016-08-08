@@ -6,10 +6,12 @@ package ChemistryCounter.DevelopmentPurposes;
 
 /**
  * Created by sarhaD on 29-Jun-16.
+ * <p>
+ * The class sample contains a sample of elements and reactions.
  */
 public class Sample
 {
-
+	
 	/**
 	 * The method name contains samples.
 	 */

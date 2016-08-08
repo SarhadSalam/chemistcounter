@@ -12,14 +12,16 @@ import java.util.ArrayList;
 
 /**
  * Created by sarha on 26-Apr-16.
- * Just handles on whether it's polyatomic of normal.
+ * Just handles on whether it's polyatomic or normal.
  */
 public class ElementManager
 {
 	
 	/**
-	 * The method elements below determines whether its polyatomic or normal and forwards it to Polyatomic manager of
-	 * Normal manager.
+	 * The method elements below determines whether its polyatomic or normal and forwards it to Polyatomic manager or
+	 * Normal manager. The class ElementManager is responsible for managing elements.
+	 * <p>
+	 * This class acts like a middleman.
 	 *
 	 * @param chemicalCompound The chemical compound that was inputted by the user, which is forwarded by the summoner.
 	 *
