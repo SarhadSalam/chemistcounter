@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="chemistsCounter:main" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="inc.sarhad.chemistry.tools" external.system.module.type="sourceSet" external.system.module.version="1.2-ALPHA" type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
+<module external.linked.project.id="chemistsCounter:main" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="inc.sarhad.chemistry.tools" external.system.module.type="sourceSet" external.system.module.version="0.1" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/../../build/classes/main" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../src/main">
@@ -9,7 +9,12 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="guava-19.0" level="project" />
-    <orderEntry type="library" name="EJML-core-0.29-sources" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.guava:guava:19.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.ejml:all:0.29" level="project" />
+    <orderEntry type="library" name="Gradle: org.ejml:dense64:0.29" level="project" />
+    <orderEntry type="library" name="Gradle: org.ejml:equation:0.29" level="project" />
+    <orderEntry type="library" name="Gradle: org.ejml:core:0.29" level="project" />
+    <orderEntry type="library" name="Gradle: org.ejml:simple:0.29" level="project" />
+    <orderEntry type="library" name="Gradle: org.ejml:denseC64:0.29" level="project" />
   </component>
 </module>

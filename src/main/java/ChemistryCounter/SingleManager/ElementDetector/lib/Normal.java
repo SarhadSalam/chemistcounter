@@ -30,22 +30,25 @@ public class Normal
 //			Detects compounds
 		for( String elementName : splitElement )
 		{
-			ChemicalName element = new ChemicalName();
-//			If Element does not have valence electronP
-			if( !elementName.matches(".*\\d+.*") )
+			if(!elementName.equals("") )
 			{
-				element.setChemicalSymbol(elementName);
-				element.setValenceElectron(1);
-				chemicalList.add(element);
-			}
+				ChemicalName element = new ChemicalName();
+//			If Element does not have valence electronP
+				if( !elementName.matches(".*\\d+.*") )
+				{
+					element.setChemicalSymbol(elementName);
+					element.setValenceElectron(1);
+					chemicalList.add(element);
+				}
 
 //			If element has valence electron.
-			if( elementName.matches(".*\\d+.*") )
-			{
-				String[] valencyElements = elementName.split("(?<=[\\w&&\\D])(?=\\d)");
-				element.setChemicalSymbol(valencyElements[0]);
-				element.setValenceElectron(Integer.parseInt(valencyElements[1]));
-				chemicalList.add(element);
+				if( elementName.matches(".*\\d+.*") )
+				{
+					String[] valencyElements = elementName.split("(?<=[\\w&&\\D])(?=\\d)");
+					element.setChemicalSymbol(valencyElements[0]);
+					element.setValenceElectron(Integer.parseInt(valencyElements[1]));
+					chemicalList.add(element);
+				}
 			}
 		}
 		return chemicalList;

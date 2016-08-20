@@ -4,11 +4,17 @@
 
 package ChemistryCounter.SingleManager.Calculator;
 
+import ChemistryCounter.Exceptions.ElementNotFoundException;
 import ChemistryCounter.SingleManager.Cleaners.SignificantFigures;
+import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;
+import java.util.ArrayList;
 
 /**
  * Created by sarhaD on 27-May-16.
@@ -26,10 +32,16 @@ public class MoleCounter
 	 *
 	 * @return The mole.
 	 */
-	public static Double mole(Double mass, String userInput)
+	public static Double mole(Double mass, String userInput) throws IOException, SAXException, ParserConfigurationException, ElementNotFoundException
 	{
 		Double molar = MolarMassCounter.molar(userInput);
 		return mass/molar;
+	}
+	
+	public static Double mole(Double mass, ArrayList<ChemicalName> cn)
+	{
+		Double molar = MolarMassCounter.molar(cn);
+		return  mass/molar;
 	}
 	
 	/**

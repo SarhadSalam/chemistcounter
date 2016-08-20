@@ -7,7 +7,10 @@ package ChemistryCounter.SingleManager.ElementDetector.lib;
 import ChemistryCounter.Exceptions.ElementNotFoundException;
 import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
 import ChemistryCounter.SingleManager.Summoner;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.regex.Matcher;
@@ -30,7 +33,7 @@ public class Polyatomic
 	 *
 	 * @see Normal
 	 */
-	public static ArrayList<ChemicalName> manager(String chemicalCompound)
+	public static ArrayList<ChemicalName> manager(String chemicalCompound) throws ElementNotFoundException, SAXException, ParserConfigurationException, IOException
 	{
 		ArrayList<String> polyatomicElements = new ArrayList<>();
 //		Separate the polyatomic compound and the normal compounds
@@ -65,7 +68,7 @@ public class Polyatomic
 	 *
 	 * @see Polyatomic
 	 */
-	private static ArrayList<ChemicalName> bracketManager(ArrayList<String> polyatomicElements)
+	private static ArrayList<ChemicalName> bracketManager(ArrayList<String> polyatomicElements) throws ElementNotFoundException, SAXException, ParserConfigurationException, IOException
 	{
 		ArrayList<ChemicalName> chemicalListContainer = new ArrayList<>();
 //		Goes through all instances of the polyatomic compounds
@@ -101,14 +104,7 @@ public class Polyatomic
 			} else
 			{
 //				In case polyatomic valence is not available in the input
-				ArrayList<ChemicalName> elements = null;
-				try
-				{
-					elements = Summoner.summoner(polyatomicValenceArrayFinal.get(0));
-				} catch( ElementNotFoundException e )
-				{
-					e.printStackTrace();
-				}
+				ArrayList<ChemicalName> elements = Summoner.summoner(polyatomicValenceArrayFinal.get(0));
 				chemicalListContainer.addAll(elements);
 			}
 		}

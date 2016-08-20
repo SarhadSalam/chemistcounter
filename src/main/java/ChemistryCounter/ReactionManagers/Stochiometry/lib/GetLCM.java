@@ -5,7 +5,7 @@
 package ChemistryCounter.ReactionManagers.Stochiometry.lib;
 
 import ChemistryCounter.Exceptions.ReactionElementNotMatchedException;
-import ChemistryCounter.UniversalGetters;
+import ChemistryCounter.Universal.UniversalGetters;
 import com.google.common.math.IntMath;
 
 /**

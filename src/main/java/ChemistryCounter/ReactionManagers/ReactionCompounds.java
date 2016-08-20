@@ -30,9 +30,74 @@ public class ReactionCompounds
 	private String originalName = "";
 	
 	/**
+	 * The mole of a compound is stored as a double.
+	 */
+	private double moleOfCompound;
+	
+	/**
 	 * The reactionBalance is stored in reactionBalance
 	 */
 	private int reactionBalance;
+	
+	public boolean isLimitingReagent()
+	{
+		return limitingReagent;
+	}
+	
+	public void setLimitingReagent(boolean limitingReagent)
+	{
+		this.limitingReagent = limitingReagent;
+	}
+	
+	/**
+	 * The limiting reagent of a reactant is stored in limitingReagent.
+	 */
+	private boolean limitingReagent = false;
+	
+	/**
+	 * The method getMolarMassOfCompound gets the molar mass of a compound.
+	 *
+	 * @return The molar mass of a compound.
+	 */
+	public double getMolarMassOfCompound()
+	{
+		return molarMassOfCompound;
+	}
+	
+	/**
+	 * The method setMolarMassOfCompound sets the molar mass of a compound.
+	 *
+	 * @param molarMassOfCompound The molar mass of a compound.
+	 */
+	public void setMolarMassOfCompound(double molarMassOfCompound)
+	{
+		this.molarMassOfCompound = molarMassOfCompound;
+	}
+	
+	/**
+	 * The variable below sets the molar mass of a compound.
+	 */
+	private double molarMassOfCompound;
+	
+	/**
+	 * The method getMoleOfCompound gets the moles of compounds.
+	 *
+	 * @return The moles of compounds.
+	 */
+	public double getMoleOfCompound()
+	{
+		return moleOfCompound;
+	}
+	
+	/**
+	 * The method setMoleOfCompound sets the moles of compounds.
+	 *
+	 * @param moleOfCompound The mole of a compound
+	 */
+	public void setMoleOfCompound(double moleOfCompound)
+	{
+		this.moleOfCompound = moleOfCompound;
+	}
 	
 	/**
 	 * The method getReactionBalance gets reactions balance.

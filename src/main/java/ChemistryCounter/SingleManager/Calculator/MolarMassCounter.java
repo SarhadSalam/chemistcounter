@@ -7,7 +7,10 @@ package ChemistryCounter.SingleManager.Calculator;
 import ChemistryCounter.Exceptions.ElementNotFoundException;
 import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
 import ChemistryCounter.SingleManager.Summoner;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -25,17 +28,11 @@ public class MolarMassCounter
 	 *
 	 * @return molarCounter
 	 */
-	static Double molar(String userInput)
+	public static Double molar(String userInput) throws ParserConfigurationException, SAXException, IOException, ElementNotFoundException
 	{
 		ArrayList<ChemicalName> chemicalListArray = null;
-		try
-		{
-			chemicalListArray = Summoner.summoner(userInput);
-		} catch( ElementNotFoundException e )
-		{
-			e.printStackTrace();
-		}
-		return molarCounter(chemicalListArray);
+		chemicalListArray = Summoner.summoner(userInput);
+		return molar(chemicalListArray);
 	}
 	
 	/**
@@ -45,7 +42,7 @@ public class MolarMassCounter
 	 *
 	 * @return molar mass
 	 */
-	static Double molarCounter(ArrayList<ChemicalName> chemicalListArray)
+	public static Double molar(ArrayList<ChemicalName> chemicalListArray)
 	{
 		double molarMass = 0.0;
 		for( ChemicalName item : chemicalListArray )

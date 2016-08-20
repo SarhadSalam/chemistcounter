@@ -6,7 +6,7 @@ package ChemistryCounter.ReactionManagers.ReactionDetector;
 
 import ChemistryCounter.Exceptions.ReactionNotBalancableException;
 import ChemistryCounter.ReactionManagers.ReactionCompounds;
-import ChemistryCounter.UniversalGetters;
+import ChemistryCounter.Universal.UniversalGetters;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -28,14 +28,13 @@ public class BeautifyReaction
 	 * The method balancedEquation beautifies the reaction after balancing is done.
 	 *
 	 * @param splitReaction the reaction solved which remains to be beautified.
-	 * @param d             2D Double
 	 *
 	 * @return equation
 	 *
 	 * @throws ReactionNotBalancableException Reaction cannot be balanced.
 	 * @see ChemistryCounter.ReactionManagers.Manager
 	 */
-	public static String balancedEquation(UniversalGetters splitReaction, Double[] d) throws ReactionNotBalancableException
+	public static String balancedEquation(UniversalGetters splitReaction) throws ReactionNotBalancableException
 	{
 		String product = "";
 		String reactant = "";
@@ -44,7 +43,6 @@ public class BeautifyReaction
 		for( int i = 0; i<splitReaction.getReactionCompounds().size(); i++ )
 		{
 			ReactionCompounds eq = splitReaction.getReactionCompounds().get(i);
-			eq.setReactionBalance((int) Math.round(Math.abs(d[i])));
 			
 			if( eq.getCompoundStatus().equals("Reactant") )
 			{

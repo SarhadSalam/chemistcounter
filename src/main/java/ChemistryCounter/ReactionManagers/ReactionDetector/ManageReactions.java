@@ -10,10 +10,13 @@ import ChemistryCounter.Exceptions.ReactionNotBalancableException;
 import ChemistryCounter.ReactionManagers.ReactionCompounds;
 import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
 import ChemistryCounter.SingleManager.Summoner;
-import ChemistryCounter.UniversalGetters;
+import ChemistryCounter.Universal.UniversalGetters;
 import org.ejml.factory.SingularMatrixException;
 import org.ejml.simple.SimpleMatrix;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -168,7 +171,7 @@ public class ManageReactions
 	 * @throws ReactionNotBalancableException     Reaction cannot be balanced.
 	 * @throws ReactionElementNotMatchedException Reaction cannot be matched with the given elements and compounds.
 	 */
-	public static Double[] setMatrix(UniversalGetters u) throws ReactionNotBalancableException, ReactionElementNotMatchedException
+	public static Double[] setMatrix(UniversalGetters u) throws ReactionNotBalancableException, ReactionElementNotMatchedException, ParserConfigurationException, SAXException, IOException, ElementNotFoundException
 	{
 		ArrayList<String> productList = new ArrayList<>();
 		ArrayList<String> compounds = new ArrayList<>();
@@ -197,13 +200,9 @@ public class ManageReactions
 			for( int j = 0; j<entireCompound.size(); j++ )
 			{
 				ArrayList<ChemicalName> cn = new ArrayList<>();
-				try
-				{
-					cn = Summoner.summoner(entireCompound.get(j).getName());
-				} catch( ElementNotFoundException e )
-				{
-					e.printStackTrace();
-				}
+				
+				cn = Summoner.summoner(entireCompound.get(j).getName());
+				
 				for( ChemicalName chemicalName : cn )
 				{
 					if( chemicalName.getChemicalSymbol().equals(symbol) )
@@ -219,7 +218,18 @@ public class ManageReactions
 				}
 			}
 		}
-		return solveMatrix(matrixRaw);
+		Double[] d = solveMatrix(matrixRaw);
+		setReactionBalance(u, d);
+		return d;
+	}
+	
+	private static UniversalGetters setReactionBalance(UniversalGetters u, Double[] d)
+	{
+		for( int i = 0; i<d.length; i++ )
+		{
+			u.getReactionCompounds().get(i).setReactionBalance((int) Math.round(Math.abs(d[i])));
+		}
+		return u;
 	}
 	
 	/**
@@ -233,7 +243,6 @@ public class ManageReactions
 	 */
 	private static Double[] solveMatrix(double[][] matrixRaw) throws ReactionNotBalancableException
 	{
-		
 		//		The matrix relationship for each equation will start at this point.
 		int compound = matrixRaw[0].length;
 		int element = matrixRaw.length;

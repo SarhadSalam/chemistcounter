@@ -4,12 +4,17 @@
 
 package ChemistryCounter.SingleManager;
 
+import ChemistryCounter.DevelopmentPurposes.TestingPrint;
 import ChemistryCounter.Exceptions.ElementNotFoundException;
 import ChemistryCounter.SingleManager.Cleaners.AtomCounter;
 import ChemistryCounter.SingleManager.DetailsGrabbers.ElementDetails;
 import ChemistryCounter.SingleManager.ElementDetector.ElementManager;
 import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 /**
@@ -22,6 +27,10 @@ import java.util.ArrayList;
 public class Summoner
 {
 	
+	public static void main(String[] args) throws ElementNotFoundException, SAXException, ParserConfigurationException, IOException
+	{
+		TestingPrint.printCompounds(summoner("H2O"));
+	}
 	/**
 	 * The class Summoner is where all elements and compounds are sent using the userInput param.
 	 * <p>
@@ -33,7 +42,7 @@ public class Summoner
 	 *
 	 * @throws ElementNotFoundException Element was not found.
 	 */
-	public static ArrayList<ChemicalName> summoner(String userInput) throws ElementNotFoundException
+	public static ArrayList<ChemicalName> summoner(String userInput) throws ElementNotFoundException, IOException, SAXException, ParserConfigurationException
 	{
 		ArrayList<ChemicalName> managedElements = ElementManager.elements(userInput);
 		ArrayList<ChemicalName> elementName = ElementDetails.findElement(managedElements);

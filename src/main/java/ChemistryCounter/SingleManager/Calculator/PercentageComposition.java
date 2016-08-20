@@ -21,15 +21,15 @@ public class PercentageComposition
 	 *
 	 * @param compound The element in a compound to find the composition
 	 */
-	public static void percentage(ArrayList<ChemicalName> compound)
+	public static ArrayList<ChemicalName> percentage(ArrayList<ChemicalName> compound)
 	{
-		ArrayList<Double> list = new ArrayList<>();
-		Double molarMass = MolarMassCounter.molarCounter(compound);
+		Double molarMass = MolarMassCounter.molar(compound);
 		
 		for( ChemicalName item : compound )
 		{
 			Double compositionPercent = ( ( item.getAtomicWeight()*item.getValenceElectron() )/molarMass )*100;
 			item.setComposition(compositionPercent);
 		}
+		return compound;
 	}
 }

@@ -11,8 +11,11 @@ import ChemistryCounter.ReactionManagers.ReactionDetector.BeautifyReaction;
 import ChemistryCounter.ReactionManagers.ReactionDetector.ManageReactions;
 import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
 import ChemistryCounter.SingleManager.Summoner;
-import ChemistryCounter.UniversalGetters;
+import ChemistryCounter.Universal.UniversalGetters;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -27,27 +30,6 @@ public class Manager
 {
 	
 	/**
-	 * The method will be deleted cause its main. It's used for only dev purposes.
-	 *
-	 * @param args The main args
-	 */
-	public static void main(String[] args)
-	{
-		String[] sample = {"KI + KClO3 + HCl = I2H + H2O + KCl", "Na+Cl2=NaCl", "C2+O2->CO2", "C2+O2->CO", "FeS2 + HNO3 = Fe2(SO4)3 + NO + H2SO4"};
-		System.out.println("Unbalanced Equation: "+sample[1]);
-		
-		String balanced;
-		try
-		{
-			balanced = balance(sample[1]);
-			System.out.println("Balanced Equation: "+balanced);
-		} catch( ReactionElementNotMatchedException|ReactionNotBalancableException|ElementNotFoundException e )
-		{
-			e.printStackTrace();
-		}
-	}
-	
-	/**
 	 * The method balance balances the equation with the help of matrices.
 	 *
 	 * @param input The user input
@@ -59,14 +41,18 @@ public class Manager
 	 * @throws ElementNotFoundException           Element wasn't found in the periodic table.
 	 * @see ManageReactions
 	 */
-	private static String balance(String input) throws ReactionElementNotMatchedException, ReactionNotBalancableException, ElementNotFoundException
+	public static UniversalGetters balance(String input) throws ReactionElementNotMatchedException, ReactionNotBalancableException, ElementNotFoundException, IOException, SAXException, ParserConfigurationException
 	{
 //		The real logic
 		UniversalGetters splitReaction = findElementInReactions(ManageReactions.splitReactions(input));
-		Double[] d = ManageReactions.setMatrix(splitReaction);
+		ManageReactions.setMatrix(splitReaction);
 
-//		The beautify and return
-		return BeautifyReaction.balancedEquation(splitReaction, d);
+		return splitReaction;
+	}
+	
+	public static String equation(UniversalGetters splitReaction) throws ReactionNotBalancableException
+	{
+		return BeautifyReaction.balancedEquation(splitReaction);
 	}
 	
 	/**
@@ -80,7 +66,7 @@ public class Manager
 	 * @throws ReactionElementNotMatchedException Element and or Compound weren't matched.
 	 * @see Summoner
 	 */
-	private static UniversalGetters findElementInReactions(ArrayList<ReactionCompounds> compoundsArrayList) throws ElementNotFoundException, ReactionElementNotMatchedException
+	private static UniversalGetters findElementInReactions(ArrayList<ReactionCompounds> compoundsArrayList) throws ElementNotFoundException, ReactionElementNotMatchedException, ParserConfigurationException, SAXException, IOException
 	{
 		UniversalGetters universal = new UniversalGetters();
 		ArrayList<ChemicalName> reactant = Summoner.summoner(ManageReactions.getReactant);

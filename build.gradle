@@ -3,11 +3,12 @@
  */
 
 group 'inc.sarhad.chemistry.tools'
-version '1.2-ALPHA'
+version '0.1'
 
 apply plugin: 'java'
 
-sourceCompatibility = 8
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
 
 repositories {
     mavenCentral()
@@ -17,5 +18,4 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     compile group: 'com.google.guava', name: 'guava', version: '19.0'
     compile group: 'org.ejml', name: 'all', version: '0.29'
-
 }

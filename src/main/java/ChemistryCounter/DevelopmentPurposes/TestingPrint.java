@@ -6,7 +6,7 @@ package ChemistryCounter.DevelopmentPurposes;
 
 import ChemistryCounter.ReactionManagers.ReactionCompounds;
 import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
-import ChemistryCounter.UniversalGetters;
+import ChemistryCounter.Universal.UniversalGetters;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -54,7 +54,7 @@ public class TestingPrint
 			}
 		}
 		System.out.println();
-		System.out.format("%10s%15s%15s%20s%15s%15s%20s", "Chemical Symbol", "Chemical Name", "Atomic weight", "Valence Electron", "Atom Count", "Composition", "Reaction Balance");
+		System.out.format("%10s%15s%15s%20s%15s%20s", "Chemical Symbol", "Chemical Name", "Atomic weight", "Valence Electron", "Atom Count", "Composition");
 		for( ChemicalName s : list )
 		{
 			System.out.println();
@@ -80,10 +80,11 @@ public class TestingPrint
 				methods.add(i.getName());
 			}
 		}
+		System.out.format("%10s%20s%20s%20s%20s%20s", "Name", "Original", "Reaction Balance", "Compound Status", "Molar Mass", "Mole");
 		for( ReactionCompounds r : reactionCompoundNames )
 		{
 			System.out.println();
-			System.out.format("%10s%10s%20s", r.getName(), r.getOriginalName(), r.getCompoundStatus());
+			System.out.format("%10s%20s%20d%20s%20s%20s", r.getName(), r.getOriginalName(), r.getReactionBalance(), r.getCompoundStatus(), r.getMolarMassOfCompound(), r.getMoleOfCompound());
 		}
 	}
 }

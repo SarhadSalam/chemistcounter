@@ -6,7 +6,7 @@ package ChemistryCounter.ReactionManagers.Stochiometry;
 
 import ChemistryCounter.Exceptions.ReactionElementNotMatchedException;
 import ChemistryCounter.ReactionManagers.Stochiometry.lib.GetLCM;
-import ChemistryCounter.UniversalGetters;
+import ChemistryCounter.Universal.UniversalGetters;
 
 /**
  * Created by sarhaD on 30-Jun-16.

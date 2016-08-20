@@ -4,10 +4,14 @@
 
 package ChemistryCounter.SingleManager.ElementDetector;
 
+import ChemistryCounter.Exceptions.ElementNotFoundException;
 import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
 import ChemistryCounter.SingleManager.ElementDetector.lib.Normal;
 import ChemistryCounter.SingleManager.ElementDetector.lib.Polyatomic;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -27,7 +31,7 @@ public class ElementManager
 	 *
 	 * @return elementsList
 	 */
-	public static ArrayList<ChemicalName> elements(String chemicalCompound)
+	public static ArrayList<ChemicalName> elements(String chemicalCompound) throws ElementNotFoundException, SAXException, ParserConfigurationException, IOException
 	{
 		ArrayList<ChemicalName> elementsList;
 //		If polyatomic

@@ -4,7 +4,7 @@
 
 package ChemistryCounter.ReactionManagers.Stochiometry.lib;
 
-import ChemistryCounter.UniversalGetters;
+import ChemistryCounter.Universal.UniversalGetters;
 
 /**
  * Class Details:-
