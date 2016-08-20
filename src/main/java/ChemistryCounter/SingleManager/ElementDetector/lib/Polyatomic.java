@@ -31,6 +31,10 @@ public class Polyatomic
 	 *
 	 * @return The polyatomic elements list.
 	 *
+	 * @throws IOException                  There is no files found.
+	 * @throws SAXException                 No idea what this is
+	 * @throws ParserConfigurationException The xml parser failed.
+	 * @throws ElementNotFoundException    The element wasn't found.
 	 * @see Normal
 	 */
 	public static ArrayList<ChemicalName> manager(String chemicalCompound) throws ElementNotFoundException, SAXException, ParserConfigurationException, IOException
@@ -65,7 +69,10 @@ public class Polyatomic
 	 * @param polyatomicElements Polyatomic elements is minmised by the managing method.
 	 *
 	 * @return Element List
-	 *
+	 *@throws IOException  There is no files found.
+	 * @throws SAXException     No idea what this is
+	 * @throws ParserConfigurationException     The xml parser failed.
+	 * @throws  ElementNotFoundException The element wasn't found.
 	 * @see Polyatomic
 	 */
 	private static ArrayList<ChemicalName> bracketManager(ArrayList<String> polyatomicElements) throws ElementNotFoundException, SAXException, ParserConfigurationException, IOException

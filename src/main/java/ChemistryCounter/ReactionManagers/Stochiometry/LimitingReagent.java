@@ -6,17 +6,10 @@ package ChemistryCounter.ReactionManagers.Stochiometry;
 
 import ChemistryCounter.Exceptions.ElementNotFoundException;
 import ChemistryCounter.Exceptions.ReactionElementNotMatchedException;
-import ChemistryCounter.Exceptions.ReactionNotBalancableException;
-import ChemistryCounter.ReactionManagers.Manager;
 import ChemistryCounter.ReactionManagers.ReactionCompounds;
 import ChemistryCounter.Universal.UniversalGetters;
-import org.xml.sax.SAXException;
 
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.IOException;
 import java.util.ArrayList;
-
-import static ChemistryCounter.ReactionManagers.Stochiometry.Stochiometry.convertString;
 
 /**
  * The class LimitingReagent is still in development. The class will temporarily will be discounted as I start working
@@ -53,14 +46,14 @@ public class LimitingReagent
 	/**
 	 * The method findLimitingReagent  finds the limiting reagent in a reaction.
 	 * <p>
-	 * <p>
 	 * The method is still in development and incomplete.
 	 *
 	 * @param details The object contains the mass, name of several reactants. Object[x][y]  where x is the list of
 	 *                products inputted by the user. Which is ignored cause who cares about the user lel. The y is the
 	 *                mass and name.
 	 * @param u       The universal getter.
-	 *
+	 * @throws ReactionElementNotMatchedException The Reaction Element was not matched.
+	 * @throws  ElementNotFoundException The Element wasn't found.
 	 * @return The universal getter with limiting reagent.
 	 */
 	public static UniversalGetters findLimitingReagent(Object[][] details, UniversalGetters u) throws ReactionElementNotMatchedException, ElementNotFoundException

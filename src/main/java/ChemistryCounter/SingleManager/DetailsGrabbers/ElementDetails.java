@@ -15,7 +15,6 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -51,6 +50,9 @@ public class ElementDetails
 	 * @return A final verified list that contains all elements inputted by the user.
 	 *
 	 * @throws ElementNotFoundException Element was not found and is invalid.
+	 * @throws IOException  There is no files found.
+	 * @throws SAXException     No idea what this is
+	 * @throws ParserConfigurationException     The xml parser failed.
 	 */
 	public static ArrayList<ChemicalName> findElement(ArrayList<ChemicalName> unverifiedList) throws ElementNotFoundException, ParserConfigurationException, IOException, SAXException
 	{

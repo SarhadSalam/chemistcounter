@@ -39,6 +39,9 @@ public class Manager
 	 * @throws ReactionElementNotMatchedException Reaction cannot be matched with the given elements and compounds.
 	 * @throws ReactionNotBalancableException     Reaction cannot be balanced.
 	 * @throws ElementNotFoundException           Element wasn't found in the periodic table.
+	 * @throws IOException  There is no files found.
+	 * @throws SAXException     No idea what this is
+	 * @throws ParserConfigurationException     The xml parser failed.
 	 * @see ManageReactions
 	 */
 	public static UniversalGetters balance(String input) throws ReactionElementNotMatchedException, ReactionNotBalancableException, ElementNotFoundException, IOException, SAXException, ParserConfigurationException
@@ -64,6 +67,9 @@ public class Manager
 	 *
 	 * @throws ElementNotFoundException           Element wasn't found in the periodic table.
 	 * @throws ReactionElementNotMatchedException Element and or Compound weren't matched.
+	 * @throws IOException  There is no files found.
+	 * @throws SAXException     No idea what this is
+	 * @throws ParserConfigurationException     The xml parser failed.
 	 * @see Summoner
 	 */
 	private static UniversalGetters findElementInReactions(ArrayList<ReactionCompounds> compoundsArrayList) throws ElementNotFoundException, ReactionElementNotMatchedException, ParserConfigurationException, SAXException, IOException

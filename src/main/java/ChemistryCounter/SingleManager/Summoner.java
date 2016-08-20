@@ -4,7 +4,6 @@
 
 package ChemistryCounter.SingleManager;
 
-import ChemistryCounter.DevelopmentPurposes.TestingPrint;
 import ChemistryCounter.Exceptions.ElementNotFoundException;
 import ChemistryCounter.SingleManager.Cleaners.AtomCounter;
 import ChemistryCounter.SingleManager.DetailsGrabbers.ElementDetails;
@@ -14,7 +13,6 @@ import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 
 /**
@@ -27,11 +25,8 @@ import java.util.ArrayList;
 public class Summoner
 {
 	
-	public static void main(String[] args) throws ElementNotFoundException, SAXException, ParserConfigurationException, IOException
-	{
-		TestingPrint.printCompounds(summoner("H2O"));
-	}
 	/**
+	 * /**
 	 * The class Summoner is where all elements and compounds are sent using the userInput param.
 	 * <p>
 	 * The class solves the element name.
@@ -39,8 +34,10 @@ public class Summoner
 	 * @param userInput The string that contains the user input to simplify
 	 *
 	 * @return ArrayList elementDetails
-	 *
-	 * @throws ElementNotFoundException Element was not found.
+	 * @throws ElementNotFoundException The Element wasn't found.
+	 * @throws IOException  There is no files found.
+	 * @throws SAXException     No idea what this is
+	 * @throws ParserConfigurationException     The xml parser failed.
 	 */
 	public static ArrayList<ChemicalName> summoner(String userInput) throws ElementNotFoundException, IOException, SAXException, ParserConfigurationException
 	{

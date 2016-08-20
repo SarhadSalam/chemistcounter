@@ -30,6 +30,10 @@ public class MoleCounter
 	 * @param mass      The mass of the element/compound for which mole to be calculated.
 	 * @param userInput The user input is the element/compound.
 	 *
+	 *                  @throws IOException  There is no files found.
+	 * @throws SAXException     No idea what this is
+	 * @throws ParserConfigurationException     The xml parser failed.
+	 * @throws ElementNotFoundException The element was not found.
 	 * @return The mole.
 	 */
 	public static Double mole(Double mass, String userInput) throws IOException, SAXException, ParserConfigurationException, ElementNotFoundException
