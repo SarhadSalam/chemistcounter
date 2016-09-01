@@ -52,9 +52,11 @@ public class LimitingReagent
 	 *                products inputted by the user. Which is ignored cause who cares about the user lel. The y is the
 	 *                mass and name.
 	 * @param u       The universal getter.
-	 * @throws ReactionElementNotMatchedException The Reaction Element was not matched.
-	 * @throws  ElementNotFoundException The Element wasn't found.
+	 *
 	 * @return The universal getter with limiting reagent.
+	 *
+	 * @throws ReactionElementNotMatchedException The Reaction Element was not matched.
+	 * @throws ElementNotFoundException           The Element wasn't found.
 	 */
 	public static UniversalGetters findLimitingReagent(Object[][] details, UniversalGetters u) throws ReactionElementNotMatchedException, ElementNotFoundException
 	{

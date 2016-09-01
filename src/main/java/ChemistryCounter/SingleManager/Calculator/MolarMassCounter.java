@@ -20,17 +20,17 @@ import java.util.ArrayList;
  */
 public class MolarMassCounter
 {
-	
 	/**
 	 * The method molar below finds the molar mass of an element of compound.
 	 *
 	 * @param userInput The molar mass is userInput.
 	 *
 	 * @return molarCounter
-	 * @throws IOException  There is no files found.
-	 * @throws SAXException     No idea what this is
-	 * @throws ParserConfigurationException     The xml parser failed.
-	 * @throws ElementNotFoundException The element wasn't found.
+	 *
+	 * @throws IOException                  There is no files found.
+	 * @throws SAXException                 No idea what this is
+	 * @throws ParserConfigurationException The xml parser failed.
+	 * @throws ElementNotFoundException     The element wasn't found.
 	 */
 	public static Double molar(String userInput) throws ParserConfigurationException, SAXException, IOException, ElementNotFoundException
 	{

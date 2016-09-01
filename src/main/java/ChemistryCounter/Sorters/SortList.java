@@ -15,7 +15,7 @@ import java.util.Collections;
  * Time : 7:16 PM
  * Project Name: chemistsCounter
  * Class Name: SortList
- *
+ * <p>
  * The class sortList sorts the calculator created for android.
  */
 public class SortList
@@ -23,7 +23,8 @@ public class SortList
 	
 	/**
 	 * The method functions sorts the List on functions
-	 * @return  name TO array.
+	 *
+	 * @return name TO array.
 	 */
 	public static String[] functions()
 	{

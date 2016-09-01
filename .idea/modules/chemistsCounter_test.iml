@@ -10,13 +10,13 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: junit:junit:4.11" level="project" />
-    <orderEntry type="library" name="Gradle: org.ejml:core:0.29" level="project" />
-    <orderEntry type="library" name="Gradle: org.ejml:all:0.29" level="project" />
     <orderEntry type="library" name="Gradle: org.ejml:equation:0.29" level="project" />
     <orderEntry type="library" name="Gradle: org.ejml:simple:0.29" level="project" />
-    <orderEntry type="library" name="Gradle: org.ejml:denseC64:0.29" level="project" />
-    <orderEntry type="library" name="Gradle: org.ejml:dense64:0.29" level="project" />
+    <orderEntry type="library" name="Gradle: org.ejml:all:0.29" level="project" />
     <orderEntry type="library" name="Gradle: com.google.guava:guava:19.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.ejml:dense64:0.29" level="project" />
+    <orderEntry type="library" name="Gradle: org.ejml:core:0.29" level="project" />
+    <orderEntry type="library" name="Gradle: org.ejml:denseC64:0.29" level="project" />
   </component>
   <component name="TestModuleProperties" production-module="chemistsCounter_main" />
 </module>

@@ -12,7 +12,7 @@ package ChemistryCounter.Exceptions;
  * Time : 7:02 PM
  * Project Name: chemistsCounter
  * Class Name: CalculatorNotFoundException
- *
+ * <p>
  * The class throws CalculatorNotFoundException
  */
 public class CalculatorNotFoundException extends Exception
@@ -28,7 +28,8 @@ public class CalculatorNotFoundException extends Exception
 	
 	/**
 	 * The method CalculatorNotFoundException throws if no such calculator is not found.
-	 * @param message   The message for errors
+	 *
+	 * @param message The message for errors
 	 */
 	public CalculatorNotFoundException(String message)
 	{
@@ -37,8 +38,9 @@ public class CalculatorNotFoundException extends Exception
 	
 	/**
 	 * The method CalculatorNotFoundException throws if no such calculator is not found.
-	 * @param message   The message for errors
-	 * @param cause     The cause for error
+	 *
+	 * @param message The message for errors
+	 * @param cause   The cause for error
 	 */
 	public CalculatorNotFoundException(String message, Throwable cause)
 	{
@@ -47,7 +49,8 @@ public class CalculatorNotFoundException extends Exception
 	
 	/**
 	 * The method CalculatorNotFoundException throws if no such calculator is not found.
-	 * @param cause     The cause for error
+	 *
+	 * @param cause The cause for error
 	 */
 	public CalculatorNotFoundException(Throwable cause)
 	{
@@ -56,10 +59,11 @@ public class CalculatorNotFoundException extends Exception
 	
 	/**
 	 * The method CalculatorNotFoundException throws if no such calculator is not found.
-	 * @param message   The message for errors
-	 * @param cause     The cause for error
-	 * @param enableSuppression Enable Supression of error
-	 * @param writableStackTrace    Enable if its writable
+	 *
+	 * @param message            The message for errors
+	 * @param cause              The cause for error
+	 * @param enableSuppression  Enable Supression of error
+	 * @param writableStackTrace Enable if its writable
 	 */
 	protected CalculatorNotFoundException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace)
 	{

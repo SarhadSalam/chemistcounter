@@ -38,6 +38,14 @@ public class ReactionCompounds
 	 * The reactionBalance is stored in reactionBalance
 	 */
 	private int reactionBalance;
+	/**
+	 * The limiting reagent of a reactant is stored in limitingReagent.
+	 */
+	private boolean limitingReagent = false;
+	/**
+	 * The variable below sets the molar mass of a compound.
+	 */
+	private double molarMassOfCompound;
 	
 	public boolean isLimitingReagent()
 	{
@@ -48,11 +56,6 @@ public class ReactionCompounds
 	{
 		this.limitingReagent = limitingReagent;
 	}
-	
-	/**
-	 * The limiting reagent of a reactant is stored in limitingReagent.
-	 */
-	private boolean limitingReagent = false;
 	
 	/**
 	 * The method getMolarMassOfCompound gets the molar mass of a compound.
@@ -73,11 +76,6 @@ public class ReactionCompounds
 	{
 		this.molarMassOfCompound = molarMassOfCompound;
 	}
-	
-	/**
-	 * The variable below sets the molar mass of a compound.
-	 */
-	private double molarMassOfCompound;
 	
 	/**
 	 * The method getMoleOfCompound gets the moles of compounds.

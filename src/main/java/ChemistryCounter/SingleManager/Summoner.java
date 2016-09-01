@@ -13,6 +13,7 @@ import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 /**
@@ -25,6 +26,38 @@ import java.util.ArrayList;
 public class Summoner
 {
 	
+	public static void main(String[] args)
+	{
+		try
+		{
+			Summoner.summoner("H2O");
+		} catch( ElementNotFoundException e )
+		{
+			e.printStackTrace();
+		} catch( IOException e )
+		{
+			e.printStackTrace();
+		} catch( SAXException e )
+		{
+			e.printStackTrace();
+		} catch( ParserConfigurationException e )
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	public static InputStream getInputStream()
+	{
+		return inputStream;
+	}
+	
+	private static InputStream inputStream = null;
+	
+	public static void setInputStream(InputStream inputStream)
+	{
+		Summoner.inputStream = inputStream;
+	}
+	
 	/**
 	 * /**
 	 * The class Summoner is where all elements and compounds are sent using the userInput param.
@@ -34,15 +67,23 @@ public class Summoner
 	 * @param userInput The string that contains the user input to simplify
 	 *
 	 * @return ArrayList elementDetails
-	 * @throws ElementNotFoundException The Element wasn't found.
-	 * @throws IOException  There is no files found.
-	 * @throws SAXException     No idea what this is
-	 * @throws ParserConfigurationException     The xml parser failed.
+	 *
+	 * @throws ElementNotFoundException     The Element wasn't found.
+	 * @throws IOException                  There is no files found.
+	 * @throws SAXException                 No idea what this is
+	 * @throws ParserConfigurationException The xml parser failed.
 	 */
 	public static ArrayList<ChemicalName> summoner(String userInput) throws ElementNotFoundException, IOException, SAXException, ParserConfigurationException
 	{
-		ArrayList<ChemicalName> managedElements = ElementManager.elements(userInput);
-		ArrayList<ChemicalName> elementName = ElementDetails.findElement(managedElements);
+		ArrayList<ChemicalName> elementName = null;
+		if(inputStream == null)
+		{
+			ArrayList<ChemicalName> managedElements = ElementManager.elements(userInput);
+			elementName = ElementDetails.findElement(managedElements);
+		} else {
+			ArrayList<ChemicalName> managedElements = ElementManager.elements(userInput);
+			elementName = ElementDetails.findElement(managedElements, inputStream);
+		}
 		return AtomCounter.atomCounter(elementName);
 	}
 }

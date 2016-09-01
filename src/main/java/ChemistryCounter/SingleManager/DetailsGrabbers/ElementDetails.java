@@ -15,10 +15,11 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.FileInputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Properties;
 
 /**
  * Created by sarha on 26-Apr-16.
@@ -26,20 +27,14 @@ import java.util.ArrayList;
  */
 public class ElementDetails
 {
+	private static Properties properties;
 	
-	public static ArrayList<String> name = new ArrayList<>();
-	
-	/**
-	 * Something I realized late is that to be an android library you need it to be a android file system. So for
-	 * development and or computer purposes the value is hardcoded. But the value is and wil be overwritten in android
-	 * dev.
-	 */
-	private static InputStream is = null;
-	
-	public static void setDirectory(InputStream path)
+	public static void setProperties(Properties properties)
 	{
-		is = path;
+		ElementDetails.properties = properties;
 	}
+	
+	public ArrayList<String> name = new ArrayList<>();
 	
 	/**
 	 * The method finds elements from the xml files and whether they exist. If they do not exist a new exception is
@@ -49,28 +44,30 @@ public class ElementDetails
 	 *
 	 * @return A final verified list that contains all elements inputted by the user.
 	 *
-	 * @throws ElementNotFoundException Element was not found and is invalid.
-	 * @throws IOException  There is no files found.
-	 * @throws SAXException     No idea what this is
-	 * @throws ParserConfigurationException     The xml parser failed.
+	 * @throws ElementNotFoundException     Element was not found and is invalid.
+	 * @throws IOException                  There is no files found.
+	 * @throws SAXException                 No idea what this is
+	 * @throws ParserConfigurationException The xml parser failed.
 	 */
 	public static ArrayList<ChemicalName> findElement(ArrayList<ChemicalName> unverifiedList) throws ElementNotFoundException, ParserConfigurationException, IOException, SAXException
 	{
 		ArrayList<ChemicalName> finalVerifiedList = new ArrayList<>();
 		
-		if( is == null )
-		{
-			is = new FileInputStream("src/main/resources/properties_initMainChart.xml");
-		}
+		
+		File file = new File("src/main/resources/properties_initMainChart.xml");
 		
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-		Document doc = dBuilder.parse(is);
+		Document doc = dBuilder.parse(file);
 		
+		finalVerifiedList = findElementFromList(unverifiedList, finalVerifiedList, doc);
+		return finalVerifiedList;
+	}
+	private static ArrayList<ChemicalName> findElementFromList(ArrayList<ChemicalName> unverifiedList, ArrayList<ChemicalName> finalVerifiedList, Document doc) throws ElementNotFoundException
+	{
 		doc.getDocumentElement().normalize();
 		
 		NodeList nList = doc.getElementsByTagName("element");
-		
 		for( int i = 0; i<nList.getLength(); i++ )
 		{
 			
@@ -92,10 +89,32 @@ public class ElementDetails
 				}
 			}
 		}
-		if( (!( unverifiedList.size() == finalVerifiedList.size() )))
+		
+		if( ( !( unverifiedList.size() == finalVerifiedList.size() ) ) )
 		{
 			throw new ElementNotFoundException("There is no such element in the periodic table.");
 		}
+		return unverifiedList;
+	}
+	/**
+	 * @deprecated
+	 * @param unverifiedList The unverified List
+	 * @param is The Directory to file
+	 * @return Verified List
+	 * @throws ElementNotFoundException Element not found
+	 * @throws ParserConfigurationException Parsing Error
+	 * @throws IOException  IOException
+	 * @throws SAXException     SAXException
+	 */
+	public static ArrayList<ChemicalName> findElement(ArrayList<ChemicalName> unverifiedList, InputStream is) throws ElementNotFoundException, ParserConfigurationException, IOException, SAXException
+	{
+		ArrayList<ChemicalName> finalVerifiedList = new ArrayList<>();
+		
+		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+		Document doc = dBuilder.parse(is);
+		
+		finalVerifiedList = findElementFromList(unverifiedList, finalVerifiedList, doc);
 		return finalVerifiedList;
 	}
 }

@@ -28,11 +28,13 @@ public class ElementManager
 	 * This class acts like a middleman.
 	 *
 	 * @param chemicalCompound The chemical compound that was inputted by the user, which is forwarded by the summoner.
-	 *@throws IOException  There is no files found.
-	 * @throws SAXException     No idea what this is
-	 * @throws ParserConfigurationException     The xml parser failed.
-	 * @throws  ElementNotFoundException    The element wasn't found.
+	 *
 	 * @return elementsList
+	 *
+	 * @throws IOException                  There is no files found.
+	 * @throws SAXException                 No idea what this is
+	 * @throws ParserConfigurationException The xml parser failed.
+	 * @throws ElementNotFoundException     The element wasn't found.
 	 */
 	public static ArrayList<ChemicalName> elements(String chemicalCompound) throws ElementNotFoundException, SAXException, ParserConfigurationException, IOException
 	{
@@ -41,6 +43,12 @@ public class ElementManager
 		if( chemicalCompound.matches(".*\\(+.*") || chemicalCompound.matches(".*\\)+.*") )
 		{
 			elementsList = Polyatomic.manager(chemicalCompound);
+		}
+		
+//		Only if it's numbers.
+		else if(chemicalCompound.matches("\\d+"))
+		{
+			throw new ElementNotFoundException("The parsing error caused a no element exception.");
 		}
 
 //		If normal

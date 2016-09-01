@@ -30,7 +30,7 @@ public class Normal
 //			Detects compounds
 		for( String elementName : splitElement )
 		{
-			if(!elementName.equals("") )
+			if( !elementName.equals("") )
 			{
 				ChemicalName element = new ChemicalName();
 //			If Element does not have valence electronP

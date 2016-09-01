@@ -169,11 +169,11 @@ public class ManageReactions
 	 * @return Solve matrix
 	 *
 	 * @throws ReactionNotBalancableException     Reaction cannot be balanced.
-	 * @throws ElementNotFoundException The element wasn't found.
-	 * @throws IOException  There is no files found.
-	 * @throws SAXException     No idea what this is
-	 * @throws ParserConfigurationException     The xml parser failed.
-	 * @throws  ReactionElementNotMatchedException The reaction cannot be balanced because it wasn't matched.
+	 * @throws ElementNotFoundException           The element wasn't found.
+	 * @throws IOException                        There is no files found.
+	 * @throws SAXException                       No idea what this is
+	 * @throws ParserConfigurationException       The xml parser failed.
+	 * @throws ReactionElementNotMatchedException The reaction cannot be balanced because it wasn't matched.
 	 */
 	public static Double[] setMatrix(UniversalGetters u) throws ReactionNotBalancableException, ReactionElementNotMatchedException, ParserConfigurationException, SAXException, IOException, ElementNotFoundException
 	{
@@ -227,15 +227,6 @@ public class ManageReactions
 		return d;
 	}
 	
-	private static UniversalGetters setReactionBalance(UniversalGetters u, Double[] d)
-	{
-		for( int i = 0; i<d.length; i++ )
-		{
-			u.getReactionCompounds().get(i).setReactionBalance((int) Math.round(Math.abs(d[i])));
-		}
-		return u;
-	}
-	
 	/**
 	 * The method solveMatrix solves the matrix by inverting it.
 	 *
@@ -262,6 +253,15 @@ public class ManageReactions
 		}
 		
 		return balanced;
+	}
+	
+	private static UniversalGetters setReactionBalance(UniversalGetters u, Double[] d)
+	{
+		for( int i = 0; i<d.length; i++ )
+		{
+			u.getReactionCompounds().get(i).setReactionBalance((int) Math.round(Math.abs(d[i])));
+		}
+		return u;
 	}
 	
 	/**

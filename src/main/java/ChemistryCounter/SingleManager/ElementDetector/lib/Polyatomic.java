@@ -6,7 +6,6 @@ package ChemistryCounter.SingleManager.ElementDetector.lib;
 
 import ChemistryCounter.Exceptions.ElementNotFoundException;
 import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
-import ChemistryCounter.SingleManager.Summoner;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -34,7 +33,7 @@ public class Polyatomic
 	 * @throws IOException                  There is no files found.
 	 * @throws SAXException                 No idea what this is
 	 * @throws ParserConfigurationException The xml parser failed.
-	 * @throws ElementNotFoundException    The element wasn't found.
+	 * @throws ElementNotFoundException     The element wasn't found.
 	 * @see Normal
 	 */
 	public static ArrayList<ChemicalName> manager(String chemicalCompound) throws ElementNotFoundException, SAXException, ParserConfigurationException, IOException
@@ -51,7 +50,14 @@ public class Polyatomic
 		ArrayList<ChemicalName> polyatomicElementsList = bracketManager(polyatomicElements);
 
 //		Deals with the non-polyatomic part
-		String nonPolyatomicCompound = String.join("", chemicalCompound.split("\\((.*?)\\)\\d*"));
+		String[] split = chemicalCompound.split("\\((.*?)\\)\\d*");
+		
+		String nonPolyatomicCompound = "";
+		for( String i : split )
+		{
+			nonPolyatomicCompound = nonPolyatomicCompound+i;
+		}
+		
 		if( !nonPolyatomicCompound.equals("") )
 		{
 			//		Sends of the non polyatomic to normal manager
@@ -69,10 +75,11 @@ public class Polyatomic
 	 * @param polyatomicElements Polyatomic elements is minmised by the managing method.
 	 *
 	 * @return Element List
-	 *@throws IOException  There is no files found.
-	 * @throws SAXException     No idea what this is
-	 * @throws ParserConfigurationException     The xml parser failed.
-	 * @throws  ElementNotFoundException The element wasn't found.
+	 *
+	 * @throws IOException                  There is no files found.
+	 * @throws SAXException                 No idea what this is
+	 * @throws ParserConfigurationException The xml parser failed.
+	 * @throws ElementNotFoundException     The element wasn't found.
 	 * @see Polyatomic
 	 */
 	private static ArrayList<ChemicalName> bracketManager(ArrayList<String> polyatomicElements) throws ElementNotFoundException, SAXException, ParserConfigurationException, IOException
@@ -111,8 +118,9 @@ public class Polyatomic
 			} else
 			{
 //				In case polyatomic valence is not available in the input
-				ArrayList<ChemicalName> elements = Summoner.summoner(polyatomicValenceArrayFinal.get(0));
+				ArrayList<ChemicalName> elements = Normal.manager(polyatomicValenceArrayFinal.get(0));
 				chemicalListContainer.addAll(elements);
+				
 			}
 		}
 		return chemicalListContainer;

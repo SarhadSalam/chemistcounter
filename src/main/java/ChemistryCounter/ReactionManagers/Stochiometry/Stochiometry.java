@@ -41,30 +41,13 @@ public class Stochiometry
 	 * @throws ElementNotFoundException           Element was not found
 	 * @throws ReactionNotBalancableException     Reaction cannot be balanced.
 	 * @throws ReactionElementNotMatchedException Element and or Compound cannot be balanced.
-	 * @throws IOException  There is no files found.
-	 * @throws SAXException     No idea what this is
-	 * @throws ParserConfigurationException     The xml parser failed.
+	 * @throws IOException                        There is no files found.
+	 * @throws SAXException                       No idea what this is
+	 * @throws ParserConfigurationException       The xml parser failed.
 	 */
 	public static UniversalGetters convertString(String reactionUserInput) throws ElementNotFoundException, ReactionNotBalancableException, ReactionElementNotMatchedException, ParserConfigurationException, SAXException, IOException
 	{
 		return Manager.balance(reactionUserInput);
-	}
-	
-	/**
-	 * The method findMolarMass is used for finding the molar mass of all the compounds in reaction.
-	 *
-	 * @param u The parameter from UniversalGetters u
-	 *          @throws IOException  There is no files found.
-	 * @throws SAXException     No idea what this is
-	 * @throws ParserConfigurationException     The xml parser failed.
-	 * @throws ElementNotFoundException The element wasn't found.
-	 */
-	private static void findMolarMass(UniversalGetters u) throws IOException, SAXException, ParserConfigurationException, ElementNotFoundException
-	{
-		for( ReactionCompounds rc : u.getReactionCompounds() )
-		{
-			rc.setMolarMassOfCompound(MolarMassCounter.molar(rc.getName()));
-		}
 	}
 	
 	/**
@@ -75,10 +58,11 @@ public class Stochiometry
 	 * @param name The name of the compound the user wants
 	 *
 	 * @return u UniversalGetters
-	 *@throws IOException  There is no files found.
-	 * @throws SAXException     No idea what this is
-	 * @throws ParserConfigurationException     The xml parser failed.
-	 * @throws ElementNotFoundException Element was not found.
+	 *
+	 * @throws IOException                  There is no files found.
+	 * @throws SAXException                 No idea what this is
+	 * @throws ParserConfigurationException The xml parser failed.
+	 * @throws ElementNotFoundException     Element was not found.
 	 */
 	public static UniversalGetters findMoleOfSpecificCompound(Double mass, UniversalGetters u, String name) throws ElementNotFoundException, ParserConfigurationException, SAXException, IOException
 	{
@@ -106,14 +90,34 @@ public class Stochiometry
 	}
 	
 	/**
+	 * The method findMolarMass is used for finding the molar mass of all the compounds in reaction.
+	 *
+	 * @param u The parameter from UniversalGetters u
+	 *
+	 * @throws IOException                  There is no files found.
+	 * @throws SAXException                 No idea what this is
+	 * @throws ParserConfigurationException The xml parser failed.
+	 * @throws ElementNotFoundException     The element wasn't found.
+	 */
+	private static void findMolarMass(UniversalGetters u) throws IOException, SAXException, ParserConfigurationException, ElementNotFoundException
+	{
+		for( ReactionCompounds rc : u.getReactionCompounds() )
+		{
+			rc.setMolarMassOfCompound(MolarMassCounter.molar(rc.getName()));
+		}
+	}
+	
+	/**
 	 * The method findMoleByRatiosFromMoles finds the mole of atoms from the basic stochiometric ratios fom the moles.
 	 * <p>
 	 * Each of the methods in class Stochiometry is linked to each other.
 	 *
 	 * @param u    UniversalGetters containing details
 	 * @param name Name of the element or compound we want to find.
-	 *             @throws ElementNotFoundException The element wasn't found.
-	 *             @return u UniversalGetters.
+	 *
+	 * @return u UniversalGetters.
+	 *
+	 * @throws ElementNotFoundException The element wasn't found.
 	 */
 	public static UniversalGetters findMoleByRatiosFromMoles(UniversalGetters u, String name) throws ElementNotFoundException
 	{

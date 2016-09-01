@@ -133,13 +133,13 @@ public class BeautifyReaction
 		for( int i = 0; i<splitReaction.getReactionCompounds().size(); i++ )
 		{
 			ReactionCompounds rc = splitReaction.getReactionCompounds().get(i);
-			String tempname = rc.getName();
+			String name = rc.getName();
 			if( rc.getCompoundStatus().equals("Reactant") )
 			{
-				reactant = reactant+rc.getReactionBalance()+tempname+" + ";
+				reactant = reactant+rc.getReactionBalance()+name+" + ";
 			} else
 			{
-				product = product+rc.getReactionBalance()+tempname+" + ";
+				product = product+rc.getReactionBalance()+name+" + ";
 			}
 		}
 		equation = reactant+" = "+product;

@@ -21,8 +21,8 @@ public class PercentageComposition
 	 *
 	 * @param compound The element in a compound to find the composition
 	 *
-	 * @return compound
-	P */
+	 * @return compound P
+	 */
 	public static ArrayList<ChemicalName> percentage(ArrayList<ChemicalName> compound)
 	{
 		Double molarMass = MolarMassCounter.molar(compound);

@@ -14,7 +14,7 @@ import ChemistryCounter.Exceptions.CalculatorNotFoundException;
  * Time : 6:55 PM
  * Project Name: chemistsCounter
  * Class Name: CalcManager
- *
+ * <p>
  * The CalcManager class gets what the calculation operation should do.
  */
 public class CalcManager
@@ -22,11 +22,12 @@ public class CalcManager
 	
 	public static Boolean calcManager(String tag) throws CalculatorNotFoundException
 	{
-		if( ( tag.equals("Percentage Composition") ) || tag.equals("Molar Mass"))
+		if( ( tag.equals("Percentage Composition") ) || tag.equals("Molar Mass") )
 		{
 			return false;
-		} else if( ( tag.equals("Mole"))) {
-		return true;
+		} else if( ( tag.equals("Mole") ) )
+		{
+			return true;
 		}
 		throw new CalculatorNotFoundException("Not Found Any Such Calculator.");
 	}
