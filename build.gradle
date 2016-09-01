@@ -3,7 +3,7 @@
  */
 
 group 'inc.sarhad.chemistry.tools'
-version '0.2'
+version '0.3'
 
 apply plugin: 'java'
 
@@ -21,4 +21,14 @@ dependencies {
 }
 manifest {
     attributes 'Implementation-Title': 'Chemists Library', 'Implementation-Version': version
+}
+
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Implementation-Title': 'Chemists Library',
+                'Implementation-Version': version
+    }
+    baseName = project.name
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
 }

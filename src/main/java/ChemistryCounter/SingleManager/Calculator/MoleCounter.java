@@ -4,6 +4,7 @@
 
 package ChemistryCounter.SingleManager.Calculator;
 
+import ChemistryCounter.Converters.MassConverter;
 import ChemistryCounter.Exceptions.ElementNotFoundException;
 import ChemistryCounter.SingleManager.Cleaners.SignificantFigures;
 import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
@@ -29,6 +30,7 @@ public class MoleCounter
 	 *
 	 * @param mass      The mass of the element/compound for which mole to be calculated.
 	 * @param userInput The user input is the element/compound.
+	 * @param massUnit  The massUnit.
 	 *
 	 * @return The mole.
 	 *
@@ -37,23 +39,43 @@ public class MoleCounter
 	 * @throws ParserConfigurationException The xml parser failed.
 	 * @throws ElementNotFoundException     The element was not found.
 	 */
-	public static BigDecimal mole(Double mass, String userInput) throws IOException, SAXException, ParserConfigurationException, ElementNotFoundException
+	public static BigDecimal mole(Double mass, String userInput, String massUnit) throws IOException, SAXException, ParserConfigurationException, ElementNotFoundException
 	{
 		Double molar = MolarMassCounter.molar(userInput);
-		return getMoleBigDecimal(mass, molar);
+		return getMoleBigDecimal(mass, molar, massUnit);
 	}
 	
-	private static BigDecimal getMoleBigDecimal(Double mass, Double molar)
+	/**
+	 * The Method to find mole.
+	 *
+	 * @param mass     The mass
+	 * @param cn       The preformatted ChemicalName ArrayList
+	 * @param massUnit The String massUnit
+	 *
+	 * @return The Mole in BigDecimals.
+	 */
+	public static BigDecimal mole(Double mass, ArrayList<ChemicalName> cn, String massUnit)
 	{
+		Double molar = MolarMassCounter.molar(cn);
+		return getMoleBigDecimal(mass, molar, massUnit);
+	}
+	
+	/**
+	 * The method refactored to prevent code rewriting.
+	 *
+	 * @param mass     The mass
+	 * @param molar    The molar mass.
+	 * @param massUnit The massUnit String.
+	 *
+	 * @return BigDecimalMole
+	 */
+	private static BigDecimal getMoleBigDecimal(Double mass, Double molar, String massUnit)
+	{
+		
+		mass = MassConverter.findOperation(massUnit, mass);
 		BigDecimal bd = new BigDecimal(mass);
 		int round = SignificantFigures.roundingFigures(bd);
 		return new BigDecimal(mass/molar).abs(new MathContext(round));
-	}
-	
-	public static BigDecimal mole(Double mass, ArrayList<ChemicalName> cn)
-	{
-		Double molar = MolarMassCounter.molar(cn);
-		return getMoleBigDecimal(mass, molar);
 	}
 	
 	/**
@@ -72,7 +94,7 @@ public class MoleCounter
 	
 	/**
 	 * The method avogadroNumber just fetches the avogadro number. A separate method was created just because I found it
-	 * to be amusing.
+	 * to be amusing. I am such a huge dork.
 	 *
 	 * @return Avogadro's Number
 	 */

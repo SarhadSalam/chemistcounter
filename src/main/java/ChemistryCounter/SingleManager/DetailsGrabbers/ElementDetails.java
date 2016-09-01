@@ -15,11 +15,8 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.ArrayList;
-import java.util.Properties;
 
 /**
  * Created by sarha on 26-Apr-16.
@@ -27,13 +24,10 @@ import java.util.Properties;
  */
 public class ElementDetails
 {
-	private static Properties properties;
 	
-	public static void setProperties(Properties properties)
-	{
-		ElementDetails.properties = properties;
-	}
-	
+	/**
+	 * The array list containing the name.
+	 */
 	public ArrayList<String> name = new ArrayList<>();
 	
 	/**
@@ -53,16 +47,23 @@ public class ElementDetails
 	{
 		ArrayList<ChemicalName> finalVerifiedList = new ArrayList<>();
 		
-		
-		File file = new File("src/main/resources/properties_initMainChart.xml");
-		
+		InputStream in = ClassLoader.getSystemClassLoader().getResourceAsStream("properties_initMainChart.xml");
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-		Document doc = dBuilder.parse(file);
+		Document doc = dBuilder.parse(in);
 		
 		finalVerifiedList = findElementFromList(unverifiedList, finalVerifiedList, doc);
 		return finalVerifiedList;
 	}
+	
+	/**
+	 * The method for finding element from a list.
+	 * @param unverifiedList    The Unverified List
+	 * @param finalVerifiedList The Final Verified List
+	 * @param doc   The Document
+	 * @return The Final Variable Instance
+	 * @throws ElementNotFoundException In case Element is not found.
+	 */
 	private static ArrayList<ChemicalName> findElementFromList(ArrayList<ChemicalName> unverifiedList, ArrayList<ChemicalName> finalVerifiedList, Document doc) throws ElementNotFoundException
 	{
 		doc.getDocumentElement().normalize();
@@ -94,27 +95,6 @@ public class ElementDetails
 		{
 			throw new ElementNotFoundException("There is no such element in the periodic table.");
 		}
-		return unverifiedList;
-	}
-	/**
-	 * @deprecated
-	 * @param unverifiedList The unverified List
-	 * @param is The Directory to file
-	 * @return Verified List
-	 * @throws ElementNotFoundException Element not found
-	 * @throws ParserConfigurationException Parsing Error
-	 * @throws IOException  IOException
-	 * @throws SAXException     SAXException
-	 */
-	public static ArrayList<ChemicalName> findElement(ArrayList<ChemicalName> unverifiedList, InputStream is) throws ElementNotFoundException, ParserConfigurationException, IOException, SAXException
-	{
-		ArrayList<ChemicalName> finalVerifiedList = new ArrayList<>();
-		
-		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-		Document doc = dBuilder.parse(is);
-		
-		finalVerifiedList = findElementFromList(unverifiedList, finalVerifiedList, doc);
 		return finalVerifiedList;
 	}
 }
