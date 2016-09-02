@@ -12,7 +12,7 @@ package ChemistryCounter.Converters;
  * Time : 2:15 AM
  * Project Name: chemistsCounter
  * Class Name: MassConverters
- *
+ * <p>
  * The Class responsible for mass conversions.
  */
 public class MassConverter
@@ -55,8 +55,10 @@ public class MassConverter
 	
 	/**
 	 * Converts kg to gram.
-	 * @param mass  The mass.
-	 * @return  mass in grams.
+	 *
+	 * @param mass The mass.
+	 *
+	 * @return mass in grams.
 	 */
 	private static Double kgToGram(Double mass)
 	{
@@ -64,8 +66,22 @@ public class MassConverter
 	}
 	
 	/**
+	 * Converts microgram to gram.
+	 *
+	 * @param mass The mass.
+	 *
+	 * @return mass in grams.
+	 */
+	private static Double microToGram(Double mass)
+	{
+		return mass/1e-6;
+	}
+	
+	/**
 	 * Converts milligram to gram.
-	 * @param mass  The mass.
+	 *
+	 * @param mass The mass.
+	 *
 	 * @return mass in grams.
 	 */
 	private static Double mgToGram(Double mass)
@@ -75,21 +91,13 @@ public class MassConverter
 	
 	/**
 	 * Converts nanogram to gram.
+	 *
 	 * @param mass The mass.
-	 * @return  mass in grams.
+	 *
+	 * @return mass in grams.
 	 */
 	private static Double nanoToGram(Double mass)
 	{
 		return mass/1e-9;
-	}
-	
-	/**
-	 * Converts microgram to gram.
-	 * @param mass The mass.
-	 * @return mass in grams.
-	 */
-	private static Double microToGram(Double mass)
-	{
-		return mass/1e-6;
 	}
 }

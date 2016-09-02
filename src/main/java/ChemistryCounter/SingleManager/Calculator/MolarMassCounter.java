@@ -20,6 +20,7 @@ import java.util.ArrayList;
  */
 public class MolarMassCounter
 {
+	
 	/**
 	 * The method molar below finds the molar mass of an element of compound.
 	 *

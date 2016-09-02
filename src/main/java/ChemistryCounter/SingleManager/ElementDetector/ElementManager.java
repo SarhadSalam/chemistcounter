@@ -44,9 +44,9 @@ public class ElementManager
 		{
 			elementsList = Polyatomic.manager(chemicalCompound);
 		}
-		
+
 //		Only if it's numbers.
-		else if(chemicalCompound.matches("\\d+"))
+		else if( chemicalCompound.matches("\\d+") )
 		{
 			throw new ElementNotFoundException("The parsing error caused a no element exception.");
 		}

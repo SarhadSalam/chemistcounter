@@ -24,7 +24,8 @@ import java.util.ArrayList;
 
 public class Summoner
 {
-	 /**
+	
+	/**
 	 * The class Summoner is where all elements and compounds are sent using the userInput param.
 	 * <p>
 	 * The class solves the element name.
@@ -41,7 +42,7 @@ public class Summoner
 	public static ArrayList<ChemicalName> summoner(String userInput) throws ElementNotFoundException, IOException, SAXException, ParserConfigurationException
 	{
 		ArrayList<ChemicalName> managedElements = ElementManager.elements(userInput);
-		ArrayList<ChemicalName>  elementName = ElementDetails.findElement(managedElements);
+		ArrayList<ChemicalName> elementName = ElementDetails.findElement(managedElements);
 		return AtomCounter.atomCounter(elementName);
 	}
 }

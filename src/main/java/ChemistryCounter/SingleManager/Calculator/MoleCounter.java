@@ -46,21 +46,6 @@ public class MoleCounter
 	}
 	
 	/**
-	 * The Method to find mole.
-	 *
-	 * @param mass     The mass
-	 * @param cn       The preformatted ChemicalName ArrayList
-	 * @param massUnit The String massUnit
-	 *
-	 * @return The Mole in BigDecimals.
-	 */
-	public static BigDecimal mole(Double mass, ArrayList<ChemicalName> cn, String massUnit)
-	{
-		Double molar = MolarMassCounter.molar(cn);
-		return getMoleBigDecimal(mass, molar, massUnit);
-	}
-	
-	/**
 	 * The method refactored to prevent code rewriting.
 	 *
 	 * @param mass     The mass
@@ -76,6 +61,21 @@ public class MoleCounter
 		BigDecimal bd = new BigDecimal(mass);
 		int round = SignificantFigures.roundingFigures(bd);
 		return new BigDecimal(mass/molar).abs(new MathContext(round));
+	}
+	
+	/**
+	 * The Method to find mole.
+	 *
+	 * @param mass     The mass
+	 * @param cn       The preformatted ChemicalName ArrayList
+	 * @param massUnit The String massUnit
+	 *
+	 * @return The Mole in BigDecimals.
+	 */
+	public static BigDecimal mole(Double mass, ArrayList<ChemicalName> cn, String massUnit)
+	{
+		Double molar = MolarMassCounter.molar(cn);
+		return getMoleBigDecimal(mass, molar, massUnit);
 	}
 	
 	/**

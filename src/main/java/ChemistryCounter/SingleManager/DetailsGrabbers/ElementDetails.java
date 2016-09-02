@@ -15,7 +15,8 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.*;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 /**
@@ -58,10 +59,13 @@ public class ElementDetails
 	
 	/**
 	 * The method for finding element from a list.
+	 *
 	 * @param unverifiedList    The Unverified List
 	 * @param finalVerifiedList The Final Verified List
-	 * @param doc   The Document
+	 * @param doc               The Document
+	 *
 	 * @return The Final Variable Instance
+	 *
 	 * @throws ElementNotFoundException In case Element is not found.
 	 */
 	private static ArrayList<ChemicalName> findElementFromList(ArrayList<ChemicalName> unverifiedList, ArrayList<ChemicalName> finalVerifiedList, Document doc) throws ElementNotFoundException

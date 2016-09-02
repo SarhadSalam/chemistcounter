@@ -1,0 +1,21 @@
+# Change Log
+All notable changes to this project will be documented in this file.
+
+## [0.3] 02-August-2016
+### Added
+    - Complete Support for Android.
+    - Fixed about 23 bugs.
+
+### Removed
+    - A load of unused functions.
+
+
+## [0.2] 01-September-2016
+### Added
+    - Fixed a lot of untracked bugs.
+    - Created new calculators.
+    - Created equation balancers.
+
+## [0.1] 27-May-2016
+### Added
+    -The algorithm for chemical compounds.
