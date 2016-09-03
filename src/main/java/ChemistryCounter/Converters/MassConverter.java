@@ -4,6 +4,8 @@
 
 package ChemistryCounter.Converters;
 
+import java.math.BigDecimal;
+
 /**
  * Class Details:-
  * Author: Sarhad
@@ -26,15 +28,16 @@ public class MassConverter
 	 *
 	 * @return Returns the proper mass.
 	 */
-	public static Double findOperation(String massUnit, Double mass)
+	public static BigDecimal findOperation(String massUnit, Double mass)
 	{
 //		The switch statement starts at char at 0. The Kilogram for e.g. is k.
+		BigDecimal bigDecimal = new BigDecimal(mass);
 		switch( massUnit.charAt(0) )
 		{
 			case 'K':
 				return kgToGram(mass);
 			case 'G':
-				return mass;
+				return bigDecimal;
 //			In case it's M, there is Micro or Milli therefore another nested switch statement.
 			case 'M':
 				switch( massUnit.charAt(2) )
@@ -44,12 +47,12 @@ public class MassConverter
 					case 'l':
 						return mgToGram(mass);
 					default:
-						return mass;
+						return bigDecimal;
 				}
 			case 'N':
 				return nanoToGram(mass);
 			default:
-				return mass;
+				return bigDecimal;
 		}
 	}
 	
@@ -60,9 +63,9 @@ public class MassConverter
 	 *
 	 * @return mass in grams.
 	 */
-	private static Double kgToGram(Double mass)
+	private static BigDecimal kgToGram(Double mass)
 	{
-		return mass*1e3;
+		return new BigDecimal(mass/1e3);
 	}
 	
 	/**
@@ -72,9 +75,9 @@ public class MassConverter
 	 *
 	 * @return mass in grams.
 	 */
-	private static Double microToGram(Double mass)
+	private static BigDecimal microToGram(Double mass)
 	{
-		return mass/1e-6;
+		return new BigDecimal(mass*1e6);
 	}
 	
 	/**
@@ -84,9 +87,9 @@ public class MassConverter
 	 *
 	 * @return mass in grams.
 	 */
-	private static Double mgToGram(Double mass)
+	private static BigDecimal mgToGram(Double mass)
 	{
-		return mass/1e-3;
+		return new BigDecimal(mass/1e-3);
 	}
 	
 	/**
@@ -96,8 +99,8 @@ public class MassConverter
 	 *
 	 * @return mass in grams.
 	 */
-	private static Double nanoToGram(Double mass)
+	private static BigDecimal nanoToGram(Double mass)
 	{
-		return mass/1e-9;
+		return new BigDecimal(mass/1e-9);
 	}
 }

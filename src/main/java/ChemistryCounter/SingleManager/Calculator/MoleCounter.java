@@ -57,10 +57,10 @@ public class MoleCounter
 	private static BigDecimal getMoleBigDecimal(Double mass, Double molar, String massUnit)
 	{
 		
-		mass = MassConverter.findOperation(massUnit, mass);
-		BigDecimal bd = new BigDecimal(mass);
-		int round = SignificantFigures.roundingFigures(bd);
-		return new BigDecimal(mass/molar).abs(new MathContext(round));
+		BigDecimal newMass = MassConverter.findOperation(massUnit, mass);
+		int round = SignificantFigures.roundingFigures(mass);
+		newMass = newMass.divide(new BigDecimal(molar), 6).abs(new MathContext(round));
+		return newMass;
 	}
 	
 	/**

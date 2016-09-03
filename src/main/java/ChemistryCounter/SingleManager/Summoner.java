@@ -5,6 +5,9 @@
 package ChemistryCounter.SingleManager;
 
 import ChemistryCounter.Exceptions.ElementNotFoundException;
+import ChemistryCounter.Exceptions.ReactionElementNotMatchedException;
+import ChemistryCounter.Exceptions.ReactionNotBalancableException;
+import ChemistryCounter.ReactionManagers.Manager;
 import ChemistryCounter.SingleManager.Cleaners.AtomCounter;
 import ChemistryCounter.SingleManager.DetailsGrabbers.ElementDetails;
 import ChemistryCounter.SingleManager.ElementDetector.ElementManager;
@@ -24,6 +27,32 @@ import java.util.ArrayList;
 
 public class Summoner
 {
+	
+	public static void main(String[] args)
+	{
+		try
+		{
+			System.out.println(Manager.equation(Manager.balance("H2+O2=H2O")));
+		} catch( ReactionElementNotMatchedException e )
+		{
+			e.printStackTrace();
+		} catch( ReactionNotBalancableException e )
+		{
+			e.printStackTrace();
+		} catch( ElementNotFoundException e )
+		{
+			e.printStackTrace();
+		} catch( IOException e )
+		{
+			e.printStackTrace();
+		} catch( SAXException e )
+		{
+			e.printStackTrace();
+		} catch( ParserConfigurationException e )
+		{
+			e.printStackTrace();
+		}
+	}
 	
 	/**
 	 * The class Summoner is where all elements and compounds are sent using the userInput param.

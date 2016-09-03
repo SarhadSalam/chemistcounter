@@ -13,7 +13,6 @@ import java.math.BigDecimal;
  */
 public class SignificantFigures
 {
-	
 	private static int decimalPlaces = 0;
 	
 	/**
@@ -28,7 +27,35 @@ public class SignificantFigures
 //		Converts to string for count
 		String input = userInput.stripTrailingZeros().toPlainString();
 		int count = input.length();
-//		The position of a decimal
+		count = getCount(input, count);
+		return count;
+	}
+	
+	/**
+	 * The method below rounds figures and sets rounding figures after any operation such as Multiplication or Division.
+	 *
+	 * @param userInput The significant figures are managed by a huge user input.
+	 *
+	 * @return count The rounding in significant figures.
+	 */
+	public static int roundingFigures(Double userInput)
+	{
+//		Converts to string for count
+		String input = String.valueOf(userInput);
+		int count = input.length();
+		count = getCount(input, count);
+		return count;
+	}
+	
+	/**
+	 * The count for sig figs is derived from here. Chillax mate.
+	 * @param input Input
+	 * @param count Count
+	 * @return  int
+	 */
+	private static int getCount(String input, int count)
+	{
+		//		The position of a decimal
 		int position = 0;
 
 //		Counts the entire length

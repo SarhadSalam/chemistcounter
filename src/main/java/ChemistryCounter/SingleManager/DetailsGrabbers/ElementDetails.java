@@ -27,6 +27,15 @@ public class ElementDetails
 {
 	
 	/**
+	 * This class solves the problem for finding android files. This class returns the classLoader name.
+	 * @return  ClassLoader
+	 */
+	private ClassLoader getClasses()
+	{
+		return getClass().getClassLoader();
+	}
+	
+	/**
 	 * The array list containing the name.
 	 */
 	public ArrayList<String> name = new ArrayList<>();
@@ -48,10 +57,15 @@ public class ElementDetails
 	{
 		ArrayList<ChemicalName> finalVerifiedList = new ArrayList<>();
 		
-		InputStream in = ClassLoader.getSystemClassLoader().getResourceAsStream("properties_initMainChart.xml");
+		ElementDetails ed = new ElementDetails();
+		ClassLoader classLoader = ed.getClasses();
+		
+//			InputStream is = ClassLoader.getSystemClassLoader().getResourceAsStream("properties_initMainChart.xml");
+		
+		InputStream is = classLoader.getResourceAsStream("properties_initMainChart.xml");
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-		Document doc = dBuilder.parse(in);
+		Document doc = dBuilder.parse(is);
 		
 		finalVerifiedList = findElementFromList(unverifiedList, finalVerifiedList, doc);
 		return finalVerifiedList;
