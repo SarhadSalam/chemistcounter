@@ -4,7 +4,8 @@
 
 package ChemistryCounter.ReactionManagers;
 
-import ChemistryCounter.SingleManager.Summoner;
+import ChemistryCounter.ReactionManagers.ReactionDetector.ReactionManager;
+import ChemistryCounter.SingleManager.ParseElements;
 
 /**
  * Created by sarhaD on 27-Jun-16.
@@ -162,10 +163,10 @@ public class ReactionCompounds
 	 *
 	 * @return originalName
 	 *
-	 * @see ChemistryCounter.SingleManager.ElementDetector.lib.Polyatomic
-	 * @see ChemistryCounter.SingleManager.ElementDetector.lib.Normal
-	 * @see Summoner
-	 * @see ChemistryCounter.ReactionManagers.ReactionDetector.ManageReactions
+	 * @see ChemistryCounter.SingleManager.ElementParser.lib.Polyatomic
+	 * @see ChemistryCounter.SingleManager.ElementParser.lib.Normal
+	 * @see ParseElements
+	 * @see ReactionManager
 	 */
 	public String getOriginalName()
 	{

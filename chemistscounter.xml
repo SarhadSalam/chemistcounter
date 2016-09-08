@@ -94,16 +94,34 @@
   
   <!-- Project Libraries -->
   
-  <path id="library.ejml-core-0.29-sources.classpath">
-    <pathelement location="${basedir}/lib/EJML-core-0.29.jar"/>
-    <pathelement location="${basedir}/lib/EJML-dense64-0.29.jar"/>
-    <pathelement location="${basedir}/lib/EJML-denseC64-0.29.jar"/>
-    <pathelement location="${basedir}/lib/EJML-equation-0.29.jar"/>
-    <pathelement location="${basedir}/lib/EJML-simple-0.29.jar"/>
+  <path id="library.gradle:_com.google.guava:guava:19.0.classpath">
+    <pathelement location="C:/Users/sarha/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/19.0/6ce200f6b23222af3d8abb6b6459e6c44f4bb0e9/guava-19.0.jar"/>
   </path>
   
-  <path id="library.guava-19.0.classpath">
-    <pathelement location="${basedir}/lib/guava-19.0.jar"/>
+  <path id="library.gradle:_junit:junit:4.11.classpath"/>
+  
+  <path id="library.gradle:_org.ejml:all:0.29.classpath">
+    <pathelement location="C:/Users/sarha/.gradle/caches/modules-2/files-2.1/org.ejml/all/0.29/31b3729d222d3ea055bb691213746e471fc1b474/all-0.29.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.ejml:core:0.29.classpath">
+    <pathelement location="C:/Users/sarha/.gradle/caches/modules-2/files-2.1/org.ejml/core/0.29/d22f8314e3d7fa637aec33571c0734c58892aa29/core-0.29.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.ejml:dense64:0.29.classpath">
+    <pathelement location="C:/Users/sarha/.gradle/caches/modules-2/files-2.1/org.ejml/dense64/0.29/3cae6162c012153c7e9a8e5b14682e39a69ee276/dense64-0.29.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.ejml:densec64:0.29.classpath">
+    <pathelement location="C:/Users/sarha/.gradle/caches/modules-2/files-2.1/org.ejml/denseC64/0.29/1c9016de9f3f6a96011c7487315953f7ccf2e9cd/denseC64-0.29.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.ejml:equation:0.29.classpath">
+    <pathelement location="C:/Users/sarha/.gradle/caches/modules-2/files-2.1/org.ejml/equation/0.29/7aa8d21a40e9b8dcb0f6cb7bdcea921239e5863c/equation-0.29.jar"/>
+  </path>
+  
+  <path id="library.gradle:_org.ejml:simple:0.29.classpath">
+    <pathelement location="C:/Users/sarha/.gradle/caches/modules-2/files-2.1/org.ejml/simple/0.29/d3cfefc0d9d0fcbcd37014bbe33da836fe47464f/simple-0.29.jar"/>
   </path>
   <!-- Register Custom Compiler Taskdefs -->
   <property name="javac2.home" value="${idea.home}/lib"/>
@@ -120,236 +138,11 @@
   
   <!-- Modules -->
   
+  <import file="${basedir}/.idea/modules/module_chemistscounter.xml"/>
   
-  <!-- Module chemistsCounter -->
+  <import file="${basedir}/.idea/modules/module_chemistscounter_main.xml"/>
   
-  <dirname property="module.chemistscounter.basedir" file="${ant.file}"/>
-  
-  
-  <property name="module.jdk.home.chemistscounter" value="${project.jdk.home}"/>
-  <property name="module.jdk.bin.chemistscounter" value="${project.jdk.bin}"/>
-  <property name="module.jdk.classpath.chemistscounter" value="${project.jdk.classpath}"/>
-  
-  <property name="compiler.args.chemistscounter" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
-  
-  <property name="chemistscounter.output.dir" value="${module.chemistscounter.basedir}/out/production/chemistsCounter"/>
-  <property name="chemistscounter.testoutput.dir" value="${module.chemistscounter.basedir}/out/test/chemistsCounter"/>
-  
-  <path id="chemistscounter.module.bootclasspath">
-    <!-- Paths to be included in compilation bootclasspath -->
-  </path>
-  
-  <path id="chemistscounter.module.production.classpath">
-    <path refid="${module.jdk.classpath.chemistscounter}"/>
-  </path>
-  
-  <path id="chemistscounter.runtime.production.module.classpath">
-    <pathelement location="${chemistscounter.output.dir}"/>
-  </path>
-  
-  <path id="chemistscounter.module.classpath">
-    <path refid="${module.jdk.classpath.chemistscounter}"/>
-    <pathelement location="${chemistscounter.output.dir}"/>
-  </path>
-  
-  <path id="chemistscounter.runtime.module.classpath">
-    <pathelement location="${chemistscounter.testoutput.dir}"/>
-    <pathelement location="${chemistscounter.output.dir}"/>
-  </path>
-  
-  
-  <patternset id="excluded.from.module.chemistscounter">
-    <patternset refid="ignored.files"/>
-  </patternset>
-  
-  <patternset id="excluded.from.compilation.chemistscounter">
-    <patternset refid="excluded.from.module.chemistscounter"/>
-  </patternset>
-  
-  
-  <target name="compile.module.chemistscounter" depends="compile.module.chemistscounter.production,compile.module.chemistscounter.tests" description="Compile module chemistsCounter"/>
-  
-  <target name="compile.module.chemistscounter.production" depends="register.custom.compilers" description="Compile module chemistsCounter; production classes"/>
-  
-  <target name="compile.module.chemistscounter.tests" depends="register.custom.compilers,compile.module.chemistscounter.production" description="compile module chemistsCounter; test classes" unless="skip.tests"/>
-  
-  <target name="clean.module.chemistscounter" description="cleanup module">
-    <delete dir="${chemistscounter.output.dir}"/>
-    <delete dir="${chemistscounter.testoutput.dir}"/>
-  </target>
-  
-  
-  <!-- Module chemistsCounter_main -->
-  
-  <dirname property="module.chemistscounter_main.basedir" file="${ant.file}"/>
-  
-  
-  <property name="module.jdk.home.chemistscounter_main" value="${project.jdk.home}"/>
-  <property name="module.jdk.bin.chemistscounter_main" value="${project.jdk.bin}"/>
-  <property name="module.jdk.classpath.chemistscounter_main" value="${project.jdk.classpath}"/>
-  
-  <property name="compiler.args.chemistscounter_main" value="-encoding UTF-8 -source 8 -target 1.8 ${compiler.args}"/>
-  
-  <property name="chemistscounter_main.output.dir" value="${module.chemistscounter_main.basedir}/build/classes/main"/>
-  <property name="chemistscounter_main.testoutput.dir" value="${module.chemistscounter_main.basedir}/build/classes/main"/>
-  
-  <path id="chemistscounter_main.module.bootclasspath">
-    <!-- Paths to be included in compilation bootclasspath -->
-  </path>
-  
-  <path id="chemistscounter_main.module.production.classpath">
-    <path refid="${module.jdk.classpath.chemistscounter_main}"/>
-    <path refid="library.ejml-core-0.29-sources.classpath"/>
-    <path refid="library.guava-19.0.classpath"/>
-  </path>
-  
-  <path id="chemistscounter_main.runtime.production.module.classpath">
-    <pathelement location="${chemistscounter_main.output.dir}"/>
-    <path refid="library.ejml-core-0.29-sources.classpath"/>
-    <path refid="library.guava-19.0.classpath"/>
-  </path>
-  
-  <path id="chemistscounter_main.module.classpath">
-    <path refid="${module.jdk.classpath.chemistscounter_main}"/>
-    <pathelement location="${chemistscounter_main.output.dir}"/>
-    <path refid="library.ejml-core-0.29-sources.classpath"/>
-    <path refid="library.guava-19.0.classpath"/>
-  </path>
-  
-  <path id="chemistscounter_main.runtime.module.classpath">
-    <pathelement location="${chemistscounter_main.output.dir}"/>
-    <path refid="library.ejml-core-0.29-sources.classpath"/>
-    <path refid="library.guava-19.0.classpath"/>
-  </path>
-  
-  
-  <patternset id="excluded.from.module.chemistscounter_main">
-    <patternset refid="ignored.files"/>
-  </patternset>
-  
-  <patternset id="excluded.from.compilation.chemistscounter_main">
-    <patternset refid="excluded.from.module.chemistscounter_main"/>
-  </patternset>
-  
-  <path id="chemistscounter_main.module.sourcepath">
-    <dirset dir="${module.chemistscounter_main.basedir}/src/main">
-      <include name="java"/>
-      <include name="resources"/>
-    </dirset>
-  </path>
-  
-  
-  <target name="compile.module.chemistscounter_main" depends="compile.module.chemistscounter_main.production,compile.module.chemistscounter_main.tests" description="Compile module chemistsCounter_main"/>
-  
-  <target name="compile.module.chemistscounter_main.production" depends="register.custom.compilers" description="Compile module chemistsCounter_main; production classes">
-    <mkdir dir="${chemistscounter_main.output.dir}"/>
-    <javac2 destdir="${chemistscounter_main.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.chemistscounter_main}/javac">
-      <compilerarg line="${compiler.args.chemistscounter_main}"/>
-      <bootclasspath refid="chemistscounter_main.module.bootclasspath"/>
-      <classpath refid="chemistscounter_main.module.production.classpath"/>
-      <src refid="chemistscounter_main.module.sourcepath"/>
-      <patternset refid="excluded.from.compilation.chemistscounter_main"/>
-    </javac2>
-    
-    <copy todir="${chemistscounter_main.output.dir}">
-      <fileset dir="${module.chemistscounter_main.basedir}/src/main/java">
-        <patternset refid="compiler.resources"/>
-        <type type="file"/>
-      </fileset>
-      <fileset dir="${module.chemistscounter_main.basedir}/src/main/resources">
-        <patternset refid="compiler.resources"/>
-        <type type="file"/>
-      </fileset>
-    </copy>
-  </target>
-  
-  <target name="compile.module.chemistscounter_main.tests" depends="register.custom.compilers,compile.module.chemistscounter_main.production" description="compile module chemistsCounter_main; test classes" unless="skip.tests"/>
-  
-  <target name="clean.module.chemistscounter_main" description="cleanup module">
-    <delete dir="${chemistscounter_main.output.dir}"/>
-    <delete dir="${chemistscounter_main.testoutput.dir}"/>
-  </target>
-  
-  
-  <!-- Module chemistsCounter_test -->
-  
-  <dirname property="module.chemistscounter_test.basedir" file="${ant.file}"/>
-  
-  
-  <property name="module.jdk.home.chemistscounter_test" value="${project.jdk.home}"/>
-  <property name="module.jdk.bin.chemistscounter_test" value="${project.jdk.bin}"/>
-  <property name="module.jdk.classpath.chemistscounter_test" value="${project.jdk.classpath}"/>
-  
-  <property name="compiler.args.chemistscounter_test" value="-encoding UTF-8 -source 8 -target 1.8 ${compiler.args}"/>
-  
-  <property name="chemistscounter_test.output.dir" value="undefined"/>
-  <property name="chemistscounter_test.testoutput.dir" value="${module.chemistscounter_test.basedir}/build/classes/test"/>
-  
-  <path id="chemistscounter_test.module.bootclasspath">
-    <!-- Paths to be included in compilation bootclasspath -->
-  </path>
-  
-  <path id="chemistscounter_test.module.production.classpath">
-    <path refid="${module.jdk.classpath.chemistscounter_test}"/>
-  </path>
-  
-  <path id="chemistscounter_test.runtime.production.module.classpath"/>
-  
-  <path id="chemistscounter_test.module.classpath">
-    <path refid="${module.jdk.classpath.chemistscounter_test}"/>
-  </path>
-  
-  <path id="chemistscounter_test.runtime.module.classpath">
-    <pathelement location="${chemistscounter_test.testoutput.dir}"/>
-  </path>
-  
-  
-  <patternset id="excluded.from.module.chemistscounter_test">
-    <patternset refid="ignored.files"/>
-  </patternset>
-  
-  <patternset id="excluded.from.compilation.chemistscounter_test">
-    <patternset refid="excluded.from.module.chemistscounter_test"/>
-  </patternset>
-  
-  <path id="chemistscounter_test.module.test.sourcepath">
-    <dirset dir="${module.chemistscounter_test.basedir}/src/test">
-      <include name="java"/>
-      <include name="resources"/>
-    </dirset>
-  </path>
-  
-  
-  <target name="compile.module.chemistscounter_test" depends="compile.module.chemistscounter_test.production,compile.module.chemistscounter_test.tests" description="Compile module chemistsCounter_test"/>
-  
-  <target name="compile.module.chemistscounter_test.production" depends="register.custom.compilers" description="Compile module chemistsCounter_test; production classes"/>
-  
-  <target name="compile.module.chemistscounter_test.tests" depends="register.custom.compilers,compile.module.chemistscounter_test.production" description="compile module chemistsCounter_test; test classes" unless="skip.tests">
-    <mkdir dir="${chemistscounter_test.testoutput.dir}"/>
-    <javac2 destdir="${chemistscounter_test.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.chemistscounter_test}/javac">
-      <compilerarg line="${compiler.args.chemistscounter_test}"/>
-      <bootclasspath refid="chemistscounter_test.module.bootclasspath"/>
-      <classpath refid="chemistscounter_test.module.classpath"/>
-      <src refid="chemistscounter_test.module.test.sourcepath"/>
-      <patternset refid="excluded.from.compilation.chemistscounter_test"/>
-    </javac2>
-    
-    <copy todir="${chemistscounter_test.testoutput.dir}">
-      <fileset dir="${module.chemistscounter_test.basedir}/src/test/java">
-        <patternset refid="compiler.resources"/>
-        <type type="file"/>
-      </fileset>
-      <fileset dir="${module.chemistscounter_test.basedir}/src/test/resources">
-        <patternset refid="compiler.resources"/>
-        <type type="file"/>
-      </fileset>
-    </copy>
-  </target>
-  
-  <target name="clean.module.chemistscounter_test" description="cleanup module">
-    <delete dir="${chemistscounter_test.output.dir}"/>
-    <delete dir="${chemistscounter_test.testoutput.dir}"/>
-  </target>
+  <import file="${basedir}/.idea/modules/module_chemistscounter_test.xml"/>
   
   <target name="init" description="Build initialization">
     <!-- Perform any build initialization in this target -->
@@ -361,40 +154,32 @@
   
   <target name="init.artifacts">
     <property name="artifacts.temp.dir" value="${basedir}/__artifacts_temp"/>
-    <property name="artifact.output.chemistscounter" value="${basedir}/out/artifacts"/>
+    <property name="artifact.output.chemistscounter:jar" value="${basedir}/out/artifacts/chemistsCounter_jar"/>
     <mkdir dir="${artifacts.temp.dir}"/>
     <property name="temp.jar.path.chemistsCounter.jar" value="${artifacts.temp.dir}/chemistsCounter.jar"/>
-    <property name="temp.jar.path.chemistsCounter.jar2" value="${artifacts.temp.dir}/1/chemistsCounter.jar"/>
-    <mkdir dir="${artifacts.temp.dir}/1"/>
   </target>
   
-  <target name="artifact.chemistscounter" depends="init.artifacts, compile.module.chemistscounter_main, compile.module.chemistscounter_test" description="Build &#39;chemistsCounter&#39; artifact">
-    <property name="artifact.temp.output.chemistscounter" value="${artifacts.temp.dir}/chemistsCounter"/>
-    <mkdir dir="${artifact.temp.output.chemistscounter}"/>
-    <ant antfile="" target="null" dir="">
-      <property name="artifact.output.path" value="${artifact.temp.output.chemistscounter}"/>
-    </ant>
-    <jar destfile="${temp.jar.path.chemistsCounter.jar2}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+  <target name="artifact.chemistscounter:jar" depends="init.artifacts, compile.module.chemistscounter_main, compile.module.chemistscounter_test" description="Build &#39;chemistsCounter:jar&#39; artifact">
+    <property name="artifact.temp.output.chemistscounter:jar" value="${artifacts.temp.dir}/chemistsCounter_jar"/>
+    <mkdir dir="${artifact.temp.output.chemistscounter:jar}"/>
+    <jar destfile="${temp.jar.path.chemistsCounter.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain">
       <zipfileset dir="${chemistscounter_main.output.dir}"/>
       <zipfileset dir="${chemistscounter_test.testoutput.dir}"/>
+      <zipfileset src="${basedir}/lib/guava-19.0.jar"/>
+      <zipfileset src="${basedir}/lib/EJML-core-0.29.jar"/>
+      <zipfileset src="${basedir}/lib/EJML-dense64-0.29.jar"/>
+      <zipfileset src="${basedir}/lib/EJML-denseC64-0.29.jar"/>
+      <zipfileset src="${basedir}/lib/EJML-equation-0.29.jar"/>
+      <zipfileset src="${basedir}/lib/EJML-simple-0.29.jar"/>
+      <zipfileset dir="${basedir}/src/main/resources"/>
     </jar>
-    <jar destfile="${temp.jar.path.chemistsCounter.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain">
-      <zipfileset file="${temp.jar.path.chemistsCounter.jar2}"/>
-      <zipfileset file="${basedir}/lib/guava-19.0.jar"/>
-      <zipfileset file="${basedir}/lib/EJML-core-0.29.jar"/>
-      <zipfileset file="${basedir}/lib/EJML-dense64-0.29.jar"/>
-      <zipfileset file="${basedir}/lib/EJML-denseC64-0.29.jar"/>
-      <zipfileset file="${basedir}/lib/EJML-equation-0.29.jar"/>
-      <zipfileset file="${basedir}/lib/EJML-simple-0.29.jar"/>
-      <zipfileset file="${basedir}/src/main/java/META-INF/MANIFEST.MF" prefix="META-INF"/>
-    </jar>
-    <copy file="${temp.jar.path.chemistsCounter.jar}" tofile="${artifact.temp.output.chemistscounter}/chemistsCounter.jar"/>
+    <copy file="${temp.jar.path.chemistsCounter.jar}" tofile="${artifact.temp.output.chemistscounter:jar}/chemistsCounter.jar"/>
   </target>
   
-  <target name="build.all.artifacts" depends="artifact.chemistscounter" description="Build all artifacts">
-    <mkdir dir="${artifact.output.chemistscounter}"/>
-    <copy todir="${artifact.output.chemistscounter}">
-      <fileset dir="${artifact.temp.output.chemistscounter}"/>
+  <target name="build.all.artifacts" depends="artifact.chemistscounter:jar" description="Build all artifacts">
+    <mkdir dir="${artifact.output.chemistscounter:jar}"/>
+    <copy todir="${artifact.output.chemistscounter:jar}">
+      <fileset dir="${artifact.temp.output.chemistscounter:jar}"/>
     </copy>
     
     <!-- Delete temporary files -->

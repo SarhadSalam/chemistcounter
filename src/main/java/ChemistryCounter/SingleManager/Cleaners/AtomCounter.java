@@ -4,7 +4,7 @@
 
 package ChemistryCounter.SingleManager.Cleaners;
 
-import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
+import ChemistryCounter.SingleManager.ElementParser.Universal.ElementDetails;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -26,20 +26,20 @@ public class AtomCounter
 	 *
 	 * @return counted The counted list contains the number of atoms.
 	 */
-	public static ArrayList<ChemicalName> atomCounter(ArrayList<ChemicalName> uncountedList)
+	public static ArrayList<ElementDetails> atomCounter(ArrayList<ElementDetails> uncountedList)
 	{
-		ArrayList<ChemicalName> countedList = new ArrayList<>();
+		ArrayList<ElementDetails> countedList = new ArrayList<>();
 		ArrayList<String> counter = new ArrayList<>();
 		HashSet<String> resultsHasMap = new HashSet<>();
 
 //		Creates a list counter for each chemical symbol
-		for( ChemicalName item : uncountedList )
+		for( ElementDetails item : uncountedList )
 		{
 			counter.add(item.getChemicalSymbol());
 		}
 
 //		Each uncounted list gets sorted and properly translated
-		for( ChemicalName item : uncountedList )
+		for( ElementDetails item : uncountedList )
 		{
 //			Calculates Frequency of each occurence
 			int count = Collections.frequency(counter, item.getChemicalSymbol());
@@ -55,7 +55,7 @@ public class AtomCounter
 			if( resultsHasMap.contains(item.getChemicalSymbol()) )
 			{
 				int multivalence = item.getValenceElectron();
-				for( ChemicalName multiValenceSolver : countedList )
+				for( ElementDetails multiValenceSolver : countedList )
 				{
 					if( multiValenceSolver.getChemicalSymbol().equals(item.getChemicalSymbol()) )
 					{

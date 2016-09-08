@@ -1,14 +1,18 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-## [UNRELEASED] 03-August-2016
+## [0.4] 08-August-2016
 ### Fixed
     - Fixed functionality for mole in different mass units.
     - Fixed loading of external resources.
     - Fixed RoundingMode Logic.
     - Pretty impressed at how I handled an arbitrary logic for significant digit.
+    - Refactored a lot of classes and names.
+    - Generated ANT Build.
+
 ### Removed
    - Old access methods deleted.
+   - Deprecated Classes and methods.
 
 ## [0.3] 02-August-2016
 ### Added

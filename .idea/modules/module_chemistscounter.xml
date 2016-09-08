@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_chemistscounter" default="compile.module.chemistscounter">
+  <dirname property="module.chemistscounter.basedir" file="${ant.file.module_chemistscounter}"/>
+  
+  <property name="module.jdk.home.chemistscounter" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.chemistscounter" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.chemistscounter" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.chemistscounter" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="chemistscounter.output.dir" value="${module.chemistscounter.basedir}/../../out/production/chemistsCounter"/>
+  <property name="chemistscounter.testoutput.dir" value="${module.chemistscounter.basedir}/../../out/test/chemistsCounter"/>
+  
+  <path id="chemistscounter.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="chemistscounter.module.production.classpath">
+    <path refid="${module.jdk.classpath.chemistscounter}"/>
+  </path>
+  
+  <path id="chemistscounter.runtime.production.module.classpath">
+    <pathelement location="${chemistscounter.output.dir}"/>
+  </path>
+  
+  <path id="chemistscounter.module.classpath">
+    <path refid="${module.jdk.classpath.chemistscounter}"/>
+    <pathelement location="${chemistscounter.output.dir}"/>
+  </path>
+  
+  <path id="chemistscounter.runtime.module.classpath">
+    <pathelement location="${chemistscounter.testoutput.dir}"/>
+    <pathelement location="${chemistscounter.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.chemistscounter">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.chemistscounter">
+    <patternset refid="excluded.from.module.chemistscounter"/>
+  </patternset>
+  
+  
+  <target name="compile.module.chemistscounter" depends="compile.module.chemistscounter.production,compile.module.chemistscounter.tests" description="Compile module chemistsCounter"/>
+  
+  <target name="compile.module.chemistscounter.production" depends="register.custom.compilers" description="Compile module chemistsCounter; production classes"/>
+  
+  <target name="compile.module.chemistscounter.tests" depends="register.custom.compilers,compile.module.chemistscounter.production" description="compile module chemistsCounter; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.chemistscounter" description="cleanup module">
+    <delete dir="${chemistscounter.output.dir}"/>
+    <delete dir="${chemistscounter.testoutput.dir}"/>
+  </target>
+</project>

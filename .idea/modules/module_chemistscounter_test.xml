@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_chemistscounter_test" default="compile.module.chemistscounter_test">
+  <dirname property="module.chemistscounter_test.basedir" file="${ant.file.module_chemistscounter_test}"/>
+  
+  <property name="module.jdk.home.chemistscounter_test" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.chemistscounter_test" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.chemistscounter_test" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.chemistscounter_test" value="-encoding UTF-8 -source 1.7 -target 1.7 ${compiler.args}"/>
+  
+  <property name="chemistscounter_test.output.dir" value="undefined"/>
+  <property name="chemistscounter_test.testoutput.dir" value="${module.chemistscounter_test.basedir}/../../build/classes/test"/>
+  
+  <path id="chemistscounter_test.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="chemistscounter_test.module.production.classpath">
+    <path refid="${module.jdk.classpath.chemistscounter_test}"/>
+    <path refid="library.gradle:_junit:junit:4.11.classpath"/>
+    <path refid="library.gradle:_com.google.guava:guava:19.0.classpath"/>
+    <path refid="library.gradle:_org.ejml:dense64:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:densec64:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:core:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:all:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:simple:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:equation:0.29.classpath"/>
+  </path>
+  
+  <path id="chemistscounter_test.runtime.production.module.classpath">
+    <path refid="library.gradle:_junit:junit:4.11.classpath"/>
+    <path refid="library.gradle:_com.google.guava:guava:19.0.classpath"/>
+    <path refid="library.gradle:_org.ejml:dense64:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:densec64:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:core:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:all:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:simple:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:equation:0.29.classpath"/>
+  </path>
+  
+  <path id="chemistscounter_test.module.classpath">
+    <path refid="${module.jdk.classpath.chemistscounter_test}"/>
+    <path refid="library.gradle:_junit:junit:4.11.classpath"/>
+    <path refid="library.gradle:_com.google.guava:guava:19.0.classpath"/>
+    <path refid="library.gradle:_org.ejml:dense64:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:densec64:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:core:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:all:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:simple:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:equation:0.29.classpath"/>
+  </path>
+  
+  <path id="chemistscounter_test.runtime.module.classpath">
+    <pathelement location="${chemistscounter_test.testoutput.dir}"/>
+    <path refid="library.gradle:_junit:junit:4.11.classpath"/>
+    <path refid="library.gradle:_com.google.guava:guava:19.0.classpath"/>
+    <path refid="library.gradle:_org.ejml:dense64:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:densec64:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:core:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:all:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:simple:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:equation:0.29.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.chemistscounter_test">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.chemistscounter_test">
+    <patternset refid="excluded.from.module.chemistscounter_test"/>
+  </patternset>
+  
+  <path id="chemistscounter_test.module.test.sourcepath">
+    <dirset dir="${module.chemistscounter_test.basedir}/../../src/test">
+      <include name="java"/>
+      <include name="resources"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.chemistscounter_test" depends="compile.module.chemistscounter_test.production,compile.module.chemistscounter_test.tests" description="Compile module chemistsCounter_test"/>
+  
+  <target name="compile.module.chemistscounter_test.production" depends="register.custom.compilers" description="Compile module chemistsCounter_test; production classes"/>
+  
+  <target name="compile.module.chemistscounter_test.tests" depends="register.custom.compilers,compile.module.chemistscounter_test.production" description="compile module chemistsCounter_test; test classes" unless="skip.tests">
+    <mkdir dir="${chemistscounter_test.testoutput.dir}"/>
+    <javac2 destdir="${chemistscounter_test.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.chemistscounter_test}/javac">
+      <compilerarg line="${compiler.args.chemistscounter_test}"/>
+      <bootclasspath refid="chemistscounter_test.module.bootclasspath"/>
+      <classpath refid="chemistscounter_test.module.classpath"/>
+      <src refid="chemistscounter_test.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.chemistscounter_test"/>
+    </javac2>
+    
+    <copy todir="${chemistscounter_test.testoutput.dir}">
+      <fileset dir="${module.chemistscounter_test.basedir}/../../src/test/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.chemistscounter_test.basedir}/../../src/test/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.chemistscounter_test" description="cleanup module">
+    <delete dir="${chemistscounter_test.output.dir}"/>
+    <delete dir="${chemistscounter_test.testoutput.dir}"/>
+  </target>
+</project>

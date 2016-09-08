@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_chemistscounter_main" default="compile.module.chemistscounter_main">
+  <dirname property="module.chemistscounter_main.basedir" file="${ant.file.module_chemistscounter_main}"/>
+  
+  <property name="module.jdk.home.chemistscounter_main" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.chemistscounter_main" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.chemistscounter_main" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.chemistscounter_main" value="-encoding UTF-8 -source 1.7 -target 1.7 ${compiler.args}"/>
+  
+  <property name="chemistscounter_main.output.dir" value="${module.chemistscounter_main.basedir}/../../build/classes/main"/>
+  <property name="chemistscounter_main.testoutput.dir" value="${module.chemistscounter_main.basedir}/../../build/classes/main"/>
+  
+  <path id="chemistscounter_main.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="chemistscounter_main.module.production.classpath">
+    <path refid="${module.jdk.classpath.chemistscounter_main}"/>
+    <path refid="library.gradle:_com.google.guava:guava:19.0.classpath"/>
+    <path refid="library.gradle:_org.ejml:all:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:dense64:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:equation:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:core:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:simple:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:densec64:0.29.classpath"/>
+  </path>
+  
+  <path id="chemistscounter_main.runtime.production.module.classpath">
+    <pathelement location="${chemistscounter_main.output.dir}"/>
+    <path refid="library.gradle:_com.google.guava:guava:19.0.classpath"/>
+    <path refid="library.gradle:_org.ejml:all:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:dense64:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:equation:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:core:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:simple:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:densec64:0.29.classpath"/>
+  </path>
+  
+  <path id="chemistscounter_main.module.classpath">
+    <path refid="${module.jdk.classpath.chemistscounter_main}"/>
+    <pathelement location="${chemistscounter_main.output.dir}"/>
+    <path refid="library.gradle:_com.google.guava:guava:19.0.classpath"/>
+    <path refid="library.gradle:_org.ejml:all:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:dense64:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:equation:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:core:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:simple:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:densec64:0.29.classpath"/>
+  </path>
+  
+  <path id="chemistscounter_main.runtime.module.classpath">
+    <pathelement location="${chemistscounter_main.output.dir}"/>
+    <path refid="library.gradle:_com.google.guava:guava:19.0.classpath"/>
+    <path refid="library.gradle:_org.ejml:all:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:dense64:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:equation:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:core:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:simple:0.29.classpath"/>
+    <path refid="library.gradle:_org.ejml:densec64:0.29.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.chemistscounter_main">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.chemistscounter_main">
+    <patternset refid="excluded.from.module.chemistscounter_main"/>
+  </patternset>
+  
+  <path id="chemistscounter_main.module.sourcepath">
+    <dirset dir="${module.chemistscounter_main.basedir}/../../src/main">
+      <include name="java"/>
+      <include name="resources"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.chemistscounter_main" depends="compile.module.chemistscounter_main.production,compile.module.chemistscounter_main.tests" description="Compile module chemistsCounter_main"/>
+  
+  <target name="compile.module.chemistscounter_main.production" depends="register.custom.compilers" description="Compile module chemistsCounter_main; production classes">
+    <mkdir dir="${chemistscounter_main.output.dir}"/>
+    <javac2 destdir="${chemistscounter_main.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.chemistscounter_main}/javac">
+      <compilerarg line="${compiler.args.chemistscounter_main}"/>
+      <bootclasspath refid="chemistscounter_main.module.bootclasspath"/>
+      <classpath refid="chemistscounter_main.module.production.classpath"/>
+      <src refid="chemistscounter_main.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.chemistscounter_main"/>
+    </javac2>
+    
+    <copy todir="${chemistscounter_main.output.dir}">
+      <fileset dir="${module.chemistscounter_main.basedir}/../../src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.chemistscounter_main.basedir}/../../src/main/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.chemistscounter_main.tests" depends="register.custom.compilers,compile.module.chemistscounter_main.production" description="compile module chemistsCounter_main; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.chemistscounter_main" description="cleanup module">
+    <delete dir="${chemistscounter_main.output.dir}"/>
+    <delete dir="${chemistscounter_main.testoutput.dir}"/>
+  </target>
+</project>

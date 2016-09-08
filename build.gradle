@@ -3,7 +3,7 @@
  */
 
 group 'inc.sarhad.chemistry.tools'
-version '0.3'
+version '0.4'
 
 apply plugin: 'java'
 

@@ -4,7 +4,7 @@
 
 package ChemistryCounter.SingleManager.Cleaners;
 
-import ChemistryCounter.SingleManager.ElementDetector.Universal.ChemicalName;
+import ChemistryCounter.SingleManager.ElementParser.Universal.ElementDetails;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -25,12 +25,12 @@ public class AlphabeticalOrder
 	 *
 	 * @return categorizedList
 	 */
-	public static ArrayList<ChemicalName> alphabeticalOrder(ArrayList<ChemicalName> uncategorizedList)
+	public static ArrayList<ElementDetails> alphabeticalOrder(ArrayList<ElementDetails> uncategorizedList)
 	{
-		Collections.sort(uncategorizedList, new Comparator<ChemicalName>()
+		Collections.sort(uncategorizedList, new Comparator<ElementDetails>()
 		{
 			@Override
-			public int compare(ChemicalName o1, ChemicalName o2)
+			public int compare(ElementDetails o1, ElementDetails o2)
 			{
 				return o1.getChemicalSymbol().compareTo(o2.getChemicalSymbol());
 			}

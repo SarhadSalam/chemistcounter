@@ -7,7 +7,7 @@ package ChemistryCounter.ReactionManagers.Stochiometry;
 import ChemistryCounter.Exceptions.ElementNotFoundException;
 import ChemistryCounter.Exceptions.ReactionElementNotMatchedException;
 import ChemistryCounter.ReactionManagers.ReactionCompounds;
-import ChemistryCounter.Universal.UniversalGetters;
+import ChemistryCounter.ReactionManagers.ReactionContainer;
 
 import java.util.ArrayList;
 
@@ -58,7 +58,7 @@ public class LimitingReagent
 	 * @throws ReactionElementNotMatchedException The Reaction Element was not matched.
 	 * @throws ElementNotFoundException           The Element wasn't found.
 	 */
-	public static UniversalGetters findLimitingReagent(Object[][] details, UniversalGetters u) throws ReactionElementNotMatchedException, ElementNotFoundException
+	public static ReactionContainer findLimitingReagent(Object[][] details, ReactionContainer u) throws ReactionElementNotMatchedException, ElementNotFoundException
 	{
 		ArrayList<Double> limitingReagent = new ArrayList<>();
 		ArrayList<String> s = new ArrayList<>();
